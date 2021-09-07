@@ -1,0 +1,84 @@
+1 Dwarven Mine
+1 Haven of the Spirit Dragon
+1 Holdout Settlement
+31 Mountain
+1 Myriad Landscape
+1 Aethersphere Harvester
+1 Axgard Cavalry
+1 Blinkmoth Urn
+1 Bomat Bazaar Barge
+1 Brass's Bounty
+1 Breath of Darigaaz
+1 Chaos Warp
+1 Cultivator's Caravan
+1 Cursed Mirror
+1 Daredevil Dragster
+1 Deflecting Swat
+1 Dockside Extortionist
+1 Dragonmaster Outcast
+1 Dwarven Blastminer
+1 Dwarven Grunt
+1 Dwarven Lieutenant
+1 Dwarven Miner
+1 Dwarven Thaumaturgist
+1 Faithless Looting
+1 Fearless Liberator
+1 Fire Diamond
+1 Fleetwheel Cruiser
+1 Furnace Dragon
+1 Gadrak, the Crown-Scourge
+1 Gleaming Barrier
+1 Goldspan Dragon
+1 Goldvein Pick
+1 Gonti's Aether Heart
+1 Heart of Kiran
+1 Hellkite Tyrant
+1 Hoard-Smelter Dragon
+1 Impulsive Pilferer
+1 Lathliss, Dragon Queen
+1 Lightning Greaves
+1 Magda, Brazen Outlaw
+1 Mizzium Tank
+1 Mobile Garrison
+1 Moonveil Dragon
+1 Prying Blade
+1 Raiders' Karve
+1 Rapacious Dragon
+1 Rimrock Knight // Boulder Rush
+1 Sarkhan the Masterless
+1 Scourge of Valkas
+1 Seize the Spoils
+7 Seven Dwarves
+1 Shattering Spree
+1 Skysovereign, Consul Flagship
+1 Smash to Smithereens
+1 Sol Ring
+1 Spark Mage
+1 Springleaf Drum
+1 Swiftfoot Boots
+1 Thunderbreak Regent
+1 Thundering Chariot
+1 Torbran, Thane of Red Fell
+1 Utvara Hellkite
+1 Vault Robber
+1 Weatherlight
+Sideboard:
+
+1 Aradara Express
+1 Ballista Charger
+1 Consulate Dreadnought
+1 Dwarven Berserker
+1 Dwarven Driller
+1 Dwarven Scorcher
+1 Enchanted Carriage
+1 Explorer's Scope
+1 Goblin Assault
+1 Hellkite Igniter
+1 Pirate's Pillage
+1 Renegade Freighter
+1 Shiny Impetus
+1 Sleek Schooner
+1 Steel Hellkite
+1 Surly Badgersaur
+1 Tapestry of the Ages
+1 Untethered Express

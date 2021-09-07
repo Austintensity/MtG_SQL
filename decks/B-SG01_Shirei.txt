@@ -1,0 +1,100 @@
+1 Bojuka Bog
+1 Cabal Stronghold
+1 Mortuary Mire
+1 Myriad Landscape
+29 Swamp
+1 Witch's Cottage
+1 Abyssal Gatekeeper
+1 Apprentice Necromancer
+1 Bankrupt in Blood
+1 Bastion of Remembrance
+1 Blessing of Leeches
+1 Blighted Shaman
+1 Blood Divination
+1 Blood Funnel
+1 Bloodthrone Vampire
+1 Bogbrew Witch
+1 Bone Shredder
+1 Bontu's Monument
+1 Bubbling Cauldron
+1 Burglar Rat
+1 Butcher of Malakir
+1 Cadaver Imp
+1 Carrion Feeder
+1 Cauldron Familiar
+1 Charcoal Diamond
+1 Cloak and Dagger
+1 Dark Prophecy
+1 Desecrated Tomb
+1 Dictate of Erebos
+1 Dusk Legion Zealot
+1 Dutiful Attendant
+1 Elderfang Disciple
+1 Eliminate the Competition
+1 Elvish Doomsayer
+1 Entreat the Dead
+1 Festering Newt
+1 Gleaming Barrier
+1 God-Eternal Bontu
+1 Gray Merchant of Asphodel
+1 Hell's Caretaker
+1 Hero's Downfall
+1 Hooded Assassin
+1 Kaya's Ghostform
+1 Lightning Greaves
+1 Malakir Rebirth // Malakir Mire
+1 Marionette Master
+1 Mask of Avacyn
+1 Mindless Automaton
+1 Mirror Shield
+1 Mortician Beetle
+1 Mutilate
+1 Open the Graves
+1 Pilgrim's Eye
+1 Pitiless Plunderer
+1 Plumb the Forbidden
+1 Priest of Forgotten Gods
+1 Qarsi Sadist
+1 Ravenous Harpy
+1 Royal Assassin
+1 Serrated Scorpion
+1 Shadows of the Past
+1 Shirei, Shizo's Caretaker
+1 Sifter of Skulls
+1 Skirsdag High Priest
+1 Smothering Abomination
+1 Sol Ring
+1 Soldevi Adnate
+1 Syr Konrad, the Grim
+1 Tattered Mummy
+1 Viscera Seer
+1 Wake the Dead
+1 Zulaport Cutthroat
+Sideboard:
+
+1 Altar's Reap
+1 Ambition's Cost
+1 Barter in Blood
+1 Black Market
+1 Bottle Gnomes
+1 Defile
+1 Demon of Catastrophes
+1 Desecration Demon
+1 Disciple of Griselbrand
+1 Disciple of Phenax
+1 Fallen Ideal
+1 Feaster of Fools
+1 Fume Spitter
+1 Kalastria Healer
+1 Kheru Bloodsucker
+1 Lampad of Death's Vigil
+1 Lazotep Reaver
+1 Leaden Myr
+1 Marsh Flitter
+1 Sadistic Glee
+1 Scaretiller
+1 Thoughtpicker Witch
+1 Undying Evil
+1 Village Rites
+1 Weaponcraft Enthusiast
+1 Whisper, Blood Liturgist

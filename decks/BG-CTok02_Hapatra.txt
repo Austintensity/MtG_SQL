@@ -1,0 +1,102 @@
+1 Bojuka Bog
+1 Command Tower
+1 Darkbore Pathway // Slitherbore Pathway
+12 Forest
+1 Golgari Rot Farm
+1 Grasping Dunes
+1 Grim Backwoods
+1 Jungle Hollow
+1 Llanowar Wastes
+1 Necroblossom Snarl
+13 Swamp
+1 Tainted Wood
+1 Temple of Malady
+1 Banewhip Punisher
+1 Bear Umbra
+1 Beast Whisperer
+1 Beastmaster Ascension
+1 Blowfly Infestation
+1 Carnifex Demon
+1 Cauldron of Souls
+1 Channeler Initiate
+1 Deathsprout
+1 Devoted Druid
+1 Driven // Despair
+1 Evolution Sage
+1 Explore
+1 Farhaven Elf
+1 Find // Finality
+1 Flesh-Eater Imp
+1 Flourishing Defenses
+1 Fresh Meat
+1 Gaze of Granite
+1 Golgari Germination
+1 Golgari Signet
+1 Grim Haruspex
+1 Grismold, the Dreadsower
+1 Hapatra, Vizier of Poisons
+1 Harrow
+1 Harvester of Souls
+1 Idol of Oblivion
+1 Ivy Lane Denizen
+1 Liliana's Influence
+1 Liliana, Death Wielder
+1 Melira, Sylvok Outcast
+1 Midnight Banshee
+1 Mirror Shield
+1 Moldervine Reclamation
+1 Nature's Claim
+1 Nest of Scarabs
+1 Obelisk Spider
+1 Phyrexian Plaguelord
+1 Plaguemaw Beast
+1 Pollenbright Druid
+1 Priest of Forgotten Gods
+1 Primal Druid
+1 Quagmire Druid
+1 Rampant Growth
+1 Read the Bones
+1 Reaper of the Wilds
+1 Reclamation Sage
+1 Skinrender
+1 Sol Ring
+1 Soul Snuffers
+1 Stinging Shot
+1 Syr Konrad, the Grim
+1 Talisman of Resilience
+1 Temur Sabertooth
+1 Three Visits
+1 Tragic Slip
+1 Tribute to the Wild
+1 Vampire Nighthawk
+1 Vhati il-Dal
+1 Viridian Emissary
+1 Wickerbough Elder
+1 Windstorm
+1 Wood Elves
+1 Zulaport Cutthroat
+Sideboard:
+
+1 Bloom Hulk
+1 Bone Picker
+1 Canker Abomination
+1 Cartouche of Ambition
+1 Cinderhaze Wretch
+1 Corrupted Grafstone
+1 Decimator Beetle
+1 Diabolic Tutor
+1 Golgari Keyrune
+1 Harmonize
+1 Krosan Grip
+1 Leyline Prowler
+1 Llanowar Dead
+1 Pestilence
+1 Pharika's Mender
+1 Phyrexian Delver
+1 Putrefy
+1 Quirion Elves
+1 Rot Wolf
+1 Soulstinger
+1 Tangle Angler
+1 Trial of Ambition
+1 Vraska the Unseen

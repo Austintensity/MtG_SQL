@@ -1,0 +1,85 @@
+33 Forest
+1 Reliquary Tower
+1 Acidic Slime
+1 Alpha Authority
+1 Arasta of the Endless Web
+1 Avenger of Zendikar
+1 Bala Ged Recovery // Bala Ged Sanctuary
+1 Beast Whisperer
+1 Beast Within
+1 Beastmaster Ascension
+1 Blackblade Reforged
+1 Blanchwood Armor
+1 Boar Umbra
+1 Canopy Cover
+1 Caustic Caterpillar
+1 Commander's Plate
+1 Esika's Chariot
+1 Eternal Witness
+1 Giant Adephage
+1 Gingerbrute
+1 Gnarlwood Dryad
+1 Gorgon's Head
+1 Harrow
+1 Harvest Season
+1 Hungering Hydra
+1 Jolrael, Mwonvuli Recluse
+1 Kamahl, Heart of Krosa
+1 Kodama of the East Tree
+1 Loaming Shaman
+1 Lure
+1 Majestic Myriarch
+1 Manglehorn
+1 Mire Boa
+1 Narnam Renegade
+1 Nature's Claim
+1 Oakhame Adversary
+1 Orchard Spirit
+1 Overrun
+1 Overwhelming Stampede
+1 Predator Ooze
+1 Prowler's Helm
+1 Rampaging Baloths
+1 Rampant Growth
+1 Rancor
+1 Reclamation Sage
+1 Regrowth
+1 Return to Nature
+1 Rhonas's Monument
+1 Roar of Challenge
+1 Sakura-Tribe Elder
+1 Scute Swarm
+1 Second Harvest
+1 Shamanic Revelation
+1 Silhana Ledgewalker
+1 Sol Ring
+1 Somberwald Dryad
+1 Swiftfoot Boots
+1 Three Visits
+1 Tornado Elemental
+1 Toski, Bearer of Secrets
+1 Verdant Force
+1 Whiptongue Hydra
+1 Whispersilk Cloak
+1 Wilt
+1 Wood Elves
+1 Worldslayer
+1 Wrap in Vigor
+1 Yavimaya Dryad
+Sideboard:
+
+1 Deep Forest Hermit
+1 Glissa's Courier
+1 Haunted Cloak
+1 Hope of Ghirapur
+1 Jedit Ojanen of Efrava
+1 Kessig Cagebreakers
+1 Lurking Crocodile
+1 Meandering Towershell
+1 Primal Bellow
+1 Reclaim
+1 Return of the Wildspeaker
+1 Scryb Sprites
+1 Spawnwrithe
+1 Spire Tracer
+1 Squirrel Nest

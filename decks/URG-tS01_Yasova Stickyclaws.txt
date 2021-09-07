@@ -1,0 +1,105 @@
+1 Command Tower
+1 Evolving Wilds
+1 Exotic Orchard
+9 Forest
+1 Forge of Heroes
+1 Gruul Turf
+6 Island
+10 Mountain
+1 Opal Palace
+1 Shivan Reef
+1 Simic Growth Chamber
+1 Temple of Epiphany
+1 Terramorphic Expanse
+1 Yavimaya Coast
+1 Aetherize
+1 Arcane Signet
+1 Avatar of Fury
+1 Blind with Anger
+1 Captivating Crew
+1 Claim the Firstborn
+1 Clan Defiance
+1 Conquering Manticore
+1 Cultivate
+1 Eldrazi Obligator
+1 Embodiment of Spring
+1 Enthralling Victor
+1 Evolutionary Leap
+1 Exert Influence
+1 Far Wanderings
+1 Fecundity
+1 Feed the Pack
+1 Fury of the Horde
+1 Goblin Bombardment
+1 Goblin Electromancer
+1 Gruul Signet
+1 Harness by Force
+1 Heart-Piercer Manticore
+1 Hydra Omnivore
+1 Izzet Signet
+1 Jeering Instigator
+1 Keldon Overseer
+1 Loyal Apprentice
+1 Loyal Drake
+1 Mark of Mutiny
+1 Mass Mutiny
+1 Mob Rule
+1 Molten Primordial
+1 Momentous Fall
+1 Neurok Stealthsuit
+1 Nissa's Pilgrimage
+1 Ohran Frostfang
+1 Opportunistic Dragon
+1 Overwhelming Denial
+1 Perilous Forays
+1 Rampaging Baloths
+1 Rattleclaw Mystic
+1 Reclamation Sage
+1 Reins of Power
+1 Relic Vial
+1 Savage Twister
+1 Simic Signet
+1 Slice and Dice
+1 Sol Ring
+1 Talisman of Impulse
+1 Temporary Insanity
+1 Traitorous Blood
+1 Treasure Nabber
+1 Twist Allegiance
+1 Verity Circle
+1 Viridian Emissary
+1 Welcome to the Fold
+1 Wilderness Reclamation
+1 Winged Coatl
+1 Witch's Oven
+1 Wrangle
+1 Yasova Dragonclaw
+1 Zealous Conscripts
+1 Zhur-Taa Druid
+Sideboard:
+
+1 Act of Treason
+1 Aether Gale
+1 Branching Bolt
+1 Carnage Altar
+1 Cold-Eyed Selkie
+1 Conjurer's Closet
+1 Freyalise Supplicant
+1 Goatnap
+1 Hijack
+1 Keiga, the Tide Star
+1 Limits of Solidarity
+1 Lose Calm
+1 Malevolent Whispers
+1 Portent of Betrayal
+1 Press into Service
+1 Ranger's Path
+1 Rough // Tumble
+1 Skull Catapult
+1 Skyfire Kirin
+1 Swiftwater Cliffs
+1 Talisman of Curiosity
+1 Tentative Connection
+1 Threaten
+1 Tooth and Claw
+1 Weaponize the Monsters

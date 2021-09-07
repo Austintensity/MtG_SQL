@@ -1,0 +1,98 @@
+1 Buried Ruin
+1 Cave of Temptation
+1 Cradle of the Accursed
+1 Darksteel Citadel
+1 Field of Ruin
+1 Foundry of the Consuls
+1 Gargoyle Castle
+1 Guildless Commons
+1 Haunted Fengraf
+1 Hostile Desert
+1 Mage-Ring Network
+1 Nephalia Academy
+1 Radiant Fountain
+1 Ruins of Oran-Rief
+1 Sequestered Stash
+1 Shimmering Grotto
+1 Shrine of the Forsaken Gods
+1 Stalking Stones
+1 Unknown Shores
+1 Urza's Factory
+15 Wastes
+1 Angelheart Vial
+1 Bane of Bala Ged
+1 Blinkmoth Urn
+1 Burnished Hart
+1 Chief of the Foundry
+1 Clockwork Servant
+1 Commander's Plate
+1 Cranial Archive
+1 Crook of Condemnation
+1 Dreamstone Hedron
+1 Everflowing Chalice
+1 Explorer's Scope
+1 Farsight Mask
+1 Fireshrieker
+1 Foundry Inspector
+1 Galvanic Key
+1 Genesis Chamber
+1 Golem Foundry
+1 Hedron Crawler
+1 Hope of Ghirapur
+1 Horizon Stone
+1 Hovermyr
+1 Icy Manipulator
+1 Jhoira's Familiar
+1 Leonin Bladetrap
+1 Mage-Ring Responder
+1 Manifold Key
+1 Mask of Memory
+1 Meteor Golem
+1 Mind Stone
+1 Mirrorworks
+1 Mishra's Self-Replicator
+1 Nevinyrral's Disk
+1 Palladium Myr
+1 Perilous Myr
+1 Pilgrim's Eye
+1 Prismatic Lens
+1 Prototype Portal
+1 Prowler's Helm
+1 Rishadan Pawnshop
+1 Scour from Existence
+1 Seer's Sundial
+1 Shambling Suit
+1 Skyscanner
+1 Sol Ring
+1 Steel Overseer
+1 Surveyor's Scope
+1 Tapestry of the Ages
+1 Thought Prison
+1 Time Bomb
+1 Titan's Presence
+1 Tormod's Crypt
+1 Traxos, Scourge of Kroog
+1 Triplicate Titan
+1 Ugin's Construct
+1 Ugin, the Ineffable
+1 Unwinding Clock
+1 Urza's Tome
+1 Viseling
+1 Voltaic Servant
+1 Walker of the Wastes
+1 Wall of Junk
+1 Warping Wail
+1 Welding Jar
+1 Workshop Assistant
+Sideboard:
+
+1 Ancestral Statue
+1 Gleaming Barrier
+1 Guardians of Koilos
+1 Henge Walker
+1 Howling Golem
+1 Metallurgic Summonings
+1 Orazca Relic
+1 Quicksand
+1 Treasure Keeper
+1 War Room

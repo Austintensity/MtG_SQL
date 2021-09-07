@@ -1,0 +1,125 @@
+1 Bonders' Enclave
+1 Command Tower
+1 Desolate Lighthouse
+1 Exotic Orchard
+1 Forgotten Cave
+13 Island
+1 Izzet Boilerworks
+8 Mountain
+1 Mystic Sanctuary
+1 Reliquary Tower
+1 Riverglide Pathway // Lavaglide Pathway
+1 Sanctum of Eternity
+1 Shivan Reef
+1 Steam Vents
+1 Sulfur Falls
+1 Temple of Epiphany
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Arcane Signet
+1 Arcanis the Omnipotent
+1 Bedlam Reveler
+1 Blue Sun's Zenith
+1 Burning Prophet
+1 Burnout
+1 Chandra, Flamecaller
+1 Clout of the Dominus
+1 Curator of Mysteries
+1 Curiosity
+1 Cyclonic Rift
+1 Dictate of Kruphix
+1 Dizzy Spell
+1 Dreamscape Artist
+1 Embermaw Hellion
+1 Faerie Vandal
+1 Faithless Looting
+1 Feldon's Cane
+1 Fierce Guardianship
+1 Forbid
+1 Forgotten Creation
+1 Frantic Search
+1 Game Plan
+1 Gorgon Flail
+1 Hullbreacher
+1 Irencrag Pyromancer
+1 Izzet Charm
+1 Izzet Signet
+1 Jori En, Ruin Diver
+1 Kasmina, Enigmatic Mentor
+1 Kefnet the Mindful
+1 Magus of the Wheel
+1 Mind Spring
+1 Mizzium Mortars
+1 Mnemonic Nexus
+1 Nadir Kraken
+1 Narset, Parter of Veils
+1 Neurok Stealthsuit
+1 Niv-Mizzet, Parun
+1 Niv-Mizzet, the Firemind
+1 Oath of Jace
+1 Ophidian Eye
+1 Patron of the Moon
+1 Psychosis Crawler
+1 Quest for Ancient Secrets
+1 Ral, Caller of Storms
+1 Sea Gate Restoration // Sea Gate, Reborn
+1 Sol Ring
+1 Spellbook
+1 Star Compass
+1 Talisman of Creativity
+1 Tamiyo, the Moon Sage
+1 The Locust God
+1 Thought Sponge
+1 Thought Vessel
+1 Tolarian Winds
+1 Vandalblast
+1 Wayfarer's Bauble
+1 Whirlpool Drake
+1 Whirlpool Rider
+1 Willbender
+1 Windfall
+1 Wonder
+Sideboard:
+
+1 Academy Elite
+1 Beacon Bolt
+1 Borrowing 100,000 Arrows
+1 Brineborn Cutthroat
+1 Chandra's Phoenix
+1 Charmbreaker Devils
+1 Cloven Casting
+1 Commander's Sphere
+1 Curious Homunculus
+1 Desperate Ravings
+1 Diplomatic Immunity
+1 Dualcaster Mage
+1 Electrolyze
+1 Electrostatic Field
+1 Erratic Cyclops
+1 Etherium-Horn Sorcerer
+1 Firemind's Research
+1 Geode Golem
+1 Goblin Electromancer
+1 Guttersnipe
+1 Invoke the Firemind
+1 Jace's Projection
+1 Loxodon Warhammer
+1 Mindswipe
+1 Nivix Guildmage
+1 Opt
+1 Protective Bubble
+1 Pyre Hound
+1 Ral's Dispersal
+1 Ravaging Blaze
+1 Seer's Lantern
+1 Sigil of Sleep
+1 Soulblade Djinn
+1 Spellheart Chimera
+1 Street Spasm
+1 Thermo-Alchemist
+1 Ugin's Insight
+1 Vedalken Aethermage
+1 Volcanic Vision
+1 Warfire Javelineer
+1 Welcome to the Fold
+1 Young Pyromancer
