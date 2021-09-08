@@ -14,7 +14,9 @@
 
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox   # NEW ADDITION
 from ttkthemes import ThemedTk
+# from tkinter.ttk import Label
 from PIL import ImageTk,Image
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from pathlib import Path
@@ -23,10 +25,12 @@ import matplotlib.pyplot as plt
 import base64
 import requests
 import os
-# from main import *
-from mtg_sql import *
-from json_load import *
-from mtg_regex import *
+import time
+import csv
+import mtg_main
+import mtg_sql
+import json_load
+import mtg_regex
 from urllib.request import urlopen
 from tkinter import filedialog
 
@@ -34,6 +38,7 @@ root = Tk()
 root.title("MTG Deck tool")
 root.geometry('1366x730+0+0')
 style = ttk.Style()
+style.configure("ImportDone", font=('wasy10', 80))
 # style.theme_use("alt")
 # stored_link = ""   ## Might not end up using this
 
@@ -70,18 +75,6 @@ newdeckbutton = ImageTk.PhotoImage(Image.open(image_folder / "newdeckbutton.png"
 partnerbutton = ImageTk.PhotoImage(Image.open(image_folder / "partnerbutton.png"))
 deckdetailsbutton = ImageTk.PhotoImage(Image.open(image_folder / "deckdetailsbutton.png"))
 
-## This is in json_load.py, shouldn't be required here
-# def fix_text(oracletext):
-#     """replace Unicode '\u2212' character that Python's console can't print, as well as a few other gnarly characters
-#     Returns: String 'card_string'  """
-#     card_string = oracletext.replace('−', '-')
-#     card_string = card_string.replace('\n', '     ')    
-#     card_string = card_string.replace("ö","o")
-#     card_string = card_string.replace("Ã¶","o")
-#     card_string = card_string.replace("Ã¢","a")
-#     card_string = card_string.replace("û","u")
-#     card_string = card_string.replace("Ã»","u")
-#     return card_string
 
 class MTG_GUI:
     """ CLASS VARIABLES """
@@ -149,7 +142,7 @@ class MTG_GUI:
         
     def build_deck_details(self, window):
         #### DECK DETAILS START ####
-        self.deck_details = LabelFrame(window, text = "", padx = 10, pady = 10)
+        self.deck_details = LabelFrame(window, text = "Deck Details", padx = 10, pady = 10)
         self.deck_details.place(x = 25, y = 10, width = 380, height = 440)
         
         ## Deck Name
@@ -204,7 +197,7 @@ class MTG_GUI:
         
     def build_card_finder(self, window):
         #### CARD FINDER START ####
-        self.card_finder = LabelFrame(window, text = "", padx = 10, pady = 10)
+        self.card_finder = LabelFrame(window, text = "Card Search", padx = 10, pady = 10)
         self.card_finder.place(x = 25, y = 10, width = 380, height = 440)
         
         ## Card Name
@@ -486,7 +479,7 @@ class MTG_GUI:
         self.partner_button.place(x = 530, y = 360)
         self.new_deck_button = Button(root, image=newdeckbutton, command = self.new_deck, borderwidth=0)
         self.new_deck_button .place(x = 680, y = 360)#, width = 120, height = 30)
-
+        
         ### MENU ###
         my_menu = Menu(window)
         window.config(menu=my_menu)
@@ -510,9 +503,9 @@ class MTG_GUI:
         import_menu.add_command(label="JSON Data", command = self.import_json_gui)        
 
     def fill_decklist(self):
-        # Populate the list of decks to load at initialization , this is called in main.py        
-        cur.execute("SELECT Deck_Name, Colour_ID FROM All_Decks")
-        deck_names = cur.fetchall()
+        # Populate the list of decks to load at initialization , this is called in mtg_main.py        
+        mtg_sql.cur.execute("SELECT Deck_Name, Colour_ID FROM All_Decks")
+        deck_names = mtg_sql.cur.fetchall()
         for deck in deck_names:
             self.treev_deck_list.insert('','end',text=deck[0],values = (deck[0], deck[1]))
     """ INITIALIZATION AND GUI BUILDING END """ 
@@ -562,31 +555,31 @@ class MTG_GUI:
         self.filter_name_box.bind('<Return>',self.filter_results)
         
     def search_results_Click(self, event):
+        """Checks which table the data for the selected card is in and displays preview image of the card """
         # for item in self.treev_results.selection():
         #     item_text = self.treev_results.get(item)
         for item in self.treev_results.selection():
             item_text = self.treev_results.item(item,"values")
-        
+
         search_this = (item_text,)
-        # print (search_this)
         if "----" not in item_text[0]:
-            if type(check_cardref(item_text[0])) is tuple:
-                this_table = (check_cardref(item_text[0])[0])
+            if type(mtg_sql.check_cardref(item_text[0])) is tuple:
+                this_table = (mtg_sql.check_cardref(item_text[0])[0])
             else:
-                this_table = check_cardref(item_text[0])
+                this_table = mtg_sql.check_cardref(item_text[0])
                 
             if this_table == "Face_Cards_Condensed":
                 srch_name = (item_text[0].split("//")[0].strip(),)
-                cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
-                flip_name = cur.fetchone()
-                cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
-                link2 = cur.fetchone()[0]
+                mtg_sql.cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
+                flip_name = mtg_sql.cur.fetchone()
+                mtg_sql.cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
+                link2 = mtg_sql.cur.fetchone()[0]
             else:
                 srch_name = (item_text[0],)
 
             # print ("SEARCHING CARD TYPE.. ", srch_name)
-            cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp  from "+this_table+" WHERE Name=?",srch_name)
-            pic_url = cur.fetchone()
+            mtg_sql.cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp from "+this_table+" WHERE Name=?",srch_name)
+            pic_url = mtg_sql.cur.fetchone()
             link = pic_url[0]
             
             try:
@@ -624,8 +617,8 @@ class MTG_GUI:
         self.close_deck()
         search_this = (item_text[0],)
         # print (item_text[0])
-        cur.execute("""SELECT Deck_list FROM All_Decks WHERE Deck_Name =?""", search_this)
-        to_load = cur.fetchone()
+        mtg_sql.cur.execute("""SELECT Deck_list FROM All_Decks WHERE Deck_Name =?""", search_this)
+        to_load = mtg_sql.cur.fetchone()
         # print (to_load)
         # try:
         #     self.load_deck(to_load[0])
@@ -646,23 +639,23 @@ class MTG_GUI:
     
         # Fetch the link to the card image for the selected card (main card list for opened deck) 
         if "----" not in item_text[0]:
-            if type(check_cardref(item_text[0])) is tuple:
-                this_table = (check_cardref(item_text[0])[0])
+            if type(mtg_sql.check_cardref(item_text[0])) is tuple:
+                this_table = (mtg_sql.check_cardref(item_text[0])[0])
             else:
-                this_table = check_cardref(item_text[0])
+                this_table = mtg_sql.check_cardref(item_text[0])
             # print (item_text[0]," found in ", this_table)
             if this_table == "Face_Cards_Condensed":
                 srch_name = (item_text[0].split("//")[0].strip(),)
-                cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
-                flip_name = cur.fetchone()
-                cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
-                link2 = cur.fetchone()[0]
+                mtg_sql.cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
+                flip_name = mtg_sql.cur.fetchone()
+                mtg_sql.cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
+                link2 = mtg_sql.cur.fetchone()[0]
             else:
                 srch_name = (item_text[0],)
 
             # print ("SEARCHING CARD TYPE.. ", srch_name)
-            cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp  from "+this_table+" WHERE Name=?",srch_name)
-            pic_url = cur.fetchone()
+            mtg_sql.cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp  from "+this_table+" WHERE Name=?",srch_name)
+            pic_url = mtg_sql.cur.fetchone()
             
             try:
                 link = pic_url[0]
@@ -747,24 +740,24 @@ class MTG_GUI:
         if "----" not in item_text[0]:
             # Fetch the link to the card image for the selected card (main card list for opened deck) 
             # print ("Sideboard click event, no '----' detected: ",item_text[0])
-            if type(check_cardref(item_text[0])) is tuple:
-                this_table = (check_cardref(item_text[0])[0])
+            if type(mtg_sql.check_cardref(item_text[0])) is tuple:
+                this_table = (mtg_sql.check_cardref(item_text[0])[0])
                 # print ("SEARCHING TABLE: ",this_table)
             else:
-                this_table = check_cardref(item_text[0])
+                this_table = mtg_sql.check_cardref(item_text[0])
                 
             if this_table == "Face_Cards_Condensed":
                 srch_name = (item_text[0].split("//")[0].strip(),)
-                cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
-                flip_name = cur.fetchone()
-                cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
-                link2 = cur.fetchone()[0]
+                mtg_sql.cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",srch_name)
+                flip_name = mtg_sql.cur.fetchone()
+                mtg_sql.cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
+                link2 = mtg_sql.cur.fetchone()[0]
                 
             else:
                 srch_name = (item_text[0],)
             
-            cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp  from "+this_table+" WHERE Name=?",srch_name)
-            pic_url = cur.fetchone()
+            mtg_sql.cur.execute("SELECT Image_URL, ETB, Draw, Target, Broad, Ramp  from "+this_table+" WHERE Name=?",srch_name)
+            pic_url = mtg_sql.cur.fetchone()
             try:
                 link = pic_url[0]
             except Exception as e:
@@ -803,15 +796,14 @@ class MTG_GUI:
         ### Clear the existing search results
         self.prep_search_result_list()
         
-        
         ### SEARCH SINGLE SIDED CARD TABLE FIRST ###    
         if len(self.sql_inner_join) > 0:
             self.sql_search_statement = "SELECT Cards_Condensed.Name, Cards_Condensed.Mana_Cost, Cards_Condensed.Card_Type, Creatures.Power, Creatures.Toughness FROM Cards_Condensed INNER JOIN Creatures ON Creatures.Name=Cards_Condensed.Name WHERE "+ self.sql_search_params + " AND " + self.sql_inner_join
         else:
             self.sql_search_statement = "SELECT Name, Mana_Cost, Card_Type FROM Cards_Condensed WHERE "+ self.sql_search_params
         
-        cur.execute(self.sql_search_statement)
-        results = cur.fetchall()
+        mtg_sql.cur.execute(self.sql_search_statement)
+        results = mtg_sql.cur.fetchall()
         search_result_counter = 0
         for items in results:
             if self.filter_name.get().lower() in items[0].lower():
@@ -842,8 +834,8 @@ class MTG_GUI:
         else:
             self.sql_search_statement = "SELECT Name, Mana_Cost, Card_Type FROM Face_Cards_Condensed WHERE "+ self.sql_search_params
         
-        cur.execute(self.sql_search_statement)
-        results = cur.fetchall()
+        mtg_sql.cur.execute(self.sql_search_statement)
+        results = mtg_sql.cur.fetchall()
 
         for items in results:
             if self.filter_name.get().lower() in items[0].lower():
@@ -868,68 +860,81 @@ class MTG_GUI:
                         
     def import_inventory_gui(self):    
         inv_filename = filedialog.askopenfilename(initialdir=data_folder, title="Import Deckbox Inventory", filetypes=(("Comma Separated Values","*.csv"),("All Files","*.*")))
-        # cur.execute("DROP TABLE IF EXISTS 'Face_Cards_Condensed'")
-        # cur.execute("DROP TABLE IF EXISTS 'Face_Cards'")
-        # cur.execute("DROP TABLE IF EXISTS 'Cards'")
-        # cur.execute("DROP TABLE IF EXISTS 'Cards_Condensed'")
-        check_all_tables()
-        print ("starting inventory import..")
-        begin_inv_time = time.time()
-        
-        importcount = 0
-        # importignorecount = 0
-        with open(inv_filename, 'r') as csv_file:
-            csv_reader = csv.reader(csv_file)
-            next(csv_reader)
-            for line in csv_reader:
-                importcount += 1
-                """# basically using the try block for weird things like Bösium 'BÃ¶sium' Strip
-                https://www.compart.com/en/unicode/U+00F6#:~:text=Unicode%20Character%20%E2%80%9C%C3%B6%E2%80%9D%20(U%2B00F6)
-                U+00F6   or U+00D6   ö:  '\xf6'    û: '\xfb'     'Ã¢'
-                    """
-                try:
-                    search_this = fix_text(line[2])
-                    scryfall_search_exact(search_this)
-                except Exception as e:
-                    print("exception error occured importing inventory for ",line[2])
-                    importcount -= 1
+        if len(inv_filename) > 0:
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Face_Cards_Condensed'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Face_Cards'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Cards'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Cards_Condensed'")
+            mtg_sql.check_all_tables()
+            print ("starting inventory import..")
+            begin_inv_time = time.time()
             
-        print(f'{importcount} records checked')
-        # print(f'{importignorecount} records skipped')
-        db.commit()
-        end_inv_time = time.time()
-        run_time = end_inv_time - begin_inv_time
-    
-        # print ("Import end time: ", time.localtime(end_inv_time))
-        print(f'{importcount} records added to Cards & Face_Cards Tables')
-        print ("Import Runtime :", round(run_time,2), " seconds")
+            importcount = 0
+            # importignorecount = 0
+            with open(inv_filename, 'r') as csv_file:
+                csv_reader = csv.reader(csv_file)
+                next(csv_reader)
+                for line in csv_reader:
+                    importcount += 1
+                    """# basically using the try block for weird things like Bösium 'BÃ¶sium' Strip
+                    https://www.compart.com/en/unicode/U+00F6#:~:text=Unicode%20Character%20%E2%80%9C%C3%B6%E2%80%9D%20(U%2B00F6)
+                    U+00F6   or U+00D6   ö:  '\xf6'    û: '\xfb'     'Ã¢'
+                        """
+
+                    search_this = json_load.fix_text(line[2])
+                    mtg_main.scryfall_search_exact(search_this)
+                        
+                    # try:
+                    #     search_this = fix_text(line[2])
+                    #     scryfall_search_exact(search_this)
+                    # except Exception as e:
+                    #     print("exception error occured importing inventory for ",line[2], "  ",e)
+                    #     importcount -= 1
+                
+            # print(f'{importignorecount} records skipped')
+            mtg_sql.db.commit()
+            end_inv_time = time.time()
+            run_time = end_inv_time - begin_inv_time
+            # print ("Import end time: ", time.localtime(end_inv_time))
+            print(f'{importcount} records added to Cards & Face_Cards Tables')
+            print ("Import Runtime :", round(run_time,2), " seconds")
+            # self.labelComplete = Label(window, text="IMPORT COMPLETE",font=("Arial", 25))
+            # self.labelComplete.place(x = 410, y = 450)
+            messagebox.showinfo("showinfo", "Import Complete")        
 
     def import_json_gui(self):
         json_filename = filedialog.askopenfilename(initialdir=data_folder, title="Import JSON Data", filetypes=(("JSON Data file","*.json"),("All Files","*.*")))        
-        begin_time = time.time()
-        print ("Starting JSON import..", time.localtime(begin_time))        
-        counter = 0
 
-        # cur.execute("DROP TABLE IF EXISTS 'Grandtable'")
-        # cur.execute("DROP TABLE IF EXISTS 'GrandtableCondensed'")
-        # cur.execute("DROP TABLE IF EXISTS 'GrandtableSplit'")
-        # cur.execute("DROP TABLE IF EXISTS 'GrandtableSplitCondensed'")
-        check_all_tables()
-        with open(json_filename, encoding='utf-8') as f:
-            data = json.load(f)
-        for card in data:#['name']:
-            if card['lang'] == "en":
-                # try:        
-                counter += 1
-                select_case_layout_JSON(card['layout'], card)
-                # except Exception as e:
-                #     counter -= 1
-                #     print ("Encountered exception accessing ",card['name'] , " - main import")
-        print (counter, " records found")
-        end_time = time.time()
-        run_time = end_time - begin_time
-        # print (time.localtime(end_time))
-        print ("Import runtime :", round(run_time,3), " seconds")    
+        if len(json_filename) > 0:
+            begin_time = time.time()
+            print ("Starting JSON import..", time.localtime(begin_time))        
+            counter = 0
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Cardref'")        
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Grandtable'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableCondensed'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableSplit'")
+            mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableSplitCondensed'")     
+            mtg_sql.check_all_tables()
+        
+            with open(json_filename, encoding='utf-8') as f:
+                data = json_load.json.load(f)
+            for card in data:#['name']:
+                if card['lang'] == "en":
+                    try:        
+                        counter += 1
+                        json_load.select_case_layout_JSON(card['layout'], card)
+                    except Exception as e:
+                        counter -= 1
+                        print ("Encountered exception accessing ",card['name'] , card['lang']," - import_json_gui(),","  ",e)
+            print (counter, " records found")
+            end_time = time.time()
+            run_time = end_time - begin_time
+            # print (time.localtime(end_time))
+            print ("Import runtime :", round(run_time,3), " seconds")    
+            # self.labelComplete = Label(window, text="IMPORT COMPLETE",font=("Arial", 25))
+            # self.labelComplete.place(x = 410, y = 450)
+            messagebox.showinfo("showinfo", "Import Complete")
+        
     """ BINDING & EVENTS END """
     
 
@@ -1000,18 +1005,20 @@ class MTG_GUI:
                 else:
                     sql_search_params = sql_search_params + "Colour_ID LIKE '%" + colours + "%' "
             sql_search_params = sql_search_params + ")"
-        # else:
-        #     sql_search_params = 
         
             ### Clear the existing list of decks and will repopulate ###        
             self.treev_deck_list.delete(*self.treev_deck_list.get_children())
             sql_statement = "SELECT Deck_Name, Colour_ID FROM All_Decks WHERE " +sql_search_params
             print(sql_statement)
             if len(sql_statement) > 4:
-                cur.execute(sql_statement)
-                deck_names = cur.fetchall()
+                mtg_sql.cur.execute(sql_statement)
+                deck_names = mtg_sql.cur.fetchall()
                 for deck in deck_names:
-                    self.treev_deck_list.insert('','end',text=deck[0],values = (deck[0], deck[1]))        
+                    self.treev_deck_list.insert('','end',text=deck[0],values = (deck[0], deck[1]))
+        else:
+            ## No colours are selected, just show all decks
+            self.treev_deck_list.delete(*self.treev_deck_list.get_children())
+            self.fill_decklist()
 
     def count_cards(self):
         creature_count = 0
@@ -1050,14 +1057,14 @@ class MTG_GUI:
             
             ### Check which table the card is in, and get the mana cost for all cards in the main deck only
             if "----" not in cardname:
-                if type(check_cardref(cardname)) is tuple:
-                    this_table = (check_cardref(cardname)[0])
+                if type(mtg_sql.check_cardref(cardname)) is tuple:
+                    this_table = (mtg_sql.check_cardref(cardname)[0])
                     # print ("SEARCHING TABLE: ",this_table)
                 else:
-                    this_table = check_cardref(cardname)        
+                    this_table = mtg_sql.check_cardref(cardname)        
                 search_this = (cardname,)
-                cur.execute("SELECT Mana_cost FROM "+this_table+" WHERE Name=?",search_this)
-                fetch = cur.fetchone()
+                mtg_sql.cur.execute("SELECT Mana_cost FROM "+this_table+" WHERE Name=?",search_this)
+                fetch = mtg_sql.cur.fetchone()
                 if type(fetch) is tuple:
                     c_mana_cost = fetch[0]
                     self.total_mana_cost_string = self.total_mana_cost_string+c_mana_cost
@@ -1114,7 +1121,7 @@ class MTG_GUI:
         item_text = self.treev_sideboard.item('Lnd',"values")
         self.treev_sideboard.item('Lnd',text="",values=(item_text[0],item_text[1],sb_lands_count))
         
-        (self.sum_white,self.sum_blue,self.sum_black,self.sum_red,self.sum_green) = regex_get_mana_symbols(self.total_mana_cost_string)
+        (self.sum_white,self.sum_blue,self.sum_black,self.sum_red,self.sum_green) = mtg_regex.regex_get_mana_symbols(self.total_mana_cost_string)
         self.show_pie_chart()
         self.total_mana_cost_string = ""
         
@@ -1131,8 +1138,8 @@ class MTG_GUI:
             self.sql_search_params = self.sql_direct.get()
             self.sql_search_statement = "SELECT Name, Mana_Cost, Card_Type FROM "+self.table_select.get()+" WHERE "+self.sql_direct.get()
             # print (sql_search_statement)
-            cur.execute(self.sql_search_statement)
-            results = cur.fetchall()
+            mtg_sql.cur.execute(self.sql_search_statement)
+            results = mtg_sql.cur.fetchall()
     
             search_result_counter = 0
             for items in results:            
@@ -1365,8 +1372,8 @@ class MTG_GUI:
                 self.sql_search_statement = "SELECT Name, Mana_Cost, Card_Type FROM Cards_Condensed WHERE "+ self.sql_search_params
     
             # print (self.sql_search_statement)
-            cur.execute(self.sql_search_statement)
-            results = cur.fetchall()
+            mtg_sql.cur.execute(self.sql_search_statement)
+            results = mtg_sql.cur.fetchall()
             search_result_counter = 0
             for items in results:
                 search_result_counter +=1
@@ -1397,8 +1404,8 @@ class MTG_GUI:
                 self.sql_search_statement = "SELECT Name, Mana_Cost, Card_Type FROM Face_Cards_Condensed WHERE "+ self.sql_search_params
             
             # print (self.sql_search_statement)
-            cur.execute(self.sql_search_statement)
-            results = cur.fetchall()
+            mtg_sql.cur.execute(self.sql_search_statement)
+            results = mtg_sql.cur.fetchall()
     
             for items in results:
                 search_result_counter +=1
@@ -1551,8 +1558,7 @@ class MTG_GUI:
     
     def remove_selected_from_main(self):
         # Cards are removed from the main deck
-        x = self.treev_maindeck.selection()
-        # print (x)    
+        x = self.treev_maindeck.selection() 
         for record in x:
             item_text = self.treev_maindeck.item(record,"values")
             # print (item_text[0])
@@ -1566,8 +1572,7 @@ class MTG_GUI:
     
     def remove_selected_from_sb(self):
         # Cards are removed from the main deck
-        x = self.treev_sideboard.selection()
-        # print (x)    
+        x = self.treev_sideboard.selection()   
         for record in x:
             item_text = self.treev_sideboard.item(record,"values")
             # print (item_text[0])
@@ -1618,16 +1623,16 @@ class MTG_GUI:
         Checks eligibility based on Legendary Creature status, or Planeswalkers that specifically can be commander
         Updates some deck data labels"""
 
-        if type(check_cardref(self.current_card)) is tuple:
-            this_table = (check_cardref(self.current_card)[0])
+        if type(mtg_sql.check_cardref(self.current_card)) is tuple:
+            this_table = (mtg_sql.check_cardref(self.current_card)[0])
             # print ("SEARCHING TABLE: ",this_table)
         else:
-            this_table = check_cardref(self.current_card)
+            this_table = mtg_sql.check_cardref(self.current_card)
         
         search_commander = (self.current_card,)
 
-        cur.execute("SELECT Mana_cost, Legendary, Card_Type, Oracle_Text, Keywords, Colour_ID FROM "+this_table+" WHERE Name=?",search_commander)
-        fetch = cur.fetchone()
+        mtg_sql.cur.execute("SELECT Mana_cost, Legendary, Card_Type, Oracle_Text, Keywords, Colour_ID FROM "+this_table+" WHERE Name=?",search_commander)
+        fetch = mtg_sql.cur.fetchone()
         # print (fetch[0])
         if 'partner' not in fetch[4].lower():
             self.partner_cmc_label.configure(text = '')
@@ -1648,28 +1653,28 @@ class MTG_GUI:
         Updates some deck data labels"""
 
         ## First confirm if the current commander has the keyword 'Partner'
-        if type(check_cardref(self.commander)) is tuple:
-            this_table = (check_cardref(self.commander)[0])
+        if type(mtg_sql.check_cardref(self.commander)) is tuple:
+            this_table = (mtg_sql.check_cardref(self.commander)[0])
             # print ("SEARCHING TABLE: ",this_table)
         else:
-            this_table = check_cardref(self.commander)
+            this_table = mtg_sql.check_cardref(self.commander)
         
         search_commander = (self.commander,)
-        cur.execute("SELECT Keywords, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
-        fetch = cur.fetchone()
+        mtg_sql.cur.execute("SELECT Keywords, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
+        fetch = mtg_sql.cur.fetchone()
         if 'partner' in fetch[0].lower() :
             # Current Commander can be Partner, now check the new card out
-            if type(check_cardref(self.current_card)) is tuple:
-                this_table = (check_cardref(self.current_card)[0])
+            if type(mtg_sql.check_cardref(self.current_card)) is tuple:
+                this_table = (mtg_sql.check_cardref(self.current_card)[0])
                 # print ("SEARCHING TABLE: ",this_table)
             else:
-                this_table = check_cardref(self.current_card)
+                this_table = mtg_sql.check_cardref(self.current_card)
             
             search_commander = (self.current_card,)
             commander_img = fetch[1]
     
-            cur.execute("SELECT Mana_cost, Legendary, Card_Type, Oracle_Text, Keywords, Colour_ID, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
-            fetch = cur.fetchone()
+            mtg_sql.cur.execute("SELECT Mana_cost, Legendary, Card_Type, Oracle_Text, Keywords, Colour_ID, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
+            fetch = mtg_sql.cur.fetchone()
             # print (fetch[0])
             if 'partner' in fetch[4].lower() and fetch[1] == "Yes" and ('creature' in fetch[2].lower() or 'can be your commander' in fetch[3].lower()):
                 # Confirm that the card is either a Legendary Creature or a Planeswalker that can be your commander, and has Partner
@@ -1707,7 +1712,7 @@ class MTG_GUI:
             # Recreate the table with the list of cards and quantities
             sqlstatement = "DROP TABLE IF EXISTS '"+self.deck_table+"'"
             print(sqlstatement)
-            cur.execute(sqlstatement)
+            mtg_sql.cur.execute(sqlstatement)
             check_new_deck_table(self.deck_table)
             children = self.get_all_children(self.treev_maindeck)
             
@@ -1726,7 +1731,7 @@ class MTG_GUI:
         
         ## New deck table is assembled, now rebuild the deck in the All_Decks table
         sql_statement = "DELETE FROM All_Decks WHERE id_Code='"+self.deck_id+"'"
-        cur.execute(sql_statement)
+        mtg_sql.cur.execute(sql_statement)
         
         if type(self.deck_tier) is str:
             self.current_tier = 'undetermined'
@@ -1753,7 +1758,7 @@ class MTG_GUI:
         print ("Closed and reopening deck..")
         self.load_deck(self.deck_table)
         
-        db.commit()
+        mtg_sql.db.commit()
         print ("Committed to dat'nbase")
         
     def prep_deck_list(self):
@@ -1827,8 +1832,8 @@ class MTG_GUI:
         
     def load_deck(self, deck):
         
-        cur.execute("""SELECT * FROM """+deck)
-        lst = cur.fetchall()
+        mtg_sql.cur.execute("""SELECT * FROM """+deck)
+        lst = mtg_sql.cur.fetchall()
         main_listcounter = 0
         side_listcounter = 0
         self.prep_deck_list()
@@ -1874,9 +1879,9 @@ class MTG_GUI:
                     self.treev_maindeck.insert("", 'end', text ="L"+str(main_listcounter),values =(items[0], items[1], items[2]))                    
     
         search_deck = (deck,)
-        cur.execute("""SELECT Avg_CMC, Board_Wipe, Draw, ETB_Effects, Ramp, Target_Removal, Deck_Name, Commander, Partner,
+        mtg_sql.cur.execute("""SELECT Avg_CMC, Board_Wipe, Draw, ETB_Effects, Ramp, Target_Removal, Deck_Name, Commander, Partner,
                     Colour_ID, Deck_Tier, Lands, id_Code, Status, Location, Notes FROM All_Decks WHERE Deck_list =?""",search_deck)
-        all_things = cur.fetchone()
+        all_things = mtg_sql.cur.fetchone()
         # print (all_things)
         try:
             avg_cmc= all_things[0]
@@ -1914,8 +1919,7 @@ class MTG_GUI:
             # monstrous line, but sometimes partner might be NoneType
             self.partner = ""
             self.current_deck_notes = ""
-            
-            
+          
         # print (self.partner, " Partner: ", type(self.partner) )
         search_commander = (commander,)
         self.commander = commander
@@ -1938,27 +1942,27 @@ class MTG_GUI:
         self.decknotesbox.delete(0,END)
         if len(str(self.current_deck_notes)) > 0 : self.decknotesbox.insert(0,self.current_deck_notes)
         
-        if type(check_cardref(commander)) is tuple:
-            this_table = (check_cardref(commander)[0])
+        if type(mtg_sql.check_cardref(commander)) is tuple:
+            this_table = (mtg_sql.check_cardref(commander)[0])
             # print ("SEARCHING TABLE: ",this_table)
         else:
-            this_table = check_cardref(commander)
+            this_table = mtg_sql.check_cardref(commander)
         
         # Display sides of cards if it is double sided, 
         if this_table == "Face_Cards_Condensed":
             if "//" in search_commander:
                 search_commander = (commander.split("//")[0].strip(),)
-                cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",search_commander)
-                flip_name = cur.fetchone()
-                cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
-                link2 = cur.fetchone()[0]
+                mtg_sql.cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",search_commander)
+                flip_name = mtg_sql.cur.fetchone()
+                mtg_sql.cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
+                link2 = mtg_sql.cur.fetchone()[0]
             else:
-                cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",search_commander)
-                flip_name = cur.fetchone()
-                cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
-                link2 = cur.fetchone()[0]                
-        cur.execute("SELECT Mana_cost, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
-        fetch = cur.fetchone()
+                mtg_sql.cur.execute("SELECT Flip_Name from Face_Cards_Condensed WHERE Name=?",search_commander)
+                flip_name = mtg_sql.cur.fetchone()
+                mtg_sql.cur.execute("SELECT Image_URL from Face_Cards_Condensed WHERE Name=?",flip_name)
+                link2 = mtg_sql.cur.fetchone()[0]                
+        mtg_sql.cur.execute("SELECT Mana_cost, Image_URL FROM "+this_table+" WHERE Name=?",search_commander)
+        fetch = mtg_sql.cur.fetchone()
         c_mana_cost = fetch[0]
         link = fetch[1]
         
@@ -1971,14 +1975,14 @@ class MTG_GUI:
         panel.place(x= 410,y=20, width = 244, height = 340)    
 
         if len(self.partner) >0 :
-            if type(check_cardref(self.partner)) is tuple:
-                this_table = (check_cardref(self.partner)[0])
+            if type(mtg_sql.check_cardref(self.partner)) is tuple:
+                this_table = (mtg_sql.check_cardref(self.partner)[0])
                 # print ("SEARCHING TABLE: ",this_table)
             else:
-                this_table = check_cardref(self.partner)
+                this_table = mtg_sql.check_cardref(self.partner)
             search_partner = (self.partner,)
-            cur.execute("SELECT Mana_cost, Image_URL, Colour_ID FROM "+this_table+" WHERE Name=?",search_partner)
-            fetch = cur.fetchone()
+            mtg_sql.mtg_sql.cur.execute("SELECT Mana_cost, Image_URL, Colour_ID FROM "+this_table+" WHERE Name=?",search_partner)
+            fetch = mtg_sql.cur.fetchone()
             partner_img = fetch[1]
             self.partner_cmc_label.configure(text = 'Partner Mana Cost: '+fetch[0])
             self.partner_label.configure(text = 'Partner: '+self.partner)
@@ -2028,7 +2032,6 @@ class MTG_GUI:
 """ DONE IN MAIN.PY, the following is for testing purposes """
 # d = MTG_GUI(root)
 # d.load_deck('zAlela')
-# d.add_Buttons()
 # d.fill_decklist()
 # d.set_event_bindings()
 # 

@@ -19,9 +19,11 @@ import sqlite3
 import os
 import re
 from pathlib import Path
-from mtg_sql import *
-from mtg_regex import *
-from main import *
+# from mtg_sql import *
+import mtg_sql
+# from mtg_regex import *
+import mtg_regex
+import mtg_main
 # from mtg_regex import regex_get_cmc
 
 def fix_text(oracletext):
@@ -50,7 +52,6 @@ def Single_Sided_Card_JSON(the_card):
     face1_manacost = str(the_card['mana_cost'])
     face1_cmc = the_card['cmc']
     face1_rarity = the_card['rarity']
-    face1_images = the_card['image_uris']['normal']
     face1_colours = the_card['colors']
     if not face1_colours : face1_colours.append ('C')
     face1_colours = str(face1_colours)
@@ -59,6 +60,10 @@ def Single_Sided_Card_JSON(the_card):
     face1_colourID = str(face1_colourID)
     
     try:
+        face1_images = the_card['image_uris']['normal']
+    except:
+        face1_images = mtg_regex.regex_get_image(str(the_card.__dict__.items()))
+    try:
         if 'creature' in face1_type.lower():
             face1_power = the_card['power']
             face1_toughness = the_card['toughness']
@@ -66,9 +71,14 @@ def Single_Sided_Card_JSON(the_card):
             face1_power = "N/A"
             face1_toughness = "N/A"
     except:
-        print ("encountered exception trying to access ",face1_name , " power and toughness  - Single_Sided_Card_JSON")
-        face1_power = "N/A"
-        face1_toughness = "N/A"
+        if face1_name == "B.F.M. (Big Furry Monster)":
+            ## A unique creature card from the Unglued set. Left side 'Melds' witb Right side to make a 99/99
+            face1_power = "See: other half"
+            face1_toughness = "See: other half"
+        else:
+            print ("encountered exception attempting to access ",face1_name , " power/toughness  - Single_Sided_Card_JSON")
+            face1_power = "N/A"
+            face1_toughness = "N/A"
         
     try:    
         if 'planeswalker' in face1_type.lower():
@@ -86,10 +96,10 @@ def Single_Sided_Card_JSON(the_card):
         face1_keywords = "[]"
         print (face1_name, " isn't finding ['keywords'] - Single_Sided_Card_JSON")
     
-    insert_card_from_JSON(face1_name, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
+    mtg_sql.insert_card_from_JSON(face1_name, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
                           face1_keywords, face1_power, face1_toughness, face1_loyalty, face1_rarity, face1_images)
 
-    insert_cardref(face1_name, "Cards_Condensed")
+    mtg_sql.insert_cardref(face1_name, "Cards_Condensed")
 
 def Split_Card_JSON(the_card):
     """ Used for processing JSON data for cards of the following layouts:
@@ -119,8 +129,8 @@ def Split_Card_JSON(the_card):
 
     face1_text = fix_text(card1['oracle_text'])
     face2_text = fix_text(card2['oracle_text'])
-    face1_cmc = regex_get_cmc(face1_manacost)
-    face2_cmc = regex_get_cmc(face2_manacost)
+    face1_cmc = mtg_regex.regex_get_cmc(face1_manacost)
+    face2_cmc = mtg_regex.regex_get_cmc(face2_manacost)
 
     try:
         face1_keywords = str(the_card['keywords'])
@@ -135,7 +145,7 @@ def Split_Card_JSON(the_card):
             face1_power = card1['power']
             face1_toughness = card1['toughness']
         except:
-            print ("Encountered exception attempting to access " , face1_name, "'s power/toughness - Split_Card_JSON")
+            print ("Encountered exception attempting to access " , face1_name, "'s power/toughness - Split_Card_JSON (face 1)")
             face1_power = "-"
             face1_toughness = "-"    
     else:
@@ -147,38 +157,43 @@ def Split_Card_JSON(the_card):
             face2_power = card2['power']
             face2_toughness = card2['toughness']
         except:
-            print ("Encountered exception attempting to access " , face2_name, "'s power/toughness - Split_Card_JSON")
+            print ("Encountered exception attempting to access " , face2_name, "'s power/toughness - Split_Card_JSON (face 2)")
             face2_power = "-"
             face2_toughness = "-"
     else:        
         face2_power = "-"
         face2_toughness = "-"
+
+    face1_loyalty = "-"
+    face2_loyalty = "-"
+    ## This next section is only needed if a Planeswalker ends up on a split card, I'd kinda like to see that..
+    # if 'planeswalker' in face1_type.lower():    
+    #     try:
+    #         face1_loyalty = the_card['loyalty']
+    #     except:
+    #         print ("encountered exception accessing ", face1_name, face1_type.lower(), "  (face1)  loyalty - Split_Card_JSON")
+    #         face1_loyalty = "-"
+    # else: face1_loyalty = "-"
+    # 
+    # if 'planeswalker' in face2_type.lower():    
+    #     try:
+    #         face2_loyalty = the_card['loyalty']
+    #     except:
+    #         face2_loyalty = "-"
+    # else:
+    #     print ("encountered exception accessing ", face2_name, face2_type.lower(), " (face2) loyalty - Split_Card_JSON")
+    #     face2_loyalty = "-"
     
-    if 'planeswalker' in face1_type.lower():    
-        try:
-            face1_loyalty = the_card['loyalty']
-        except:
-            print ("encountered exception accessing ", face1_name, "  loyalty - Split_Card_JSON")
-            face1_loyalty = "-"
-    else: face1_loyalty = "-"
     
-    if 'planeswalker' in face2_type.lower():    
-        try:
-            face2_loyalty = the_card['loyalty']
-        except:
-            face2_loyalty = "-"
-    else:
-        print ("encountered exception accessing ", face2_name, " loyalty - Split_Card_JSON")
-        face2_loyalty = "-"
 
     """Adding to SQL tables: 'GrandtableSplit' and/or 'GrandtableSplit_Condensed'"""        
-    insert_splitcard_from_JSON(face1_name, face2_name, face1_layout, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
+    mtg_sql.insert_splitcard_from_JSON(face1_name, face2_name, face1_layout, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
                           face1_keywords, face1_power, face1_toughness, face1_loyalty, face1_rarity, face1_images)
-    insert_splitcard_from_JSON(face2_name, face1_name, face1_layout, face1_colours, face1_colourID, face2_manacost, face2_cmc, face2_type, face2_text,
+    mtg_sql.insert_splitcard_from_JSON(face2_name, face1_name, face1_layout, face1_colours, face1_colourID, face2_manacost, face2_cmc, face2_type, face2_text,
                           face1_keywords, face2_power, face2_toughness, face2_loyalty, face1_rarity, face1_images)
 
     add_this = face1_name+ " // "+ face2_name
-    insert_cardref(add_this, "Face_Cards_Condensed")
+    mtg_sql.insert_cardref(add_this, "Face_Cards_Condensed")
         
 def Double_Faced_Card_JSON(the_card):
     """ Used for processing JSON data for cards of the following layouts:
@@ -205,8 +220,8 @@ def Double_Faced_Card_JSON(the_card):
     face2_colours = str(card2['colors'])
     face1_manacost = str(card1['mana_cost'])
     face2_manacost = str(card2['mana_cost'])
-    face1_cmc = regex_get_cmc(face1_manacost)
-    face2_cmc = regex_get_cmc(face2_manacost)
+    face1_cmc = mtg_regex.regex_get_cmc(face1_manacost)
+    face2_cmc = mtg_regex.regex_get_cmc(face2_manacost)
     face1_images = card1['image_uris']['normal']
     face2_images = card2['image_uris']['normal']
     try:
@@ -220,7 +235,7 @@ def Double_Faced_Card_JSON(the_card):
             face1_power = card1['power']
             face1_toughness = card1['toughness']
         except:
-            print ("Encountered exception attempting to access ", face1_name, "'s power/toughness - Double_Faced_Card_JSON")    
+            print ("Encountered exception attempting to access ", face1_name, " power/toughness (side 1) - Double_Faced_Card_JSON")    
             face1_power = "-"
             face1_toughness = "-"
     else:
@@ -234,7 +249,7 @@ def Double_Faced_Card_JSON(the_card):
         except:
             face2_power = "-"
             face2_toughness = "-"
-            print ("Encountered exception attempting to access ", face2_name, "'s power/toughness - Double_Faced_Card_JSON")
+            print ("Encountered exception attempting to access ", face2_name, " power/toughness  (side 2) - Double_Faced_Card_JSON")
     else:
         face2_power = "-"
         face2_toughness = "-"
@@ -248,30 +263,46 @@ def Double_Faced_Card_JSON(the_card):
     else: face1_loyalty = "-"
             
     if 'planeswalker' in face2_type.lower():
-        try:
-            face2_loyalty = card2['loyalty']
-        except:
-            face2_loyalty = "-"
-            print ("Encountered exception attempting to access ", face2_name, "'s loyalty - Double_Faced_Card_JSON")
+        if 'planeswalker' in face1_type.lower():
+            ## Both sides of card are Planeswalkers and share the same Loyalty counters
+            try:
+                face2_loyalty = card1['loyalty']
+            except:
+                face2_loyalty = "-"
+                print ("Encountered exception attempting to access ", face2_name, "'s loyalty - Double_Faced_Card_JSON")
+        else:
+            ## Only side 2 of the card is a Planeswalker, so card2['loyalty'] should be valid..?
+            try:
+                face2_loyalty = card2['loyalty']
+            except:
+                face2_loyalty = "-"
+                print ("Encountered exception attempting to access ", face2_name, "'s loyalty - Double_Faced_Card_JSON")
+                
     else: face2_loyalty = "-"
 
-    """Adding to SQL tables: 'GrandtableSplit' and/or 'GrandtableSplit_Condensed'"""
-    insert_splitcard_from_JSON(face1_name, face2_name, face1_layout, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
+    ## Adding to SQL tables: 'GrandtableSplit' and/or 'GrandtableSplit_Condensed'
+    mtg_sql.insert_splitcard_from_JSON(face1_name, face2_name, face1_layout, face1_colours, face1_colourID, face1_manacost, face1_cmc, face1_type, face1_text,
                           face1_keywords, face1_power, face1_toughness, face1_loyalty, face1_rarity, face1_images)
     
-    insert_splitcard_from_JSON(face2_name, face1_name, face1_layout, face1_colours, face1_colourID, face2_manacost, face2_cmc, face2_type, face2_text,
+    mtg_sql.insert_splitcard_from_JSON(face2_name, face1_name, face1_layout, face1_colours, face1_colourID, face2_manacost, face2_cmc, face2_type, face2_text,
                           face1_keywords, face2_power, face2_toughness, face2_loyalty, face1_rarity, face1_images)
+
+    add_this = face1_name+ " // "+ face2_name
+    # Add the full card name to the Cardref table
+    mtg_sql.insert_cardref(add_this, "Face_Cards_Condensed")    
     
 def Ignore_Card_JSON(the_card):
+    """planar, art series, scheme and the other obscure card types are just ignored"""
     # ignored_counter = ignored_counter + 1
-    print ("Skipped card :",the_card['name'], " : ", the_card['layout'])
+    # print ("Skipped card :",the_card['name'], " : ", the_card['layout'])
+    pass
 
 convert_layout_JSON = {
     'normal' : Single_Sided_Card_JSON,
     'meld' : Single_Sided_Card_JSON,
     'saga' : Single_Sided_Card_JSON,
+    'class' : Single_Sided_Card_JSON,
     'leveler' : Single_Sided_Card_JSON,
-    'token' : Single_Sided_Card_JSON,
     'host' : Single_Sided_Card_JSON,
     'augment' : Single_Sided_Card_JSON,
     'emblem' : Single_Sided_Card_JSON,
@@ -280,8 +311,9 @@ convert_layout_JSON = {
     'adventure' : Split_Card_JSON,
     'transform' : Double_Faced_Card_JSON,
     'modal_dfc' : Double_Faced_Card_JSON,
-    'double_faced_token' : Double_Faced_Card_JSON,
-    'double_sided' : Double_Faced_Card_JSON,    
+    'double_sided' : Double_Faced_Card_JSON,
+    'token' : Ignore_Card_JSON,
+    'double_faced_token' : Ignore_Card_JSON,
     'planar' : Ignore_Card_JSON,
     'art_series' : Ignore_Card_JSON,
     'scheme' : Ignore_Card_JSON,
@@ -306,12 +338,12 @@ def main():
     # latest_card_json = data_folder / 'all-cards-20210818091127.json'  # Current full database, check https://scryfall.com/docs/api/bulk-data for
                                                                         ### latest version
     # latest_card_json = data_folder / 'MTG some cards testfile.json'  # Much smaller file with < 900 records
-    
-    # cur.execute("DROP TABLE IF EXISTS 'Grandtable'")
-    # cur.execute("DROP TABLE IF EXISTS 'GrandtableCondensed'")
-    # cur.execute("DROP TABLE IF EXISTS 'GrandtableSplit'")
-    # cur.execute("DROP TABLE IF EXISTS 'GrandtableSplitCondensed'")
-    check_all_tables()
+    mtg_sql.cur.execute("DROP TABLE IF EXISTS 'CardRef'")
+    mtg_sql.cur.execute("DROP TABLE IF EXISTS 'Grandtable'")
+    mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableCondensed'")
+    mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableSplit'")
+    mtg_sql.cur.execute("DROP TABLE IF EXISTS 'GrandtableSplitCondensed'")
+    mtg_sql.check_all_tables()
     with open(latest_card_json, encoding='utf-8') as f:
         data = json.load(f)
     for card in data:#['name']:

@@ -20,9 +20,10 @@ import sys
 import scrython
 import os
 from pathlib import Path
-from mtg_classes import *
-from mtg_regex import *
-# from mtg_regex import regex_searchmode
+# from mtg_classes import *
+import mtg_regex
+# from mtg_regex import *
+# from mtg_mtg_sql.insert_ import regex_searchmode
 # from json_load import *
 
 Current_Folder = os.path.dirname(os.path.abspath(__file__)) # This is your Project Root
@@ -64,11 +65,11 @@ def insert_splitcard_from_JSON(name1, name2, layout, colors, colorid, manacost, 
 def insert_card(name, clr_ID, mana_cost, cmc, c_type, keywords, is_legend, has_etb, has_ramp, has_draw, has_target, has_wipe, has_activated, has_triggered, image_url, oracle_text):
     sqlite_insert_with_param = """INSERT OR IGNORE INTO Cards_Condensed (Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary, ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_URL, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
     
-    sqlite_insert_with_param1 = """INSERT OR IGNORE INTO Cards (Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary, ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_URL, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""" 
+    # sqlite_insert_with_param1 = """INSERT OR IGNORE INTO Cards (Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary, ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_URL, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""" 
     add_tuple_to_sql = (name, str(clr_ID), str(mana_cost), int(cmc), c_type, str(keywords), str(is_legend), str(has_etb), str(has_ramp), str(has_draw), str(has_target), str(has_wipe), str(has_activated), str(has_triggered), image_url, oracle_text)
 
     with db:
-        cur.execute(sqlite_insert_with_param1, add_tuple_to_sql)
+        # cur.execute(sqlite_insert_with_param1, add_tuple_to_sql)
         cur.execute(sqlite_insert_with_param, add_tuple_to_sql)
 
 def insert_face_card(name, layout, flipname, clr_ID, mana_cost, cmc, c_type, keywords, is_legend, has_etb, has_ramp, has_draw, has_target, has_wipe, has_activated, has_triggered, image_url, oracle_text):
@@ -76,44 +77,15 @@ def insert_face_card(name, layout, flipname, clr_ID, mana_cost, cmc, c_type, key
     sqlite_insert_with_param = """INSERT OR IGNORE INTO Face_Cards_Condensed (Name, Layout, Flip_Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary,
     ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_url, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
     
-    sqlite_insert_with_param1 = """INSERT OR IGNORE INTO Face_Cards (Name, Layout, Flip_Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary,
-    ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_url, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+    # sqlite_insert_with_param1 = """INSERT OR IGNORE INTO Face_Cards (Name, Layout, Flip_Name, Colour_ID, Mana_Cost, CMC, Card_Type, Keywords, Legendary,
+    # ETB, Ramp, Draw, Target, Broad, Activated, Triggered, Image_url, Oracle_Text) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
 
     add_tuple_to_sql = (name, layout, flipname, str(clr_ID), str(mana_cost), int(cmc), c_type, str(keywords), is_legend, str(has_etb), str(has_ramp), str(has_draw), str(has_target), str(has_wipe), str(has_activated), str(has_triggered), image_url, oracle_text)
 
     # print (sqlite_insert_with_param, add_tuple_to_sql)
     with db:
-        cur.execute(sqlite_insert_with_param1, add_tuple_to_sql)
+        # cur.execute(sqlite_insert_with_param1, add_tuple_to_sql)
         cur.execute(sqlite_insert_with_param, add_tuple_to_sql)
-        
-def insert_card_partial(name, type_line, mana_cost):  ## Probably obsolete.. need to check if I can get rid of this , maybe tomorrow
-    """ more than half the categories - has ETB, Ramp, draw, target, wipe  will need to be determined by the card text    """
-    colour_id = get_colour_id(mana_cost)
-    cmc = regex_get_cmc(mana_cost)
-    is_legendary = 'FALSE'
-    base_type = ''
-    sub_type = ''
-    if '-' in type_line:
-        card_types = type_line.split('—')
-        base_type = card_types[0]
-        sub_type =  card_types[1]
-    
-    if 'LEGENDARY' in type_line.upper(): is_legendary = 'TRUE'
-    
-    if 'SORCERY' in type_line.upper(): base_type = 'Sorcery'
-    
-    if 'INSTANT' in type_line.upper(): base_type = 'Instant'
-
-    if base_type == "" and sub_type == "":
-        # print(name + '   ' + base_type + '   ' + sub_type  + '    ' + colour_id + '   ' + str(cmc) + '   ' + mana_cost )
-        # print(type_line)
-        base_type = type_line
-    
-    sqlite_insert_with_param = """INSERT OR IGNORE INTO Cards (Name, Colour_ID, CMC, Card_Type, Legendary)
-            VALUES (?, ?, ?, ?, ?)"""
-    add_tuple_to_sql = (name, colour_id, cmc, base_type, is_legendary)
-    # print(name + '   ' + base_type + '   ' + sub_type  + '    ' + colour_id + '   ' + str(cmc) + '   ' + mana_cost )
-    cur.execute(sqlite_insert_with_param, add_tuple_to_sql)    
 
 def insert_guild(code, name):
     sql_insert_with_param = """INSERT OR IGNORE INTO Clr_ID (id_Code, Guild_Name) VALUES (?, ?)"""
@@ -629,8 +601,7 @@ def check_planeswalker_table():
 def check_cardref_table():
     cur.execute("SELECT count(name) FROM sqlite_master WHERE type='table' AND name='Cardref' ")
     if cur.fetchone()[0]==1 : 
-        # print("Table 'Planeswalkers' exists.")
-        pass
+        print("Table 'Cardref' exists.")
     else:
         cur.execute("""
             CREATE TABLE Cardref (
@@ -940,9 +911,10 @@ def create_new_deck(id_code, deck_name, commander, partner, tier, deck_list, sta
     insert_deck(id_code, deck_name, clr_ID , commander, partner, tier, deck_list, avg_cmc, land_count, ramp_count, draw_count, target_count, wipe_count, etb_count, status, location, notes)
     print ()
 
-"""### TEMPORARY DECK TABLES preselected group of already downloaded txt files  ###"""
+"""### TEMPORARY DECK TABLES   ###
+  (preselected group of already downloaded txt files)"""
 def import_all_decks(): 
-    """Change this to a For loop later on with a directory reader..hmmm... """
+    ##Maybe change this to a For loop later on with a directory reader, and auto-generate a table name..hmmm...    
     import_deck_fromtxt('RG-$U03_Alenalana Buyback X-closer.txt', 'zAlena_Halana')    
     import_deck_fromtxt("BR-01_Bottom's up Grenzo.txt", 'zBottoms_Up_Grenzo')
     import_deck_fromtxt('B-SG01_Shirei.txt', 'zShirei')
@@ -983,7 +955,8 @@ def import_all_decks():
     import_deck_fromtxt('WUR-T04_Kykar Spirit Splicer.txt', 'zKykar')
     import_deck_fromtxt("WURG-H01_Meletis says 'Hugs not thugs'.txt", 'zMeletis')
 
-def create_all_decks():    
+def create_all_decks():
+    ## I ordered these by the boxes the decks are in
     create_new_deck('W-TW02', "Odric Keyword Smithy", 'Odric, Lunarch Marshal', "", "Primary", "zOdric", 'ACTIVE', 'SINGLE WHITE BOX', '')
     create_new_deck('U-c&ok03', "M'Orvar vor me", "Orvar, the All-Form", "", "Primary", "zOrvar", 'ACTIVE', 'SINGLE BLUE BOX', '')
     create_new_deck('B-SG01', "Shirei's Happy Sack", "Shirei, Shizo's Caretaker", "", "Primary", "zShirei", 'ACTIVE', 'SINGLE BLACK BOX', '')
@@ -1077,27 +1050,157 @@ def delete_all_zdecktables():
     cur.execute("DROP TABLE IF EXISTS 'zKykar'") 
     cur.execute("DROP TABLE IF EXISTS 'zMeletis'") 
     
-"""### MANAGING DECK TABLES ###  END  ###"""
+"""### TEMPORARY DECK TABLES  ###  END  ###"""
+
+"""### SAMPLE/TEST VERSION TEMPORARY DECK TABLES ###  START  ### """
+def import_all_decks_sample(): 
+    ##Maybe change this to a For loop later on with a directory reader, and auto-generate a table name..hmmm...    
+    import_deck_fromtxt('RG-$U03_Alenalana Buyback X-closer.txt', 'zAlena_Halana')    
+    import_deck_fromtxt("BR-01_Bottom's up Grenzo.txt", 'zBottoms_Up_Grenzo')
+    import_deck_fromtxt('B-SG01_Shirei.txt', 'zShirei')
+    import_deck_fromtxt('BG-CTok02_Hapatra.txt', 'zHapatra')
+    import_deck_fromtxt('BRG-L01_Lord Windgrace Destructive Flow.txt', 'zWindgrace')
+    import_deck_fromtxt('BRG-STok03 - I wanna be Korvold, sucka.txt', 'zKorvold')
+    import_deck_fromtxt('C-A01_Traxos and his Hope of Gary Cooper.txt', 'zTraxos')
+    import_deck_fromtxt('G unassembled - Toskiivasion.txt', 'zToski')
+    import_deck_fromtxt("G-Id03_Fynn for fun cuz Marwyn's no nurturer.txt", 'zFynn')
+    import_deck_fromtxt('R-AT04_Magda & (7 dwarves) Dorky, Broody, Horny, Loopy, Creepy, Twitchy, and Bill.txt', 'zMagda')
+    import_deck_fromtxt("U-c&ok03_M'Orvar vor me.txt", 'zOrvar')
+    import_deck_fromtxt("UB-n01_Yuriko's Ninjitsu.txt", 'zYuriko')
+    import_deck_fromtxt('UBG-i02_Volrath the Infectious.txt', 'zVolrath')
+    import_deck_fromtxt('UBR-T01_Inalla wizards ya had to include.txt', 'zInalla')
+    import_deck_fromtxt("UG-KC03_Verazol's Kick'n it.txt", 'zVerazol')
+    import_deck_fromtxt("UR-D01_It is a Niv Mizet visit, isn't it  it is.txt", 'zNivMizzet')
+    import_deck_fromtxt('URBG-TG01_Kraum_Ikra Zombie uprising.txt', 'zKraumIkra')
+    import_deck_fromtxt('URG-tS01_Yasova Stickyclaws.txt', 'zYasova')
+    import_deck_fromtxt('W-TW02_Odric Keyword Smithy.txt', 'zOdric')
+    import_deck_fromtxt('WB-a02_Teysa.txt', 'zTeysa')
+    import_deck_fromtxt('WBG-Gcy02_Nethroi, Way-big Juicy Cycling.txt', 'zNethroi')
+    import_deck_fromtxt('WBR-G02 - Ashley, the disgraceful Graverobber.txt', 'zAshley')
+    import_deck_fromtxt("WBR-T01_Edgar Markov 'Hold the garlic'.txt", 'zEdgar_Markov')
+    import_deck_fromtxt('WBRG-BE01_Saskia Combat Gimmicks.txt', 'zSaskia')
+    import_deck_fromtxt('WB_unassembled - Tribal Lannister.txt', 'zLannister')
+    import_deck_fromtxt('WG-Pok01_Trostani Tokens.txt', 'zTrostani')
+    import_deck_fromtxt("WR unassembled - Koll's affordable dwarvish crap.txt", 'zKoll')
+    import_deck_fromtxt('WR-01_Feat her to defeat her.txt', 'zFeather')
+    import_deck_fromtxt("WRG-RG03_Obuun'dn't like me when I'm angry.txt", 'zObuun')
+    import_deck_fromtxt('WU unassembled - No agony, no BRAGony.txt', 'zBrago')
+    import_deck_fromtxt("WUB-N03_Leela's Enchanter.txt", 'zAlela')
+    import_deck_fromtxt('WUB-Ut02_Freaky Merieke.txt', 'zMerieke')
+    import_deck_fromtxt("WUBG-C01_Attraxa, Praetors' +1 Sword.txt", 'zAttraxa')
+    import_deck_fromtxt('WU-EXbe01_Medomai - Timeless.txt', 'zMedomai')    
+    import_deck_fromtxt('WUBR-A02_Silas & Akiri.txt', 'zSilasAkiri')
+    import_deck_fromtxt('WUBRG-T01_Smithers, who is this gastropod.txt', 'zSmithers')
+    import_deck_fromtxt('WUG-Lc02_I Chu-Chu-Chulane you.txt', 'zChulane')
+    import_deck_fromtxt('WUR-T04_Kykar Spirit Splicer.txt', 'zKykar')
+    import_deck_fromtxt("WURG-H01_Meletis says 'Hugs not thugs'.txt", 'zMeletis')
+
+def create_all_decks_sample():
+    ## I ordered these by the boxes the decks are in
+    create_new_deck('W-TW02', "Odric Keyword Smithy", 'Odric, Lunarch Marshal', "", "Primary", "zOdric", 'ACTIVE', 'SINGLE WHITE BOX', '')
+    create_new_deck('U-c&ok03', "M'Orvar vor me", "Orvar, the All-Form", "", "Primary", "zOrvar", 'ACTIVE', 'SINGLE BLUE BOX', '')
+    create_new_deck('B-SG01', "Shirei's Happy Sack", "Shirei, Shizo's Caretaker", "", "Primary", "zShirei", 'ACTIVE', 'SINGLE BLACK BOX', '')
+    create_new_deck('R-AT04', "Magda & (7 dwarves) Dorky, Broody, Horny, Loopy, Creepy, Twitchy, and Bill", 'Magda, Brazen Outlaw', "", "Primary", "zMagda", 'ACTIVE', 'SINGLE RED BOX', '')    
+    create_new_deck('G-Id03', "Fynn for fun cuz Marwyn's no nurturer", 'Fynn, the Fangbearer', "", "Primary", "zFynn", 'ACTIVE', 'SINGLE GREEN BOX', '')
+    create_new_deck('UG-KC03', "Verazol's Kick'n it.txt", 'Verazol, the Split Current', "","Primary", "zVerazol", 'ACTIVE', 'SINGLE TURQUOISE', '')
+    create_new_deck('URBG-TG01', "Zombie uprising!", "Kraum, Ludevic's Opus", "Ikra Shidiqi, the Usurper", "Primary", "zKraumIkra", 'ACTIVE', 'SINGLE BLUE BOX-unmarked', '')
+    create_new_deck('WBG-Gcy02', "Way-big Juicy Cycling!", 'Nethroi, Apex of Death', "", "Primary", "zNethroi", 'ACTIVE', 'FANCY GREEN BOX', '')
+    ## BORN OF THE GODS
+    create_new_deck('BR-01', "Bottom's up, Grenzo!", 'Grenzo, Dungeon Warden', "", "Primary", "zBottoms_Up_Grenzo", 'ACTIVE', 'BORN OF THE GODS', '')
+    create_new_deck('WUBG-C01', "Attraxa Praetors' +1 Sword", "Atraxa, Praetors' Voice", "", "Primary", "zAttraxa", 'ACTIVE', 'BORN OF THE GODS', '')
+    create_new_deck('WBR-T01', 'Hold the garlic', 'Edgar Markov', "", "Primary", "zEdgar_Markov", 'ACTIVE', 'BORN OF THE GODS', '')
+    ## DRAGONS MAZE
+    create_new_deck('WUR-T04', 'Kykar Spirit Splicer',"Kykar, Wind's Fury", "", 'Primary','zKykar', 'ACTIVE', 'DRAGONS MAZE', '')
+    create_new_deck('RG-$U03', "Alenalana Buyback X-Closer", 'Alena, Kessig Trapper', "Halana, Kessig Ranger", "Primary", "zAlena_Halana", 'ACTIVE', 'DRAGONS MAZE', '')    
+    create_new_deck('UR-D01', "It is a Niv Mizet visit, isn't it?  it is!", 'Niv-Mizzet, Parun', "", "Primary", "zNivMizzet", 'ACTIVE', 'DRAGONS MAZE', '')
+    ## PLAIN BLUE
+    create_new_deck('WUB-Ut02', "Freaky Merieke!", 'Merieke Ri Berit', "", "Primary", "zMerieke", 'ACTIVE', 'PLAIN BLUE', '')
+    create_new_deck('UB-n01', "Yuriko's Ninjitsu", "Yuriko, the Tiger's Shadow", "", "Primary", "zYuriko", 'ACTIVE', 'PLAIN BLUE', '')
+    create_new_deck('UBR-T01', "Inalla wizards ya had to include", 'Inalla, Archmage Ritualist', "", "Primary", "zInalla", 'ACTIVE', 'PLAIN BLUE', '')
+    ## PLAIN BLACK
+    create_new_deck('WUBRG-T01', "Smithers, who is this gastropod?", 'Sliver Overlord', "", "Primary", "zSmithers", 'ACTIVE', 'PLAIN BLACK', '')
+    create_new_deck('UBG-I02', "Volrath the Infectious", 'Volrath, the Shapestealer', "", "Primary", "zVolrath", 'ACTIVE', 'PLAIN BLACK', '')
+    create_new_deck('C-A01', "Traxos and his Hope of Gary Cooper", 'Traxos, Scourge of Kroog', "", "Primary", "zTraxos", 'ACTIVE', 'PLAIN BLACK', '')
+    ## THEROS
+    create_new_deck('URG-tS01', "Yasova Stickyclaws", 'Yasova Dragonclaw', "", "Primary", "zYasova", 'ACTIVE', 'THEROS', '')
+    create_new_deck('BRG-L01', "Lord Windgrace Destructive Flow", 'Lord Windgrace', "", "Primary", "zWindgrace", 'ACTIVE', 'THEROS', '')
+    create_new_deck('WB-a02', "Teysa Aristrocrats", 'Teysa Karlov', "", "Primary", "zTeysa", 'ACTIVE', 'THEROS', '')
+    ## HOUR OF DEVASTATION
+    create_new_deck('WBRG-BE01', "Saskia Combat Gimmicks", 'Saskia the Unyielding', "", "Primary", "zSaskia", 'ACTIVE', 'HOUR OF DEVASTATION', '')
+    create_new_deck('WRG-RG03', "Obuun'dn't like me when I'm angry!", 'Obuun, Mul Daya Ancestor', "", "Primary", "zObuun", 'ACTIVE', 'HOUR OF DEVASTATION', '')
+    create_new_deck('BG-CTok02', "Hapatra", 'Hapatra, Vizier of Poisons', "", "Primary", "zHapatra", 'ACTIVE', 'HOUR OF DEVASTATION', '')
+    ## IXALAN
+    create_new_deck('WG-Pok01', "Trostani Tokens", "Trostani, Selesnya's Voice", "", "Primary", "zTrostani", 'ACTIVE', 'IXALAN', '')    
+    create_new_deck('WU-EXbe01', "Medomai - Timeless", 'Medomai the Ageless', "", "Primary", "zMedomai", 'ACTIVE', 'IXALAN', '')    
+    create_new_deck('WR-01', "Feat her to defeat her", 'Feather, the Redeemed', "", "Primary", "zFeather", 'ACTIVE', 'IXALAN', '')
+    ## ORIGINS
+    create_new_deck('WUBR-A02', "Batman & Robin", 'Silas Renn, Seeker Adept', "Akiri, Line-Slinger", "Primary", "zSilasAkiri", 'ACTIVE', 'ORIGINS', '')
+    create_new_deck('WURG-H01', "Meletis says 'Hugs not thugs'","Kynaios and Tiro of Meletis", "", 'Primary','zMeletis', 'INACTIVE', 'ORIGINS', '')
+    create_new_deck('WUG-Lc02', "I Chu-Chu-Chulane you", 'Chulane, Teller of Tales', "", 'Primary','zChulane', 'ACTIVE' , 'ORIGINS', '')
+
+    ### SECONDARY DECKS ###
+    create_new_deck('WBR-G02', "Ashley, the disgraceful Graverobber", 'Alesha, Who Smiles at Death', "", "Secondary", "zAshley", 'ACTIVE', 'RIVALS OF IXALAN', '')
+    create_new_deck('WUB-N03', "Leela's Enchanter", 'Alela, Artful Provocateur', "", "Secondary", "zAlela", 'ACTIVE', 'RIVALS OF IXALAN', '')
+    create_new_deck('BRG-STok03', "I wanna be Korvold, sucka!", 'Korvold, Fae-Cursed King', "", "Secondary", "zKorvold", 'ACTIVE', 'RIVALS OF IXALAN', '')
+
+    ### ONLINE DECKS ###
+    create_new_deck('WU-0X', "No agony, no BRAGOny", 'Brago, King Eternal', "", "Online", "zBrago", 'UNASSEMBLED', '-', '')        
+    create_new_deck('WB-0X', "Tribal Lannister", 'General Kudro of Drannith', "", "Online", "zLannister", 'UNASSEMBLED', '-', '')    
+    create_new_deck('WR-0X', "Koll's affordable dwarvish crap", 'Koll, the Forgemaster', "", "Online", "zKoll", 'UNASSEMBLED', '-', '')
+    create_new_deck('G-0X', "Toskivasion", 'Toski, Bearer of Secrets', "", "Online", "zToski", 'UNASSEMBLED', '-', '')
+
+def delete_all_zdecktables_sample():
+    cur.execute("DROP TABLE IF EXISTS 'zBottoms_Up_Grenzo'")
+    cur.execute("DROP TABLE IF EXISTS 'zAlena_Halana'")
+    cur.execute("DROP TABLE IF EXISTS 'zShirei' ")
+    cur.execute("DROP TABLE IF EXISTS 'zHapatra'") 
+    cur.execute("DROP TABLE IF EXISTS 'zWindgrace'") 
+    cur.execute("DROP TABLE IF EXISTS 'zKorvold'") 
+    cur.execute("DROP TABLE IF EXISTS 'zTraxos'") 
+    cur.execute("DROP TABLE IF EXISTS 'zToski'")
+    cur.execute("DROP TABLE IF EXISTS 'zFynn'") 
+    cur.execute("DROP TABLE IF EXISTS 'zMagda'")
+    cur.execute("DROP TABLE IF EXISTS 'zOrvar'") 
+    cur.execute("DROP TABLE IF EXISTS 'zYuriko'") 
+    cur.execute("DROP TABLE IF EXISTS 'zVolrath'") 
+    cur.execute("DROP TABLE IF EXISTS 'zInalla'") 
+    cur.execute("DROP TABLE IF EXISTS 'zVerazol'") 
+    cur.execute("DROP TABLE IF EXISTS 'zNivMizzet'") 
+    cur.execute("DROP TABLE IF EXISTS 'zKraumIkra'") 
+    cur.execute("DROP TABLE IF EXISTS 'zYasova'") 
+    cur.execute("DROP TABLE IF EXISTS 'zOdric'") 
+    cur.execute("DROP TABLE IF EXISTS 'zTeysa'") 
+    cur.execute("DROP TABLE IF EXISTS 'zNethroi'") 
+    cur.execute("DROP TABLE IF EXISTS 'zAshley'") 
+    cur.execute("DROP TABLE IF EXISTS 'zEdgar_Markov'") 
+    cur.execute("DROP TABLE IF EXISTS 'zSaskia'") 
+    cur.execute("DROP TABLE IF EXISTS 'zLannister'")
+    cur.execute("DROP TABLE IF EXISTS 'zTrostani' ")    
+    cur.execute("DROP TABLE IF EXISTS 'zKoll'")
+    cur.execute("DROP TABLE IF EXISTS 'zFeather'") 
+    cur.execute("DROP TABLE IF EXISTS 'zObuun' ")
+    cur.execute("DROP TABLE IF EXISTS 'zBrago'")
+    cur.execute("DROP TABLE IF EXISTS 'zAlela'") 
+    cur.execute("DROP TABLE IF EXISTS 'zMerieke'") 
+    cur.execute("DROP TABLE IF EXISTS 'zAttraxa'") 
+    cur.execute("DROP TABLE IF EXISTS 'zMedomai'") 
+    cur.execute("DROP TABLE IF EXISTS 'zSilasAkiri'") 
+    cur.execute("DROP TABLE IF EXISTS 'zSmithers'") 
+    cur.execute("DROP TABLE IF EXISTS 'zChulane'")
+    cur.execute("DROP TABLE IF EXISTS 'zKykar'") 
+    cur.execute("DROP TABLE IF EXISTS 'zMeletis'") 
+    
+"""### SAMPLE/TEST VERSION TEMPORARY DECK TABLES ###  END  ###"""
 
 def main():
         ## CLEAR OLD TABLES IF NECESSARY  ##
-    # cur.execute("DROP TABLE IF EXISTS 'All_Decks'")
+    cur.execute("DROP TABLE IF EXISTS 'zDelete'")
     # check_all_tables()      ## SEE IF TABLES EXIST, AND CREATES IF REQUIRED ##
-    
-    # fill_cardref() ## CardRef table identifies which table has that card's data, this should be run after updating Grandtables
 
-    # delete_all_zdecktables()    
-    # import_all_decks()
-    # create_all_decks()
+    cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'z%' ")
+    result = cur.fetchall()
+    print (result)
 
-    ### OTHER STUFF  ### 
-    # this_name = "Lightning Bolt"
-    # cur.execute("""SELECT CMC, Wipe, Draw, Ramp, Target,
-    #             ETB, Card_Type, Flip_Name FROM Cards_Condensed WHERE Name=?""",this_name)
-    # create_new_deck('UB-n01', "Yuriko's Ninjitsu", "Yuriko, the Tiger's Shadow", "Primary", "zYuriko", 'ACTIVE')
-    # check_cardref(commander)
-    # calculate_deck('zMedomai')
-    
     print ("SQL SHIT")
     db.commit()
 if __name__ == '__main__': main()

@@ -12,9 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# from mtg_sql import *
-# from main import *
-# from gui_class import *## to access  rebuild_list
+import mtg_main
 import re
 
 regex_searchmode = {
@@ -24,6 +22,8 @@ regex_searchmode = {
     'plainmanasearchmultiples' : "[Aa]dd {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, ({[WUBRGCwubrcg0123456789]}{[WUBRGCwubrcg0123456789]}, )*or {[WUBRGCwubrcg123456789]}({[WUBRGCwubrcg0123456789]})*",
     'wordmanasearch' : "[Aa]dd .+mana",
     'keywordsearch' : "'keywords': \[()?(.)*?\]",
+    'imagesearch' : "'image_uris': ?{.*?}",
+    'normal_image_search' : "'normal':.*?,",
     'activeabilitysearch' : "({[01234567890TWURBGCwubrcg]}):|({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:|({[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:",
     'gains_life_isolater' : "gains? life equal to|gains? (.)*life",
     'all_life_gains' : "gains? .*life (for each)?(equal to)?|gains? .*life[\. ,]",
@@ -220,7 +220,7 @@ regex_activated_modes = {
     'mana' : "{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{t}: add ({[wubrcgWUBRGC0123456789]})*|\n{t}: Add .+mana|{t}:.* Add .+mana|({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*(remove|put).*counter.*: add.* ({[wubrgc2341567890]})*mana|{[123456789t]}:.*add.*mana",
     'buff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(get|gain|has).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|walk|unblockable|menace|flying|shadow|double strike|vigilance)",
     'debuff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|gain|has|lose).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]+\/-[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'rebuff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(has|lose).*( it(,|\.)* |base (power|toughness)|first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]\/\+[1234567890x]|+[1234567890x]\/\-[1234567890x]|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'rebuff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(has|lose).*( it(,|\.)* |base (power|toughness)|first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]\/\+[1234567890x]|\+[1234567890x]\/\-[1234567890x]|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
     'proliferate' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*proliferate",
     'redirect' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*damage.*would.*dealt.*target.*instead",
     'charge_cntr' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind|loyalty).*counter on",
@@ -297,7 +297,7 @@ def regex_get_cmc(search_this):
         endgrab = max(match.span())
         matchfound = search_this[startgrab:endgrab]
         if len(matchfound) > 2:
-            print ("mixed mana search:" , len(matchfound), matchfound)
+            # print ("mixed mana search:" , len(matchfound), matchfound)
             total_cmc +=1
             
     pattern = re.compile(regex_mana_costs['colour_mana'], re.IGNORECASE)
@@ -307,7 +307,7 @@ def regex_get_cmc(search_this):
         endgrab = max(match.span())
         matchfound = search_this[startgrab:endgrab]
         if len(matchfound) > 2:
-            print ("colour mana search:" , len(matchfound), matchfound)
+            # print ("colour mana search:" , len(matchfound), matchfound)
             total_cmc +=1
             
     pattern = re.compile(regex_mana_costs['plain_mana'], re.IGNORECASE)
@@ -316,12 +316,12 @@ def regex_get_cmc(search_this):
         startgrab = min(match.span())
         endgrab = max(match.span())
         matchfound = search_this[startgrab:endgrab]
-        print ("plain mana" , matchfound)
+        # print ("plain mana" , matchfound)
         matchfound = matchfound.replace("{","")
         matchfound = matchfound.replace("}","")        
         total_cmc = total_cmc + int(matchfound)
     
-    print ("total CMC: ",total_cmc )
+    # print ("total CMC: ",total_cmc )
     return total_cmc
     
 def regex_get_aac(search_this):
@@ -367,7 +367,7 @@ def regex_get_mv(searchtype, search_this):
             manacostread = manacostread.replace("mana","         ")
             usethis = manacostread[0:7]
             # print (usethis)
-            mana_value = convert_manawords.get(usethis.lower().strip())
+            mana_value = mtg_main.convert_manawords.get(usethis.lower().strip())
             # print (usethis, " converted to " , mana_value)
         elif searchtype == regex_searchmode['plainmanasearchmultiples']:
             """Add {B}, {W}, {R}, or {2}:   this would need to count as generating 2, not 5 """
@@ -472,7 +472,33 @@ def regex_get_keywords(search_this):
         # if len(card_keywords) > 4: print (card_keywords)
         break
     return card_keywords
-        
+
+def regex_get_image(search_this):
+    ##   'normal': 'https://c1.scryfall.com/file/scryfall-cards/normal/front/6/4/647c2269-bdc7-4455-9158-73abbff6e50e.jpg?1627705778',
+    """"Searching with the card object dictionary for the "image_uris":{...} 
+    then searching within that block for "normal":"http....."
+    Parameters:  search_this: The card object dictionary,  str(the_card.__dict__.items()"""
+    
+    image_link = ""
+    pattern = re.compile(regex_searchmode['imagesearch'])
+    matches = pattern.finditer(search_this)
+    for match in matches:
+        startgrab = min(match.span())
+        endgrab = max(match.span())
+        matchfound = search_this[startgrab:endgrab]
+        # print ("Now search string: ", matchfound)
+        ## Next search within 
+        pattern = re.compile(regex_searchmode['normal_image_search'])
+        submatch = pattern.finditer(matchfound)
+        for result in submatch:
+            startgrab = min(result.span())
+            endgrab = max(result.span())
+            normal_image = matchfound[startgrab:endgrab]
+            image_link = normal_image.replace("'normal': '","")
+            image_link = image_link.replace("',","")
+    
+    return image_link
+
 def regex_get_lifegains(search_this):
     """Searching for life gain effects from spells or etb effects and determining how much life is restored
     Parameters:  search_this: Oracle text of the card, after check_oracle_text()
@@ -659,7 +685,7 @@ def regex_get_ETB(search_this, card_type, keyword_list):
     Returns:  List  'list(filter_list)'  
     """
     etb = ""
-    keywords = rebuild_list(keyword_list)    
+    keywords = mtg_main.rebuild_list(keyword_list)    
     regex_etb_terms = ['target', 'draw', 'energy', 'scry', 'sacrifice', 'tapped', 'damage', 'destroy', 'return', 'exile', 'discard', 'token', 'library','copy', 'choose', 'untap']  # or will these be searched under 'TARGET' and 'WIPE'
 
     pattern = re.compile(regex_searchmode['etb_filter'], re.IGNORECASE)    
@@ -705,7 +731,7 @@ def regex_get_wipe(search_this, keyword_list):
     Returns:  list 'list(filter_list)' 
     """
     wipe = ""
-    keywords = rebuild_list(keyword_list)
+    keywords = mtg_main.rebuild_list(keyword_list)
     regex_wipe_terms = ['destroy', 'exile', 'return', 'shuffle', 'sacrifice', 'damage' ]#,  'discard']  # or will these be searched and clasified under 'TARGET' and 'WIPE'
     # regex_etb_terms .extend(keyword_list)
     pattern = re.compile(regex_searchmode['wipe_filter'], re.IGNORECASE)    
@@ -781,7 +807,7 @@ def regex_get_draw(search_this):
         if matchfound == 'a':
             draw = '1'
         else:
-            draw = convert_manawords.get(matchfound, 'Other')
+            draw = mtg_main.convert_manawords.get(matchfound, 'Other')
             if draw == 'Other': 
                 if 'x' in matchfound: draw = 'X'
                 
@@ -822,7 +848,7 @@ def regex_get_triggered(search_this, keyword_list):
     """
     trigger = ""
     triggered_keywords = {'landfall', 'persist', 'enrage', 'heroic', 'inspired', }
-    keywords = rebuild_list(keyword_list)    
+    keywords = mtg_main.rebuild_list(keyword_list)    
     for triggers in regex_triggered_modes:
         if re.findall(regex_triggered_modes[triggers], search_this, re.IGNORECASE):
             # print ("   :found ", triggers)
@@ -847,8 +873,8 @@ def regex_get_activated(search_this, keyword_list):
     """
     activated = ""
     activated_keywords = {'equip', 'madness', 'enrage', 'heroic', 'inspired', 'forecast' }
-    keywords = rebuild_list(keyword_list)    
-    for modes in regex_activated_modes:
+    keywords = mtg_main.rebuild_list(keyword_list)    
+    for modes in regex_activated_modes:        
         try:
             if re.findall(regex_activated_modes[modes], search_this, re.IGNORECASE):
                 # print ("   :found ", modes)

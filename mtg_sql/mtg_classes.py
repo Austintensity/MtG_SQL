@@ -71,25 +71,25 @@ class MTG_FaceCards:
         self.face1_oracle_text = face1_oracle_text
         self.face2_oracle_text = face2_oracle_text
 
-# class MTG_Colours:
-#     def __init__(self, c_id, guild):
-#         self.id = c_id
-#         self.guild = guild
-# 
-#     def Get_Clr_ID(manastring):
-#         clr_id = ""
-#         if 'W' in manastring:
-#             clr_id = clr_id + 'W'
-#         if 'U' in manastring:
-#             clr_id = clr_id + 'U'
-#         if 'B' in manastring:
-#             clr_id = clr_id + 'B'
-#         if 'R' in manastring:
-#             clr_id = clr_id + 'R'
-#         if 'G' in manastring:
-#             clr_id = clr_id + 'G'
-#         # print (clr_id)
-#         return (clr_id)
+class MTG_Colours:
+    def __init__(self, c_id, guild):
+        self.id = c_id
+        self.guild = guild
+
+    def Get_Clr_ID(manastring):
+        clr_id = ""
+        if 'W' in manastring:
+            clr_id = clr_id + 'W'
+        if 'U' in manastring:
+            clr_id = clr_id + 'U'
+        if 'B' in manastring:
+            clr_id = clr_id + 'B'
+        if 'R' in manastring:
+            clr_id = clr_id + 'R'
+        if 'G' in manastring:
+            clr_id = clr_id + 'G'
+        # print (clr_id)
+        return (clr_id)
 # 
 # class MTG_Decks:
 #     def __init__(self, D_id, Name, Clr_ID, Commander, Num_Clrs, Tier, Ramp, Card_Draw, Target_Removal, Board_Wipe):
