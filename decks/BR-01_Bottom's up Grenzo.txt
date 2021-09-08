@@ -1,0 +1,101 @@
+1 Blightstep Pathway // Searstep Pathway
+1 Cinder Marsh
+1 Command Tower
+1 Dragonskull Summit
+1 Molten Slagheap
+11 Mountain
+1 Sequestered Stash
+1 Shadowblood Ridge
+1 Smoldering Marsh
+1 Spire of Industry
+1 Sulfurous Springs
+14 Swamp
+1 Temple of the False God
+1 Anje Falkenrath
+1 Arcane Signet
+1 Ashnod's Altar
+1 Ayara, First of Locthwain
+1 Bladewing's Thrall
+1 Blazing Specter
+1 Canal Dredger
+1 Clone Shell
+1 Conjurer's Bauble
+1 Crystal Ball
+1 Dark Hatchling
+1 Deathbringer Thoctar
+1 Dockside Extortionist
+1 Epitaph Golem
+1 Fallen Angel
+1 Foundry Hornet
+1 Goblin Ringleader
+1 Gray Merchant of Asphodel
+1 Grenzo, Dungeon Warden
+1 Heartstone
+1 Ignition Team
+1 Illusionist's Bracers
+1 Jar of Eyeballs
+1 Junktroller
+1 Lost Legion
+1 Magma Phoenix
+1 Magmasaur
+1 Mask of Avacyn
+1 Meteor Golem
+1 Mindmoil
+1 Mirror Shield
+1 Moriok Scavenger
+1 Murderous Rider // Swift End
+1 Nekrataal
+1 Queen's Agent
+1 Rakdos Ragemutt
+1 Rakdos Signet
+1 Ravenous Chupacabra
+1 Reito Lantern
+1 Rocket Launcher
+1 Scaretiller
+1 Scourge of Geier Reach
+1 Seer's Lantern
+1 Shadows of the Past
+1 Shard Phoenix
+1 Shriekmaw
+1 Skeletal Vampire
+1 Skeleton Shard
+1 Smog Elemental
+1 Sol Ring
+1 Soldevi Digger
+1 Soul Collector
+1 Tel-Jilad Stylus
+1 The Cauldron of Eternity
+1 The Haunt of Hightower
+1 The Wretched
+1 Undercity Scavenger
+1 Valakut Awakening // Valakut Stoneforge
+1 Vessel of Endless Rest
+1 Whispersilk Cloak
+1 Witch's Oven
+1 Woebearer
+1 Workhorse
+1 Workshop Assistant
+Sideboard:
+
+1 Anathemancer
+1 Bogardan Phoenix
+1 Carnage Altar
+1 Darksteel Sentinel
+1 Fire Prophecy
+1 Flamespeaker Adept
+1 Fortuitous Find
+1 Goblin Charbelcher
+1 Gorgon Recluse
+1 Kolaghan Monument
+1 Lose Hope
+1 Loyal Subordinate
+1 Mad Prophet
+1 Magma Jet
+1 Pawn of Ulamog
+1 Pharagax Giant
+1 Pia and Kiran Nalaar
+1 Priest of Urabrask
+1 Rakdos Carnarium
+1 Rakdos Ringleader
+1 Rapacious Dragon
+1 Silumgar Scavenger

@@ -1,0 +1,101 @@
+1 Arcane Sanctum
+1 Azorius Chancery
+1 Command Tower
+1 Darkwater Catacombs
+1 Dimir Aqueduct
+1 Dreadship Reef
+1 Dromar's Cavern
+1 Evolving Wilds
+1 Exotic Orchard
+1 Hallowed Fountain
+10 Island
+1 Isolated Watchtower
+1 Myriad Landscape
+1 Orzhov Basilica
+3 Plains
+1 Prairie Stream
+1 Sunken Hollow
+3 Swamp
+1 Temple of Silence
+1 Tranquil Cove
+1 Underground River
+1 Watery Grave
+1 Adarkar Valkyrie
+1 Aminatou, the Fateshifter
+1 Aphetto Alchemist
+1 Arcane Signet
+1 Arcanis the Omnipotent
+1 Arena of the Ancients
+1 Aura of Dominion
+1 Azorius Signet
+1 Basalt Monolith
+1 Brainstorm
+1 Burnished Hart
+1 Conjurer's Closet
+1 Corridor Monitor
+1 Crab Umbra
+1 Curator's Ward
+1 Devastation Tide
+1 Dimir Signet
+1 Disciple of the Ring
+1 Dramatic Reversal
+1 Dream Cache
+1 Dream Tides
+1 Dreamstone Hedron
+1 Empowered Autogenerator
+1 Freed from the Real
+1 Fumigate
+1 Hindering Light
+1 Jace, Ingenious Mind-Mage
+1 Jandor's Saddlebags
+1 King Macar, the Gold-Cursed
+1 Knight of the White Orchid
+1 Lapis Lazuli Talisman
+1 Magewright's Stone
+1 Mask of Avacyn
+1 Merieke Ri Berit
+1 Mist of Stagnation
+1 Mobile Garrison
+1 Niblis of the Breath
+1 Nightmare Shepherd
+1 Orzhov Signet
+1 Pemmin's Aura
+1 Ponder
+1 Portent
+1 Puppet Strings
+1 Retreat to Coralhelm
+1 Revoke Existence
+1 Seasinger
+1 Second Wind
+1 Simic Manipulator
+1 Sol Ring
+1 Star Compass
+1 Stonybrook Angler
+1 Stormscape Familiar
+1 Sword of the Paruns
+1 Talisman of Progress
+1 Taranika, Akroan Veteran
+1 Temporal Mastery
+1 Terminus
+1 Thassa's Ire
+1 Thornbite Staff
+1 Thousand-Year Elixir
+1 Tidal Force
+1 Tideforce Elemental
+1 Tidewater Minion
+1 Unbender Tine
+1 Vizier of Tumbling Sands
+Sideboard:
+
+1 Cloudshift
+1 Cultivator's Caravan
+1 Curse of Inertia
+1 Esper Charm
+1 Loyal Drake
+1 Mimic Vat
+1 Mundungu
+1 Puppeteer
+1 Sphinx of the Steel Wind
+1 Tenth District Veteran
+1 Utter End
+1 Village Bell-Ringer

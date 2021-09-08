@@ -1,0 +1,121 @@
+1 Boros Garrison
+1 Command Tower
+1 Darksteel Citadel
+1 Darkwater Catacombs
+1 Desolate Lighthouse
+1 Dreadship Reef
+1 Evolving Wilds
+1 Exotic Orchard
+1 Great Furnace
+6 Island
+1 Izzet Boilerworks
+5 Mountain
+1 Myriad Landscape
+1 Mystic Monastery
+4 Plains
+1 Ruins of Oran-Rief
+1 Seat of the Synod
+1 Shrine of the Forsaken Gods
+1 Spire of Industry
+3 Swamp
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Akiri, Line-Slinger
+1 Alibou, Ancient Witness
+1 Arcane Signet
+1 Artificer's Assistant
+1 Azorius Signet
+1 Blinkmoth Urn
+1 Boros Signet
+1 Bronze Guardian
+1 Brudiclad, Telchor Engineer
+1 Burnished Hart
+1 Chief Engineer
+1 Cranial Plating
+1 Dalakos, Crafter of Wonders
+1 Daring Archaeologist
+1 Dispatch
+1 Dispeller's Capsule
+1 Efficient Construction
+1 Etherium Sculptor
+1 Executioner's Capsule
+1 Foundry Inspector
+1 Herald of Kozilek
+1 Idol of Oblivion
+1 Indomitable Archangel
+1 Izzet Signet
+1 Jeweled Lotus
+1 Jhoira's Familiar
+1 Jhoira, Weatherlight Captain
+1 Jor Kadeen, the Prevailer
+1 Marionette Master
+1 Mask of Riddles
+1 Mirrodin Besieged
+1 Mishra's Self-Replicator
+1 Neurok Stealthsuit
+1 One with the Machine
+1 Orzhov Signet
+1 Osgir, the Reconstructor
+1 Padeem, Consul of Innovation
+1 Pia's Revolution
+1 Reckless Fireweaver
+1 Renowned Weaponsmith
+1 Retrofitter Foundry
+1 Reverse Engineer
+1 Rousing Refrain
+1 Saheeli's Artistry
+1 Saheeli's Directive
+1 Saheeli, Sublime Artificer
+1 Saheeli, the Gifted
+1 Sai, Master Thopterist
+1 Scrap Trawler
+1 Sharding Sphinx
+1 Shimmer Dragon
+1 Shimmer Myr
+1 Silas Renn, Seeker Adept
+1 Smothering Tithe
+1 Sol Ring
+1 Steel Hellkite
+1 Teshar, Ancestor's Apostle
+1 Tezzeret, Master of the Bridge
+1 Thopter Engineer
+1 Thopter Spy Network
+1 Time Sieve
+1 Trinket Mage
+1 Wake the Past
+1 Wayfarer's Bauble
+Sideboard:
+
+1 Ancient Stone Idol
+1 Argent Sphinx
+1 Auriok Salvagers
+1 Battle at the Bridge
+1 Bloodsoaked Altar
+1 Breya, Etherium Shaper
+1 Chief of the Foundry
+1 Coveted Jewel
+1 Darksteel Juggernaut
+1 Esperzoa
+1 Freejam Regent
+1 Hellkite Igniter
+1 Leave No Trace
+1 Magmaquake
+1 Master Trinketeer
+1 Mimic Vat
+1 Moriok Rigger
+1 Myr Battlesphere
+1 Parhelion II
+1 Sharuum the Hegemon
+1 Skilled Animator
+1 Spine of Ish Sah
+1 Tezzeret, Cruel Machinist
+1 Toolcraft Exemplar
+1 Treasure Mage
+1 Trusty Packbeast
+1 Utter End
+1 Vedalken Engineer
+1 Vedalken Humiliator
+1 Voltaic Servant
+1 Whirler Rogue
+1 Workshop Elders
+1 Yore-Tiller Nephilim

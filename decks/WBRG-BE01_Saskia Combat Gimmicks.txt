@@ -1,0 +1,96 @@
+1 Blossoming Sands
+1 Command Tower
+1 Desert of the Glorified
+1 Desert of the True
+1 Evolving Wilds
+1 Exotic Orchard
+7 Forest
+1 Gruul Turf
+1 Llanowar Wastes
+1 Mossfire Valley
+5 Mountain
+1 Myriad Landscape
+1 Naya Panorama
+4 Plains
+1 Rakdos Carnarium
+1 Rogue's Passage
+1 Saltcrusted Steppe
+6 Swamp
+1 Temple of Silence
+1 Angrath, Captain of Chaos
+1 Arcane Signet
+1 Beast Whisperer
+1 Bedlam
+1 Behemoth Sledge
+1 Blasphemous Act
+1 Boros Signet
+1 Chaosphere
+1 Commander's Sphere
+1 Compost
+1 Crash of Rhino Beetles
+1 Cultivate
+1 Deathsprout
+1 Dune-Brood Nephilim
+1 Elderwood Scion
+1 Elemental Bond
+1 End-Raze Forerunners
+1 Epic Proportions
+1 Fated Retribution
+1 Fertilid
+1 Golgari Signet
+1 Grismold, the Dreadsower
+1 Gruul Signet
+1 Harrow
+1 Harsh Mentor
+1 Hellkite Charger
+1 Hex
+1 Hydra Omnivore
+1 Hypnotic Specter
+1 In Garruk's Wake
+1 Jedit Ojanen of Efrava
+1 Jeskai Barricade
+1 Kalemne, Disciple of Iroas
+1 Kor Skyfisher
+1 Larceny
+1 Moldervine Reclamation
+1 Neheb, Dreadhorde Champion
+1 Polis Crusher
+1 Rakdos Signet
+1 Rakshasa Deathdealer
+1 Ramunap Hydra
+1 Rancor
+1 Saskia the Unyielding
+1 Skylasher
+1 Skyshroud Elf
+1 Sol Ring
+1 Soltari Visionary
+1 Spawnwrithe
+1 Stand or Fall
+1 Stronghold Overseer
+1 Swiftblade Vindicator
+1 Tahngarth, First Mate
+1 Talisman of Impulse
+1 Tana, the Bloodsower
+1 Thantis, the Warweaver
+1 Thorn Mammoth
+1 Titanic Ultimatum
+1 Total War
+1 Unbreakable Formation
+1 Unquestioned Authority
+1 Wasitora, Nekoru Queen
+1 Where Ancients Tread
+1 Whitemane Lion
+Sideboard:
+
+1 Aether Snap
+1 Aviary Mechanic
+1 Cliffside Rescuer
+1 Farbog Explorer
+1 Fated Return
+1 Jiang Yanggu, Wildcrafter
+1 Jungle Hollow
+1 Kediss, Emberclaw Familiar
+1 Oakhame Adversary
+1 Profit // Loss
+1 Scoured Barrens
+1 Unlicensed Disintegration

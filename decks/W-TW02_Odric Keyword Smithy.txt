@@ -1,0 +1,95 @@
+1 Idyllic Grange
+1 Myriad Landscape
+1 New Benalia
+29 Plains
+1 Windbrisk Heights
+1 Adarkar Valkyrie
+1 Aegis Angel
+1 Aerial Responder
+1 Akroma, Angel of Wrath
+1 Archaeomancer's Map
+1 Aven Sunstriker
+1 Baird, Steward of Argive
+1 Ballyrush Banneret
+1 Boreas Charger
+1 Bounty Agent
+1 Burnished Hart
+1 Call the Coppercoats
+1 Captain of the Watch
+1 Catapult Master
+1 Chariot of Victory
+1 Danitha Capashen, Paragon
+1 Darksteel Myr
+1 Daru Warchief
+1 Emeria's Call // Emeria, Shattered Skyclave
+1 Endless Atlas
+1 Evangel of Heliod
+1 Explorer's Scope
+1 Fencing Ace
+1 Glory-Bound Initiate
+1 Gorgon's Head
+1 Haazda Marshal
+1 Hallow
+1 Haunted Cloak
+1 Hedron Archive
+1 Heraldic Banner
+1 Honor of the Pure
+1 Hour of Revelation
+1 Jeskai Barricade
+1 Keensight Mentor
+1 Kismet
+1 Knight of Meadowgrain
+1 Knight of the White Orchid
+1 Leave No Trace
+1 Linden, the Steadfast Queen
+1 Longbow Archer
+1 Loreseeker's Stone
+1 Marble Diamond
+1 Martial Coup
+1 Mask of Avacyn
+1 Mass Calcify
+1 Militia Bugler
+1 Mirror Shield
+1 Odric, Lunarch Marshal
+1 Odric, Master Tactician
+1 Otherworldly Journey
+1 Paragon of New Dawns
+1 Precinct Captain
+1 Preeminent Captain
+1 Sejiri Shelter // Sejiri Glacier
+1 Sephara, Sky's Blade
+1 Serra Avatar
+1 Settle the Wreckage
+1 Sol Ring
+1 Stuffy Doll
+1 Swiftfoot Boots
+1 Tapestry of the Ages
+1 Tragic Arrogance
+1 Triumph of Gerrard
+1 Unbreakable Formation
+1 Verge Rangers
+1 Worn Powerstone
+1 Zetalpa, Primal Dawn
+Sideboard:
+
+1 Adanto Vanguard
+1 Ajani's Pridemate
+1 Battlefield Raptor
+1 Blinding Light
+1 Bond of Discipline
+1 Dragon Throne of Tarkir
+1 Erase
+1 Everdawn Champion
+1 Expedition Healer
+1 Gideon Jura
+1 Gideon's Company
+1 Healer's Hawk
+1 Kor Cartographer
+1 Lightform
+1 Lone Rider
+1 Phyrexian Splicer
+1 Reverent Hoplite
+1 Seraph of the Suns
+1 Skyhunter Skirmisher
+1 Sunblade Angel
+1 Veteran Swordsmith

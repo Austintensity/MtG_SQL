@@ -1,0 +1,103 @@
+1 Brightclimb Pathway // Grimclimb Pathway
+1 Caves of Koilos
+1 Command Tower
+1 Concealed Courtyard
+1 Evolving Wilds
+1 Path of Ancestry
+16 Plains
+1 Scoured Barrens
+10 Swamp
+1 Tainted Field
+1 Terramorphic Expanse
+1 Ambition's Cost
+1 Angel of Glory's Rise
+1 Angelic Overseer
+1 Auriok Steelshaper
+1 Beskir Shieldmate
+1 Bounty Agent
+1 Call the Coppercoats
+1 Charcoal Diamond
+1 Citywide Bust
+1 Daring Archaeologist
+1 Dauntless Bodyguard
+1 Dearly Departed
+1 Despark
+1 Devout Chaplain
+1 Devout Harpist
+1 Dire Tactics
+1 Disciple of Bolas
+1 Dusk // Dawn
+1 Etchings of the Chosen
+1 Ethereal Absolution
+1 Feed the Swarm
+1 Fiendslayer Paladin
+1 Fireshrieker
+1 Frontline Medic
+1 Fumigate
+1 Gallows at Willow Hill
+1 General Kudro of Drannith
+1 General's Enforcer
+1 Ghostly Prison
+1 Graveshifter
+1 Heirloom Blade
+1 High Priest of Penance
+1 Increasing Devotion
+1 Keeper of the Dead
+1 Knight of Grace
+1 Knight of Malice
+1 Knight of the White Orchid
+1 Marble Diamond
+1 Massacre Girl
+1 Obelisk of Urd
+1 Odric, Lunarch Marshal
+1 Odric, Master Tactician
+1 Omen of the Sun
+1 Orzhov Signet
+1 Painful Truths
+1 Parhelion II
+1 Prismatic Lens
+1 Riders of Gavony
+1 Sanctuary Lockdown
+1 Single Combat
+1 Slash the Ranks
+1 Smothering Tithe
+1 Sol Ring
+1 Species Specialist
+1 Star Compass
+1 Syr Konrad, the Grim
+1 Talisman of Conviction
+1 Teysa Karlov
+1 Teysa, Orzhov Scion
+1 Thalia's Lieutenant
+1 Thraben Doomsayer
+1 Village Rites
+1 Witch's Cauldron
+1 Xathrid Necromancer
+1 Zulaport Cutthroat
+Sideboard:
+
+1 Aegis Automaton
+1 Alley Evasion
+1 Angel of Serenity
+1 Black Knight
+1 Colossus Hammer
+1 Commander's Sphere
+1 Commanding Presence
+1 Demonic Vigor
+1 Dragon Mask
+1 Explorer's Scope
+1 Fight as One
+1 Inquisitor's Flail
+1 Lightwielder Paladin
+1 Loreseeker's Stone
+1 Mace of the Valiant
+1 Militant Angel
+1 Mortify
+1 Necromancer's Magemark
+1 Northern Paladin
+1 Pillar of Origins
+1 Silver Knight
+1 Slayer's Plate
+1 Southern Paladin
+1 White Knight
+1 Worthy Knight

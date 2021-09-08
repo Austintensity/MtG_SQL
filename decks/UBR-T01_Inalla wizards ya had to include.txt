@@ -1,0 +1,116 @@
+1 Bojuka Bog
+1 Command Tower
+1 Crosis's Catacombs
+1 Crumbling Necropolis
+1 Darkwater Catacombs
+1 Dragonskull Summit
+1 Dreadship Reef
+1 Drowned Catacomb
+1 Evolving Wilds
+1 Exotic Orchard
+1 Grixis Panorama
+9 Island
+1 Molten Slagheap
+4 Mountain
+1 Path of Ancestry
+1 Shadowblood Ridge
+1 Shivan Reef
+6 Swamp
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Unclaimed Territory
+1 Anathemancer
+1 Apprentice Wizard
+1 Arcane Denial
+1 Arcane Signet
+1 Barrin, Master Wizard
+1 Blasphemous Act
+1 Cruel Ultimatum
+1 Dark Dabbling
+1 Deliver Unto Evil
+1 Dimir Signet
+1 Dire Fleet Ravager
+1 Disciple of Bolas
+1 Docent of Perfection
+1 Dreadbore
+1 Dualcaster Mage
+1 Faerie Seer
+1 Ghitu Journeymage
+1 Ghostly Flicker
+1 Harmonic Prodigy
+1 Inalla, Archmage Ritualist
+1 Izzet Signet
+1 Keeper of the Dead
+1 Keeper of the Mind
+1 Magus of the Wheel
+1 Mass Appeal
+1 Naban, Dean of Iteration
+1 Necromantic Selection
+1 Nicol Bolas, Planeswalker
+1 Nightscape Battlemage
+1 Nightscape Familiar
+1 Obeka, Brute Chronologist
+1 Overwhelmed Apprentice
+1 Panharmonicon
+1 Portal Mage
+1 Profaner of the Dead
+1 Rapid Hybridization
+1 Reality Shift
+1 Rewind
+1 Scholar of the Ages
+1 Sea Gate Oracle
+1 Sedraxis Alchemist
+1 Shadowmage Infiltrator
+1 Sidisi's Faithful
+1 Sol Ring
+1 Star Compass
+1 Step Through
+1 Storm Sculptor
+1 Storm the Vault
+1 Sundial of the Infinite
+1 Talisman of Dominance
+1 Talisman of Indulgence
+1 Tempest Caller
+1 Thalakos Deceiver
+1 Thalakos Seer
+1 Thran Dynamo
+1 Timestream Navigator
+1 Unwind
+1 Vedalken Aethermage
+1 Victimize
+1 Viscera Seer
+1 Wanderwine Prophets
+1 Watcher for Tomorrow
+1 Witch's Oven
+Sideboard:
+
+1 Adeliz, the Cinder Wind
+1 Apprentice Necromancer
+1 Augur of Bolas
+1 Carnage Altar
+1 Culling Dais
+1 Daring Apprentice
+1 Dark Intimations
+1 Dragon Mage
+1 Dreamstealer
+1 Dregs of Sorrow
+1 Extract from Darkness
+1 Homarid Spawning Bed
+1 Information Dealer
+1 Invade the City
+1 Magus of the Jar
+1 Mercurial Chemister
+1 Nightscape Master
+1 Nivix Guildmage
+1 Omenspeaker
+1 Refuse // Cooperate
+1 Sage's Row Savant
+1 Siren Stormtamer
+1 Slave of Bolas
+1 Stitch in Time
+1 Stormchaser Mage
+1 Strionic Resonator
+1 Trinket Mage
+1 Vedalken Mastermind
+1 Wizard Mentor
+1 Xathrid Necromancer

@@ -1,0 +1,91 @@
+1 Azorius Chancery
+1 Calciform Pools
+1 Command Tower
+1 Irrigated Farmland
+15 Island
+12 Plains
+1 Prairie Stream
+1 Rogue's Passage
+1 Skycloud Expanse
+1 Temple of Enlightenment
+1 Temple of the False God
+1 Angel of Finality
+1 Angel of Serenity
+1 Arcane Signet
+1 Archaeomancer
+1 Azorius Signet
+1 Boreas Charger
+1 Brago, King Eternal
+1 Call to Heel
+1 Cataclysmic Gearhulk
+1 Cloud of Faeries
+1 Cloudblazer
+1 Confounding Conundrum
+1 Counterspell
+1 Curse of the Swine
+1 Deadeye Navigator
+1 Dovescape
+1 Dovin's Veto
+1 Eerie Interlude
+1 Faerie Impostor
+1 Flickerform
+1 Flickerwisp
+1 Ghostly Flicker
+1 Gods Willing
+1 Guile
+1 Hero of Goma Fada
+1 Lightning Greaves
+1 Linvala, Shield of Sea Gate
+1 Marble Diamond
+1 Mask of Avacyn
+1 Nephalia Smuggler
+1 Panharmonicon
+1 Peregrine Drake
+1 Pilgrim's Eye
+1 Reality Shift
+1 Render Silent
+1 Resplendent Marshal
+1 Restoration Angel
+1 Restore the Peace
+1 Scourge of Fleets
+1 Silver Drake
+1 Sky Diamond
+1 Sky Hussar
+1 Skyclave Apparition
+1 Sol Ring
+1 Soulherder
+1 Sphinx of Foresight
+1 Sphinx's Revelation
+1 Spirit en-Dal
+1 Stonecloaker
+1 Strionic Resonator
+1 Sun Titan
+1 Sunblast Angel
+1 Suture Priest
+1 Swiftfoot Boots
+1 Talisman of Progress
+1 Teferi, Time Raveler
+1 Time Wipe
+1 Unquestioned Authority
+1 Wall of Omens
+1 War Priest of Thune
+1 Watcher of the Spheres
+1 Whispersilk Cloak
+1 Wispweaver Angel
+1 Wrath of God
+Sideboard:
+
+1 Brainstorm
+1 Cartographer's Hawk
+1 Favorable Winds
+1 Grand Abolisher
+1 Isperia, Supreme Judge
+1 Kor Sanctifiers
+1 Medomai the Ageless
+1 Mirror Shield
+1 Pride of the Clouds
+1 Protective Bubble
+1 Prowler's Helm
+1 Shadow Rift
+1 Steel of the Godhead
+1 Warden of Evos Isle

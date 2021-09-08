@@ -1,0 +1,113 @@
+1 Boros Garrison
+1 Caves of Koilos
+1 Command Tower
+1 Dragonskull Summit
+1 Evolving Wilds
+1 Exotic Orchard
+1 Molten Slagheap
+3 Mountain
+1 Nomad Outpost
+1 Orzhov Basilica
+4 Plains
+1 Scoured Barrens
+13 Swamp
+1 Tainted Field
+1 Temple of the False God
+1 Temple of Triumph
+1 Terramorphic Expanse
+1 Unclaimed Territory
+1 Witch's Cottage
+1 Arcane Signet
+1 Bloodcrazed Paladin
+1 Bloodline Keeper
+1 Bloodlord of Vaasgoth
+1 Bloodthirsty Aerialist
+1 Boros Charm
+1 Boros Signet
+1 Champion of Dusk
+1 Cliffhaven Vampire
+1 Cordial Vampire
+1 Crackling Doom
+1 Cruel Celebrant
+1 Drana's Emissary
+1 Drana, the Last Bloodchief
+1 Dusk // Dawn
+1 Dusk Legion Zealot
+1 Edgar Markov
+1 Etchings of the Chosen
+1 Falkenrath Gorger
+1 Fire Covenant
+1 Forerunner of the Legion
+1 Fumigate
+1 Generous Gift
+1 Greed
+1 Icon of Ancestry
+1 Indulgent Aristocrat
+1 Indulging Patrician
+1 Knight of the Ebon Legion
+1 Legion Lieutenant
+1 Legion's Landing
+1 Licia, Sanguine Tribune
+1 Malakir Bloodwitch
+1 Markov Blademaster
+1 Necropolis Regent
+1 Nullpriest of Oblivion
+1 Orzhov Signet
+1 Quag Vampires
+1 Rakdos Signet
+1 Rakish Heir
+1 Ruinous Ultimatum
+1 Sadistic Skymarcher
+1 Sanctum Seeker
+1 Sangromancer
+1 Sevinne's Reclamation
+1 Shadow Alley Denizen
+1 Shared Animosity
+1 Skullclamp
+1 Sol Ring
+1 Sorin, Vengeful Bloodlord
+1 Stinging Study
+1 Stitch Together
+1 Stromkirk Captain
+1 Sword of the Animist
+1 Swords to Plowshares
+1 Tithe Drinker
+1 Urge to Feed
+1 Vampire Neonate
+1 Vampire Nighthawk
+1 Vampire of the Dire Moon
+1 Veinwitch Coven
+1 Vicious Conquistador
+1 Viscera Seer
+1 Vish Kal, Blood Arbiter
+1 Zagras, Thief of Heartbeats
+Sideboard:
+
+1 Blood Baron of Vizkopa
+1 Blood Divination
+1 Bloodbond Vampire
+1 Bold Impaler
+1 Carrier Thrall
+1 Child of Night
+1 Claim // Fame
+1 Cursebreak
+1 Dark Impostor
+1 Deathgreeter
+1 Falkenrath Noble
+1 Final Parting
+1 Gruesome Fate
+1 Guul Draz Vampire
+1 Kheru Mind-Eater
+1 Malakir Cullblade
+1 Mavren Fein, Dusk Apostle
+1 Olivia Voldaren
+1 Paladin of Atonement
+1 Reaping the Graves
+1 Reveillark
+1 Revive the Fallen
+1 Righteous Cause
+1 Sanguine Indulgence
+1 Sengir, the Dark Baron
+1 Sign in Blood
+1 Stensia Masquerade
+1 Talisman of Conviction

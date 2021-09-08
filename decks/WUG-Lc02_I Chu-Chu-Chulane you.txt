@@ -1,0 +1,103 @@
+1 Azorius Chancery
+1 Bant Panorama
+1 Calciform Pools
+1 Command Tower
+1 Evolving Wilds
+1 Exotic Orchard
+6 Forest
+1 Irrigated Farmland
+5 Island
+1 Krosan Verge
+1 Opal Palace
+6 Plains
+1 Prairie Stream
+1 Saltcrusted Steppe
+1 Seaside Citadel
+1 Selesnya Sanctuary
+1 Simic Growth Chamber
+1 Temple of Mystery
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Treva's Ruins
+1 Yavimaya Coast
+1 Abundance
+1 Admonition Angel
+1 Adventuring Gear
+1 Arcane Signet
+1 Archangel's Light
+1 Archon of Valor's Reach
+1 Baloth Woodcrasher
+1 Cathars' Crusade
+1 Chulane, Teller of Tales
+1 Civic Guildmage
+1 Cloud Cover
+1 Crystal Shard
+1 Elixir of Immortality
+1 Emeria Shepherd
+1 Enlightened Ascetic
+1 Equilibrium
+1 Essence Warden
+1 Ezuri's Archers
+1 Faerie Impostor
+1 Fleetfoot Panther
+1 Fumigate
+1 Giant Killer // Chop Down
+1 God-Eternal Oketra
+1 Harbinger of the Tides
+1 Honorable Scout
+1 Kiora's Follower
+1 Knight of the Reliquary
+1 Laboratory Maniac
+1 Loam Lion
+1 Lotus Cobra
+1 Mangara of Corondor
+1 Meloku the Clouded Mirror
+1 Mirror Entity
+1 Mizzium Meddler
+1 Mother of Runes
+1 Path of Discovery
+1 Quest for Renewal
+1 Rapid Hybridization
+1 Reclamation Sage
+1 Retreat to Coralhelm
+1 Retreat to Emeria
+1 Ruin Crab
+1 Selfless Savior
+1 Shalai, Voice of Plenty
+1 Siren Stormtamer
+1 Skyway Sniper
+1 Sol Ring
+1 Soratami Cloudskater
+1 Spore Frog
+1 Sprouting Vines
+1 Steppe Lynx
+1 Stoic Angel
+1 Stratus Dancer
+1 Sunscape Apprentice
+1 Sunscape Familiar
+1 Sunscape Master
+1 Trade Routes
+1 Trove Warden
+1 Undergrowth Champion
+1 Vigilant Martyr
+1 Vinelasher Kudzu
+1 Whitemane Lion
+1 Willbender
+1 Winged Coatl
+Sideboard:
+
+1 Ambush Viper
+1 Beanstalk Giant // Fertile Footsteps
+1 Derevi, Empyrial Tactician
+1 Fblthp, the Lost
+1 Fieldmist Borderpost
+1 Fiend Hunter
+1 Gatecreeper Vine
+1 Gyre Engineer
+1 Kami of False Hope
+1 Kefnet the Mindful
+1 Kor Skyfisher
+1 Loyal Guardian
+1 Sage Owl
+1 Shanna, Sisay's Legacy
+1 Stonecloaker

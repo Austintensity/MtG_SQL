@@ -1,0 +1,89 @@
+1 Command Tower
+1 Evolving Wilds
+10 Forest
+1 High Market
+7 Mountain
+1 Myriad Landscape
+1 Reliquary Tower
+1 Rocky Tar Pit
+1 Savage Lands
+11 Swamp
+1 Terramorphic Expanse
+1 Artifact Mutation
+1 Avenger of Zendikar
+1 Bala Ged Recovery // Bala Ged Sanctuary
+1 Bane of Progress
+1 Beast Within
+1 Black Market
+1 Bone Splinters
+1 Caustic Caterpillar
+1 Commander's Sphere
+1 Crop Rotation
+1 Culling Dais
+1 Daemogoth Woe-Eater
+1 Dargo, the Shipwrecker
+1 Dawntreader Elk
+1 Deathbringer Thoctar
+1 Dragon Appeasement
+1 Elixir of Immortality
+1 Endrek Sahr, Master Breeder
+1 Explore
+1 Extinction Event
+1 Farhaven Elf
+1 Fresh Meat
+1 Garna, the Bloodflame
+1 Gift of Doom
+1 Goblin Bombardment
+1 Golgari Signet
+1 Harrow
+1 In Garruk's Wake
+1 Jolrael, Mwonvuli Recluse
+1 Judith, the Scourge Diva
+1 Khalni Heart Expedition
+1 Korvold, Fae-Cursed King
+1 Last-Ditch Effort
+1 Mayhem Devil
+1 Mazirek, Kraul Death Priest
+1 Mortician Beetle
+1 Ophiomancer
+1 Ordeal of Nylea
+1 Phyrexian Plaguelord
+1 Plaguecrafter
+1 Prossh, Skyraider of Kher
+1 Reclamation Sage
+1 Roiling Regrowth
+1 Sakura-Tribe Elder
+1 Shadows of the Past
+1 Sol Ring
+1 Spark Harvest
+1 Spawning Pit
+1 Spontaneous Combustion
+1 Springbloom Druid
+1 Stronghold Assassin
+1 Swiftfoot Boots
+1 Syr Konrad, the Grim
+1 Taste of Death
+1 Tempt with Vengeance
+1 Thermopod
+1 Thunderscape Familiar
+1 Tilonalli's Summoner
+1 Tormod's Crypt
+1 Viridian Emissary
+1 Viscera Seer
+1 Yavimaya Elder
+1 Yavimaya Granger
+1 Young Pyromancer
+Sideboard:
+
+1 Altar's Reap
+1 Burnished Hart
+1 Carrier Thrall
+1 Chaos Warp
+1 Juri, Master of the Revue
+1 Lavalanche
+1 Lightning Greaves
+1 Psychosis Crawler
+1 Reassembling Skeleton
+1 Red Elemental Blast
+1 Wave of Vitriol
+1 Witch's Oven

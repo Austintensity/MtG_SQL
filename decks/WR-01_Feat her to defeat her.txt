@@ -1,0 +1,106 @@
+1 Battlefield Forge
+1 Command Tower
+1 Evolving Wilds
+1 Inspiring Vantage
+11 Mountain
+1 Myriad Landscape
+1 Needle Spires
+13 Plains
+1 Reliquary Tower
+1 Slayers' Stronghold
+1 Spire of Industry
+1 Sunhome, Fortress of the Legion
+1 Temple of Triumph
+1 Adamant Will
+1 Ajani's Presence
+1 Akroan Conscriptor
+1 Akroan Crusader
+1 Anax and Cymede
+1 Arc Trail
+1 Arcane Signet
+1 Armageddon
+1 Blessed Breath
+1 Boros Charm
+1 Boros Signet
+1 By Force
+1 Consulate Skygate
+1 Corrupted Grafstone
+1 Dawnbringer Charioteers
+1 Defiant Strike
+1 Desolation Giant
+1 Emerge Unscathed
+1 Ephemeral Shields
+1 Expedite
+1 Fabled Hero
+1 Favored Hoplite
+1 Feather, the Redeemed
+1 Fight as One
+1 Fire Diamond
+1 Fists of Flame
+1 Flawless Maneuver
+1 Gerrard, Weatherlight Hero
+1 Ghired's Belligerence
+1 Gird for Battle
+1 Gisela, Blade of Goldnight
+1 Gleaming Barrier
+1 Gods Willing
+1 Gold Myr
+1 Guided Strike
+1 Guttersnipe
+1 Hero of Iroas
+1 Hero of the Nyxborn
+1 Leonin Iconoclast
+1 Mana Geyser
+1 Marble Diamond
+1 Mask of Avacyn
+1 Mirror Shield
+1 Moment of Triumph
+1 Panic
+1 Phalanx Leader
+1 Psychotic Fury
+1 Renegade Tactics
+1 Scroll of the Masters
+1 Sejiri Shelter // Sejiri Glacier
+1 Shelter
+1 Sheltering Light
+1 Shower of Sparks
+1 Sol Ring
+1 Spark Jolt
+1 Star Compass
+1 Stave Off
+1 Strength of Arms
+1 Swiftfoot Boots
+1 Talisman of Conviction
+1 Tenth District Legionnaire
+1 Tethmos High Priest
+1 Titan's Strength
+1 Vanguard of Brimaz
+1 Wingsteed Rider
+Sideboard:
+
+1 Blaze Commando
+1 Boros Keyrune
+1 Boros Locket
+1 Caldera Hellion
+1 Death Ward
+1 Emancipation Angel
+1 Fall of the Hammer
+1 Holdout Settlement
+1 Jaya's Immolating Inferno
+1 Labyrinth Champion
+1 Meteor Blast
+1 Moonsilver Spear
+1 Myr Battlesphere
+1 Phalanx Tactics
+1 Prying Blade
+1 Pyrokinesis
+1 Satyr Hoplite
+1 Setessan Battle Priest
+1 Show of Confidence
+1 Skyknight Vanguard
+1 Storm Strike
+1 Stun
+1 Sudden Breakthrough
+1 Sunforger
+1 Temur Battle Rage
+1 Terramorphic Expanse

@@ -1,0 +1,155 @@
+29 Island
+1 Myriad Landscape
+1 Mystic Sanctuary
+1 Reliquary Tower
+1 Temple of the False God
+1 Aquitect's Will
+1 Arcane Denial
+1 Archaeomancer
+1 Augur of Bolas
+1 Baral's Expertise
+1 Burnished Hart
+1 Capsize
+1 Cerulean Wisps
+1 Clever Impersonator
+1 Cloak of Feathers
+1 Clockspinning
+1 Coveted Jewel
+1 Curse of the Swine
+1 Draining Whelk
+1 Dream's Grip
+1 Early Frost
+1 Energy Tap
+1 Enervate
+1 Finale of Revelation
+1 Fleeting Distraction
+1 Ghostly Flicker
+1 Gridlock
+1 Heraldic Banner
+1 Hidden Strings
+1 Idol of Oblivion
+1 Jace's Sanctum
+1 Junk Winder
+1 Keep Safe
+1 Mask of Avacyn
+1 Master of Waves
+1 Metallurgic Summonings
+1 Midnight Clock
+1 Mind Games
+1 Mind Stone
+1 Mulldrifter
+1 Niblis of Frost
+1 Open into Wonder
+1 Orvar, the All-Form
+1 Paradoxical Outcome
+1 Parallel Thoughts
+1 Peregrine Drake
+1 Precursor Golem
+1 Psychic Spiral
+1 Rapid Hybridization
+1 Reality Shift
+1 Salvager of Secrets
+1 Scourge of Fleets
+1 Shipwreck Dowser
+1 Silundi Vision // Silundi Isle
+1 Siren Stormtamer
+1 Sky Diamond
+1 Slip Through Space
+1 Sol Ring
+1 Solemn Simulacrum
+1 Star Compass
+1 String of Disappearances
+1 Sway of Illusion
+1 Swiftfoot Boots
+1 Talrand, Sky Summoner
+1 Temporal Fissure
+1 Thermal Flux
+1 Toils of Night and Day
+1 Vesuvan Shapeshifter
+1 Voracious Greatshark
+1 Wall of Stolen Identity
+1 Wavebreak Hippocamp
+1 Wayfarer's Bauble
+Sideboard:
+
+1 Aether Tradewinds
+1 Aetherize
+1 Alter Reality
+1 Artisan of Forms
+1 Banishing Knack
+1 Brainstorm
+1 Cackling Counterpart
+1 Chain to Memory
+1 Chilling Trap
+1 Churning Eddy
+1 Cloud of Faeries
+1 Commander's Sphere
+1 Counterspell
+1 Dazzling Lights
+1 Dematerialize
+1 Displace
+1 Dive Down
+1 Dramatic Reversal
+1 Elixir of Immortality
+1 Fate Foretold
+1 Fated Infatuation
+1 Flow of Ideas
+1 Gadwick, the Wizened
+1 Ghostform
+1 Gigadrowse
+1 Guile
+1 High Tide
+1 Infuse
+1 Jinx
+1 Jolt
+1 Leap
+1 Legerdemain
+1 Lilting Refrain
+1 Lord of the Unreal
+1 Lost in a Labyrinth
+1 Lunar Mystic
+1 Man-o'-War
+1 Maximize Altitude
+1 Meteor Golem
+1 Mind Bend
+1 Mizzium Skin
+1 Mnemonic Wall
+1 Moonlace
+1 Myr Battlesphere
+1 Narset, Parter of Veils
+1 Naru Meha, Master Wizard
+1 Negate
+1 Powerstone Shard
+1 Private Research
+1 Propaganda
+1 Psychic Puppetry
+1 Pull from the Deep
+1 Quasiduplicate
+1 Quickchange
+1 Ravenform
+1 Reality Spasm
+1 Rescue
+1 Retraced Image
+1 Rookie Mistake
+1 Run Away Together
+1 Saheeli's Artistry
+1 Scholar of the Ages
+1 Sea Gate Oracle
+1 Shimmering Mirage
+1 Solve the Equation
+1 Spark Double
+1 Step Through
+1 Stream of Unconsciousness
+1 Strionic Resonator
+1 Supplant Form
+1 Swarm Intelligence
+1 Tempest Caller
+1 Trait Doctoring
+1 Twiddle
+1 Twisted Image
+1 Twitch
+1 Undo
+1 Voidwalk
+1 Wandering Archaic // Explore the Vastlands
+1 Whelming Wave
+1 Wizard's Retort

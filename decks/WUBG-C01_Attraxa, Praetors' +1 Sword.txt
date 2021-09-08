@@ -1,0 +1,100 @@
+1 Azorius Chancery
+1 Command Tower
+1 Concealed Courtyard
+1 Evolving Wilds
+1 Exotic Orchard
+9 Forest
+1 Forge of Heroes
+1 Gavony Township
+1 Golgari Rot Farm
+1 Irrigated Farmland
+5 Island
+1 Karn's Bastion
+1 Myriad Landscape
+1 Opulent Palace
+3 Plains
+1 Rejuvenating Springs
+1 Seaside Citadel
+1 Simic Growth Chamber
+4 Swamp
+1 Terramorphic Expanse
+1 Abzan Ascendancy
+1 Arcane Signet
+1 Atraxa, Praetors' Voice
+1 Dauthi Embrace
+1 Deepglow Skate
+1 Divine Reckoning
+1 Dreadhorde Invasion
+1 Empowered Autogenerator
+1 Essence Capture
+1 Evolution Vat
+1 Familiar's Ruse
+1 Farseek
+1 Fathom Mage
+1 Fertilid
+1 Festercreep
+1 Find // Finality
+1 Forgotten Ancient
+1 Fuel for the Cause
+1 Gideon's Battle Cry
+1 Gideon, the Oathsworn
+1 Golgari Signet
+1 Grim Haruspex
+1 Gyre Sage
+1 Herald of Secret Streams
+1 Ishai, Ojutai Dragonspeaker
+1 Ivorytusk Fortress
+1 Jace, Arcane Strategist
+1 Leyline of Abundance
+1 Longshot Squad
+1 Mask of Avacyn
+1 Master Biomancer
+1 Oath of Ajani
+1 Orzhov Signet
+1 Paradox Zone
+1 Patron of the Valiant
+1 Pyramid of the Pantheon
+1 Rampant Growth
+1 Ravenous Slime
+1 Reyhan, Last of the Abzan
+1 Rhonas's Monument
+1 Rishkar, Peema Renegade
+1 Sakura-Tribe Elder
+1 Seedborn Muse
+1 Selfless Squire
+1 Shamanic Revelation
+1 Simic Ascendancy
+1 Simic Guildmage
+1 Simic Signet
+1 Slurrk, All-Ingesting
+1 Sol Ring
+1 Song of Freyalise
+1 Spike Cannibal
+1 Steelbane Hydra
+1 Sunscape Familiar
+1 Thought Sponge
+1 Time Wipe
+1 Urban Evolution
+1 Vastwood Hydra
+1 Vigor
+1 Vulturous Zombie
+1 Wildborn Preserver
+1 Witch-Maw Nephilim
+1 Zegana, Utopian Speaker
+Sideboard:
+
+1 Archetype of Imagination
+1 Beanstalk Giant // Fertile Footsteps
+1 Bioshift
+1 Crowned Ceratok
+1 Experiment Kraj
+1 Faerie Vandal
+1 Increasing Savagery
+1 Noosegraf Mob
+1 Oko, the Trickster
+1 Phantom Nantuko
+1 Predatory Hunger
+1 Rot Shambler
+1 Simic Fluxmage
+1 Sunscorch Regent
+1 Tempt with Glory

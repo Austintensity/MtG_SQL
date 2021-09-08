@@ -1,0 +1,113 @@
+1 Cavern of Souls
+1 Cinder Glade
+1 Command Tower
+1 Evolving Wilds
+1 Exotic Orchard
+4 Forest
+1 Godless Shrine
+1 Hallowed Fountain
+3 Island
+1 Karplusan Forest
+1 Krosan Verge
+3 Mountain
+1 Path of Ancestry
+4 Plains
+1 Prairie Stream
+1 Spire of Industry
+1 Sungrass Prairie
+3 Swamp
+1 Temple of Mystery
+1 Temple of the False God
+1 Terramorphic Expanse
+1 The World Tree
+1 Treva's Ruins
+1 Unclaimed Territory
+1 Yavimaya Coast
+1 Adventurous Impulse
+1 Amoeboid Changeling
+1 Arcane Signet
+1 Bonescythe Sliver
+1 Cloudshredder Sliver
+1 Commune with Nature
+1 Corrupted Grafstone
+1 Crypt Sliver
+1 Cultivate
+1 Dark Prophecy
+1 Diffusion Sliver
+1 Divine Reckoning
+1 Dormant Sliver
+1 Essence Sliver
+1 Farseek
+1 Fellwar Stone
+1 Fungus Sliver
+1 Gemhide Sliver
+1 Graveshifter
+1 Groundshaker Sliver
+1 Gruul Signet
+1 Harmonic Sliver
+1 Hibernation Sliver
+1 Hot Soup
+1 Hunter Sliver
+1 Lavabelly Sliver
+1 Loreseeker's Stone
+1 Mana Leak
+1 Manaweft Sliver
+1 Mask of Avacyn
+1 Mirror Shield
+1 Mnemonic Sliver
+1 Negate
+1 Opaline Sliver
+1 Overwhelming Instinct
+1 Path to Exile
+1 Pillar of Origins
+1 Predatory Sliver
+1 Pulmonic Sliver
+1 Rampant Growth
+1 Return of the Wildspeaker
+1 Robe of Mirrors
+1 Rout
+1 Selesnya Signet
+1 Sentinel Sliver
+1 Shifting Sliver
+1 Sliver Hivelord
+1 Sliver Overlord
+1 Sol Ring
+1 Spinneret Sliver
+1 Spiteful Sliver
+1 Star Compass
+1 Striking Sliver
+1 Syphon Sliver
+1 Tempered Sliver
+1 The First Sliver
+1 Vampiric Sliver
+1 Vanquisher's Banner
+1 Vedalken Aethermage
+1 Venom Sliver
+1 Virulent Sliver
+1 Ward Sliver
+1 Winged Sliver
+Sideboard:
+
+1 Azorius Chancery
+1 Basal Sliver
+1 Battle Sliver
+1 Beneath the Sands
+1 Birthing Boughs
+1 Blur Sliver
+1 Brood Sliver
+1 Cleaving Sliver
+1 Crystal Ball
+1 Fury Sliver
+1 Hollowhead Sliver
+1 Lancer Sliver
+1 Lead the Stampede
+1 Mana Geode
+1 Mindlash Sliver
+1 Muscle Sliver
+1 Phyrexian Rebirth
+1 Seaside Citadel
+1 Seek the Wilds
+1 Sinew Sliver
+1 Synchronous Sliver
+1 Temple of Triumph
+1 Two-Headed Sliver

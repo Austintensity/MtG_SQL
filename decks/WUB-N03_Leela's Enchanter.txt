@@ -1,0 +1,128 @@
+1 Arcane Sanctum
+1 Cloudcrest Lake
+1 Command Tower
+1 Dismal Backwater
+1 Dreadship Reef
+1 Evolving Wilds
+5 Island
+1 Jwar Isle Refuge
+12 Plains
+1 Scoured Barrens
+1 Sejiri Refuge
+1 Seraph Sanctuary
+1 Survivors' Encampment
+5 Swamp
+1 Terramorphic Expanse
+1 Waterveil Cavern
+1 Agent of Erebos
+1 Ajani's Chosen
+1 Ajani's Welcome
+1 Alela, Artful Provocateur
+1 Alexi's Cloak
+1 All That Glitters
+1 Alseid of Life's Bounty
+1 Archetype of Courage
+1 Archon of Sun's Grace
+1 Brilliant Halo
+1 Brine Shaman
+1 Bruna, Light of Alabaster
+1 Celestial Ancient
+1 Commander's Sphere
+1 Confounding Conundrum
+1 Coveted Jewel
+1 Curiosity Crafter
+1 Darksteel Mutation
+1 Daxos the Returned
+1 Daxos, Blessed by the Sun
+1 Decree of Silence
+1 Doomwake Giant
+1 Dusk // Dawn
+1 Eidolon of Countless Battles
+1 Eidolon of Philosophy
+1 Ertai, the Corrupted
+1 Estrid's Invocation
+1 Ethereal Armor
+1 Extinguish All Hope
+1 Favorable Winds
+1 Gnarled Scarhide
+1 Gossamer Chains
+1 Greed
+1 Hanna, Ship's Navigator
+1 Hateful Eidolon
+1 Heavenly Blademaster
+1 Helm of the Gods
+1 Heraldic Banner
+1 Hyena Umbra
+1 Hypnotic Siren
+1 Kitsune Mystic
+1 Lofty Denial
+1 Mace of the Valiant
+1 Mesa Enchantress
+1 Mind Unbound
+1 Odunos River Trawler
+1 Orzhov Signet
+1 Perplexing Test
+1 Rayne, Academy Chancellor
+1 Sage's Reverie
+1 Seal of Cleansing
+1 Sephara, Sky's Blade
+1 Shimmering Wings
+1 Sigil of the Empty Throne
+1 Sol Ring
+1 Spear of Heliod
+1 Sphere of Safety
+1 Telepathy
+1 Thoughtrender Lamia
+1 Tome of Legends
+1 Transcendent Envoy
+1 True Conviction
+1 Underworld Coinsmith
+1 Winds of Rath
+1 Zur the Enchanter
+Sideboard:
+
+1 Aboshan's Desire
+1 Absolute Law
+1 Angelic Shield
+1 Archetype of Finality
+1 Arenson's Aura
+1 Auramancer
+1 Blightcaster
+1 Blood Funnel
+1 Callaphe, Beloved of the Sea
+1 Cartouche of Solidarity
+1 Chosen by Heliod
+1 Commander's Insignia
+1 Dawn Evangel
+1 Diabolic Servitude
+1 Djinn of Infinite Deceits
+1 Enduring Renewal
+1 Frozen Aether
+1 Gold Myr
+1 Guardian's Magemark
+1 Heliod's Pilgrim
+1 High Seas
+1 Hopeful Eidolon
+1 Kangee, Sky Warden
+1 Lawmage's Binding
+1 Mantle of Leadership
+1 Mourning
+1 Necromancer's Magemark
+1 Nighthowler
+1 Nyxborn Shieldmate
+1 Omen of the Dead
+1 Oona, Queen of the Fae
+1 Peppersmoke
+1 Righteous Authority
+1 Rule of Law
+1 Shielded by Faith
+1 Sigil of Sleep
+1 Silent Sentinel
+1 Silver Myr
+1 Skeleton Shard
+1 Soul Snare
+1 Spawnbroker
+1 Spirit Link
+1 Spirit of the Labyrinth
+1 Tymaret, Chosen from Death
+1 Verity Circle

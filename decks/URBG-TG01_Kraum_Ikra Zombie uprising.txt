@@ -1,0 +1,106 @@
+1 Command Tower
+1 Cradle of the Accursed
+1 Dimir Aqueduct
+1 Evolving Wilds
+1 Exotic Orchard
+4 Forest
+1 Grim Backwoods
+6 Island
+1 Izzet Boilerworks
+1 Jwar Isle Refuge
+3 Mountain
+1 Myriad Landscape
+1 Simic Growth Chamber
+10 Swamp
+1 Temple of Mystery
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Unclaimed Territory
+1 Altar of the Pantheon
+1 Arcane Signet
+1 Archetype of Imagination
+1 Army of the Damned
+1 Beanstalk Giant // Fertile Footsteps
+1 Cemetery Recruitment
+1 Clutch of the Undercity
+1 Commander's Sphere
+1 Corpse Harvester
+1 Corpseweft
+1 Corrupted Grafstone
+1 Curse of Shallow Graves
+1 Death Baron
+1 Death Denied
+1 Desecrated Tomb
+1 Diregraf Captain
+1 Dread Wanderer
+1 Dreadhorde Invasion
+1 Fleshbag Marauder
+1 Ghoulcaller's Chant
+1 Gisa and Geralf
+1 Glint-Eye Nephilim
+1 Golgari Signet
+1 Graf Harvest
+1 Grave Defiler
+1 Gravepurge
+1 Gray Merchant of Asphodel
+1 Gruesome Fate
+1 Gruul Signet
+1 Havengul Runebinder
+1 Heaven // Earth
+1 Hour of Eternity
+1 Ikra Shidiqi, the Usurper
+1 Incubation Druid
+1 Infernal Caretaker
+1 Izzet Signet
+1 Josu Vess, Lich Knight
+1 Kodama's Reach
+1 Kraum, Ludevic's Opus
+1 Krosan Tusker
+1 Lava Zombie
+1 Leyline Prowler
+1 Liliana's Mastery
+1 Lord of the Accursed
+1 Loyal Subordinate
+1 Nightscape Familiar
+1 Noosegraf Mob
+1 Open the Graves
+1 Pillar of Origins
+1 Plague Wind
+1 Pontiff of Blight
+1 Rise from the Tides
+1 Rooftop Storm
+1 Shepherd of Rot
+1 Sign in Blood
+1 Simic Signet
+1 Skinthinner
+1 Sol Ring
+1 Undead Augur
+1 Undead Warchief
+1 Vengeful Dead
+1 Vizier of the Scorpion
+1 Wight of Precinct Six
+Sideboard:
+
+1 Crumbling Vestige
+1 Dark Salvation
+1 Dreadhorde Twins
+1 Dreg Mangler
+1 Gempalm Polluter
+1 Golgari Locket
+1 Gravedigger
+1 Kederekt Creeper
+1 Lazotep Reaver
+1 Liliana's Elite
+1 Maraleaf Pixie
+1 Mistvein Borderpost
+1 Obelisk of Grixis
+1 Obelisk of Jund
+1 Phylactery Lich
+1 Rhizome Lurcher
+1 Shambling Remains
+1 Spinning Wheel
+1 Sprouting Thrinax
+1 Sultai Banner
+1 Toil // Trouble
+1 Transguild Promenade
+1 Zhur-Taa Druid

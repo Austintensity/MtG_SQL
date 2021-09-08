@@ -1,0 +1,118 @@
+1 Azorius Chancery
+1 Blighted Woodland
+1 Boros Garrison
+1 Command Tower
+1 Evolving Wilds
+1 Exotic Orchard
+1 Field of Ruin
+6 Forest
+1 Frontier Bivouac
+1 Irrigated Farmland
+5 Island
+1 Jungle Shrine
+1 Krosan Verge
+1 Mikokoro, Center of the Sea
+3 Mountain
+1 Myriad Landscape
+1 Mystic Monastery
+1 Naya Panorama
+5 Plains
+1 Selesnya Sanctuary
+1 Simic Growth Chamber
+1 Terramorphic Expanse
+1 Absolute Grace
+1 Agitator Ant
+1 Akroan Horse
+1 All Suns' Dawn
+1 Arcane Signet
+1 Bant Charm
+1 Borderland Explorer
+1 Boros Signet
+1 Centaur Peacemaker
+1 Coiling Oracle
+1 Dictate of Kruphix
+1 Edric, Spymaster of Trest
+1 Emergency Powers
+1 Essence Filter
+1 Essence Warden
+1 Felidar Sovereign
+1 Fertilid
+1 Folio of Fancies
+1 Forcemage Advocate
+1 Gahiji, Honored One
+1 Ghirapur Orrery
+1 Ghostly Prison
+1 Glademuse
+1 Gor Muldrak, Amphinologist
+1 Gruul Signet
+1 Gwafa Hazid, Profiteer
+1 Howling Golem
+1 Island Sanctuary
+1 Jungle Wayfinder
+1 Kefnet the Mindful
+1 Khalni Heart Expedition
+1 Kwain, Itinerant Meddler
+1 Kynaios and Tiro of Meletis
+1 Loxodon Peacekeeper
+1 Magus of the Balance
+1 Negate
+1 Noble Benefactor
+1 Orzhov Advokist
+1 Pendant of Prosperity
+1 Pir's Whim
+1 Rites of Flourishing
+1 Rootweaver Druid
+1 Rousing of Souls
+1 Runed Servitor
+1 Savage Summoning
+1 Sawtooth Loon
+1 Search for Tomorrow
+1 Selesnya Signet
+1 Selvala's Charge
+1 Selvala's Enforcer
+1 Selvala, Explorer Returned
+1 Shefet Monitor
+1 Sky Hussar
+1 Skyscribing
+1 Soaring Show-Off
+1 Sol Ring
+1 Soul Warden
+1 Tempt with Discovery
+1 Tidal Barracuda
+1 Vision Skeins
+1 Woodvine Elemental
+1 Words of Wisdom
+1 Yasharn, Implacable Earth
+Sideboard:
+
+1 Absolute Law
+1 Arcane Melee
+1 Bonder's Ornament
+1 Centaur Nurturer
+1 Chaos Warp
+1 Cultivate
+1 Curfew
+1 Dakra Mystic
+1 Eager Construct
+1 Earnest Fellowship
+1 Excavation
+1 Farhaven Elf
+1 Fascination
+1 Flux
+1 Growth Spiral
+1 Jeska's Will
+1 Krosan Tusker
+1 Magus of the Wheel
+1 Paradise Druid
+1 Peace Talks
+1 Propaganda
+1 Prosperity
+1 Pyxis of Pandemonium
+1 Roon of the Hidden Realm
+1 Scaretiller
+1 Seer's Sundial
+1 Shimmer Dragon
+1 Stubborn Denial
+1 Sumala Woodshaper
+1 Talrand, Sky Summoner
+1 Treasure Trove

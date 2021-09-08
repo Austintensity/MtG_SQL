@@ -1,0 +1,115 @@
+1 Battlefield Forge
+1 Cinder Glade
+1 Command Tower
+1 Cragcrown Pathway // Timbercrown Pathway
+1 Evolving Wilds
+1 Exotic Orchard
+6 Forest
+1 Graypelt Refuge
+1 Gruul Turf
+1 Inspiring Vantage
+1 Jungle Shrine
+1 Krosan Verge
+7 Mountain
+1 Myriad Landscape
+1 Naya Panorama
+6 Plains
+1 Rith's Grove
+1 Spinerock Knoll
+1 Sungrass Prairie
+1 Terramorphic Expanse
+1 Aether Flash
+1 Apex Altisaur
+1 Arcane Signet
+1 Atzocan Seer
+1 Beast Within
+1 Bellowing Aegisaur
+1 Boros Reckoner
+1 Boros Signet
+1 Breath of Darigaaz
+1 Broodhatch Nantuko
+1 Caltrops
+1 Chain Reaction
+1 Coalhauler Swine
+1 Cultivate
+1 Deep-Slumber Titan
+1 Elemental Bond
+1 Explore
+1 Faithless Looting
+1 Farhaven Elf
+1 Gruul Ragebeast
+1 Gruul Signet
+1 Hans Eriksson
+1 Harmonize
+1 Hornet Nest
+1 Hungering Hydra
+1 Kami of the Honored Dead
+1 Karametra, God of Harvests
+1 Lavabrink Floodgates
+1 Magmaquake
+1 Marauding Raptor
+1 Marisi, Breaker of the Coil
+1 Nomads en-Kor
+1 Obuun, Mul Daya Ancestor
+1 Ohran Frostfang
+1 Outrider en-Kor
+1 Pyrohemia
+1 Ranging Raptors
+1 Raptor Hatchling
+1 Ravenous Daggertooth
+1 Ripjaw Raptor
+1 Rite of Passage
+1 Sakura-Tribe Elder
+1 Selesnya Signet
+1 Shake the Foundations
+1 Shaman en-Kor
+1 Siegehorn Ceratops
+1 Silklash Spider
+1 Silverclad Ferocidons
+1 Skyshroud Elf
+1 Slice and Dice
+1 Snapping Sailback
+1 Sol Ring
+1 Spirit en-Kor
+1 Spitemare
+1 Starstorm
+1 Stormwild Capridor
+1 Tamanoa
+1 Thornscape Familiar
+1 Thunderherd Migration
+1 Truefire Captain
+1 Urban Daggertooth
+1 Wall of Hope
+1 Warmonger
+1 Warrior en-Kor
+Sideboard:
+
+1 Apocalypse Hydra
+1 Beacon of Destiny
+1 Cacophodon
+1 Cinder Giant
+1 Commune with Dinosaurs
+1 Deadly Recluse
+1 Frilled Deathspitter
+1 Hurly-Burly
+1 Imperial Ceratops
+1 Inflame
+1 Jiwari, the Earth Aflame
+1 Lancers en-Kor
+1 Marath, Will of the Wild
+1 Mogg Maniac
+1 Naya Charm
+1 Needletooth Raptor
+1 Pathway Arrows
+1 Polyraptor
+1 Powerstone Minefield
+1 Pyroclasm
+1 Rampaging Baloths
+1 Rolling Temblor
+1 Savage Stomp
+1 Seismic Shudder
+1 Sprouting Phytohydra
+1 Stuffy Doll
+1 Sun-Crowned Hunters
+1 Trapjaw Tyrant
+1 Volcanic Fallout

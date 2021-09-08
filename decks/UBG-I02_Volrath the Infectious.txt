@@ -1,0 +1,123 @@
+1 Command Tower
+1 Darkwater Catacombs
+1 Dimir Aqueduct
+1 Evolving Wilds
+1 Exotic Orchard
+7 Forest
+1 Golgari Rot Farm
+1 Grim Backwoods
+6 Island
+1 Llanowar Wastes
+1 Myriad Landscape
+1 Opal Palace
+1 Opulent Palace
+1 Rogue's Passage
+1 Sunken Hollow
+6 Swamp
+1 Tainted Wood
+1 Temple of Malady
+1 Terramorphic Expanse
+1 Yavimaya Coast
+1 Arcane Signet
+1 Beast Within
+1 Biomass Mutation
+1 Blighted Agent
+1 Blightwidow
+1 Bone Picker
+1 Bonehoard
+1 Bounty of the Luxa
+1 Call to Heel
+1 Channeler Initiate
+1 Contagion Clasp
+1 Core Prowler
+1 Corrupted Conscience
+1 Corrupted Grafstone
+1 Cultivate
+1 Deathsprout
+1 Decimator Web
+1 Dispel
+1 Epic Proportions
+1 Evolution Sage
+1 Flensermite
+1 Flesh-Eater Imp
+1 Flux Channeler
+1 Glistening Oil
+1 Golgari Signet
+1 Grafted Exoskeleton
+1 Growth Spiral
+1 Hand of the Praetors
+1 Harvester of Souls
+1 Ichor Rats
+1 Inexorable Tide
+1 Mana Leak
+1 Midnight Banshee
+1 Moldervine Reclamation
+1 Oracle's Vault
+1 Pestilence
+1 Phyrexian Juggernaut
+1 Phyrexian Swarmlord
+1 Plague Stinger
+1 Prowler's Helm
+1 Putrefax
+1 Pyramid of the Pantheon
+1 Rampant Growth
+1 Reclamation Sage
+1 Return to Nature
+1 Sakura-Tribe Elder
+1 Sandwurm Convergence
+1 Septic Rats
+1 Simic Signet
+1 Sol Ring
+1 Talisman of Resilience
+1 Tezzeret's Gambit
+1 Thrummingbird
+1 Trailblazer's Boots
+1 Vampire Nighthawk
+1 Villainous Wealth
+1 Viral Drake
+1 Viridian Corrupter
+1 Volrath, the Shapestealer
+1 Whispering Specter
+1 Whispersilk Cloak
+1 Wickerbough Elder
+1 Willbender
+1 Wrap in Vigor
+Sideboard:
+
+1 Aqueous Form
+1 Carrion Call
+1 Chained Throatseeker
+1 Cinderhaze Wretch
+1 Contagious Nim
+1 Cystbearer
+1 Farseek
+1 Fuel for the Cause
+1 Golgari Decoy
+1 Hapatra, Vizier of Poisons
+1 Harrow
+1 Invisibility
+1 Karn's Bastion
+1 Liliana's Influence
+1 Mask of Avacyn
+1 Melira, Sylvok Outcast
+1 Mirror Shield
+1 Mutilate
+1 Nest of Scarabs
+1 Neurok Stealthsuit
+1 Passwall Adept
+1 Phyresis
+1 Phyrexian Vatmother
+1 Plaguemaw Beast
+1 Read the Bones
+1 Reality Shift
+1 Rhonas's Monument
+1 Rot Wolf
+1 Snake Cult Initiation
+1 Soul Snuffers
+1 Spinebiter
+1 Stubborn Denial
+1 Sultai Charm
+1 Tainted Strike
+1 Tangle Angler
+1 Tourach's Chant
+1 Virulent Sliver

@@ -1,0 +1,104 @@
+1 Command Tower
+1 Evolving Wilds
+16 Mountain
+1 Myriad Landscape
+12 Plains
+1 Terramorphic Expanse
+1 Altar of Dementia
+1 Ancestral Blade
+1 Arcane Signet
+1 Ashnod's Altar
+1 Auriok Steelshaper
+1 Avacyn's Collar
+1 Birgi, God of Storytelling // Harnfel, Horn of Bounty
+1 Blasting Station
+1 Bone Saw
+1 Boros Charm
+1 Boros Signet
+1 Burnished Hart
+1 Cathartic Reunion
+1 Cathodion
+1 Chaos Warp
+1 Daretti, Scrap Savant
+1 Dauntless Bodyguard
+1 Deflecting Palm
+1 Dispatch
+1 Faithless Looting
+1 Fanatical Firebrand
+1 Fireblade Charger
+1 Generous Gift
+1 Goblin Bombardment
+1 Grafted Wargear
+1 Grapeshot
+1 Immersturm Raider
+1 Impact Tremors
+1 Impulsive Pilferer
+1 Infernal Plunge
+1 Ironclad Slayer
+1 Koll, the Forgemaster
+1 Lightning Bolt
+1 Lightning Greaves
+1 Martyr's Cause
+1 Mask of Immolation
+1 Mortarpod
+1 Myr Moonvessel
+1 Myr Retriever
+1 Nahiri, Storm of Stone
+1 Oketra's Monument
+1 Open the Armory
+1 Ornithopter
+1 Outpost Siege
+1 Priest of Urabrask
+1 Red Elemental Blast
+1 Relic Seeker
+1 Reyav, Master Smith
+1 Rograkh, Son of Rohgahh
+1 Runaway Steam-Kin
+1 Sai of the Shinobi
+1 Shifting Wall
+1 Skullclamp
+1 Sol Ring
+1 Spawning Pit
+1 Sram, Senior Edificer
+1 Stone Haven Outfitter
+1 Stormrider Rig
+1 Swiftfoot Boots
+1 Swords to Plowshares
+1 Teshar, Ancestor's Apostle
+1 Thrill of Possibility
+1 Toggo, Goblin Weaponsmith
+1 Tormenting Voice
+1 Urza's Bauble
+1 Wear // Tear
+1 Wild Guess
+1 Wyleth, Soul of Steel
+Sideboard:
+
+1 Akiri, Fearless Voyager
+1 Armored Skyhunter
+1 Auriok Glaivemaster
+1 Aviary Mechanic
+1 Bloodfire Dwarf
+1 Burning Prophet
+1 Burnout
+1 Cryptic Trilobite
+1 Demonmail Hauberk
+1 Desperate Ritual
+1 Dwarven Scorcher
+1 Enlightened Ascetic
+1 Felidar Cub
+1 Fervent Champion
+1 Fissure Wizard
+1 Forging the Tyrite Sword
+1 Hope of Ghirapur
+1 Insolent Neonate
+1 Kitesail Apprentice
+1 Kor Blademaster
+1 Leonin Den-Guard
+1 Ninth Bridge Patrol
+1 Skyhunter Cub
+1 Sram's Expertise
+1 Sunspear Shikari
+1 Thermopod
+1 Tiana, Ship's Caretaker
+1 Warchanter Skald

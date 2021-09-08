@@ -1,0 +1,119 @@
+1 Ash Barrens
+1 Azorius Chancery
+1 Battlefield Forge
+1 Command Tower
+1 Evolving Wilds
+1 Exotic Orchard
+1 Irrigated Farmland
+4 Island
+3 Mountain
+1 Myriad Landscape
+1 Mystic Monastery
+2 Plains
+1 Prairie Stream
+4 Snow-Covered Island
+3 Snow-Covered Mountain
+6 Snow-Covered Plains
+1 Temple of the False God
+1 Temple of Triumph
+1 Terramorphic Expanse
+1 Anafenza, Kin-Tree Spirit
+1 Arcane Signet
+1 Ascendant Spirit
+1 Azorius Signet
+1 Baku Altar
+1 Blessed Breath
+1 Boros Charm
+1 Boros Signet
+1 Callow Jushi
+1 Celestial Crusader
+1 Clarion Spirit
+1 Consuming Vortex
+1 Desperate Ritual
+1 Displace
+1 Drogskol Captain
+1 Earthquake
+1 Earthshaker
+1 Empyrean Eagle
+1 Eternal Dragon
+1 Ethereal Valkyrie
+1 Evermind
+1 Field of Souls
+1 Geist-Honored Monk
+1 Ghostly Prison
+1 Glacial Ray
+1 Glitterfang
+1 Glorious Anthem
+1 Hundred-Talon Strike
+1 Intangible Virtue
+1 Izzet Signet
+1 Jeskai Ascendancy
+1 Jiwari, the Earth Aflame
+1 Keep Safe
+1 Keep Watch
+1 Kirtar's Wrath
+1 Kykar, Wind's Fury
+1 Long-Forgotten Gohei
+1 Magmaquake
+1 Negate
+1 Niblis of Frost
+1 Nikko-Onna
+1 Outpost Siege
+1 Oyobi, Who Split the Heavens
+1 Ranar the Ever-Watchful
+1 Reconnaissance Mission
+1 Ribbons of the Reikai
+1 Saheeli, Sublime Artificer
+1 Scholar of the Ages
+1 Shacklegeist
+1 Sire of the Storm
+1 Skyclave Apparition
+1 Skyfire Kirin
+1 Sol Ring
+1 Soulherder
+1 Spectral Shepherd
+1 Spiritual Visit
+1 Talrand, Sky Summoner
+1 Time Wipe
+1 Twilight Drover
+1 Ugin, the Ineffable
+1 Unbreakable Formation
+1 Veil of Secrecy
+1 Whirlwind of Thought
+1 Windborn Muse
+1 Yuki-Onna
+Sideboard:
+
+1 Alharu, Solemn Ritualist
+1 Archaeomancer
+1 Bell Borca, Spectral Sergeant
+1 Brago, King Eternal
+1 Cosmos Charger
+1 Dampen Thought
+1 Diviner Spirit
+1 Doomed Traveler
+1 Dreamcatcher
+1 Drowned Rusalka
+1 Eidolon of Obstruction
+1 Favorable Winds
+1 Ghostly Flicker
+1 Goblin Oriflamme
+1 Guardian of Solitude
+1 Into the Fray
+1 Keiga, the Tide Star
+1 Kiri-Onna
+1 Kurkesh, Onakke Ancient
+1 Martyr's Soul
+1 Nobilis of War
+1 Oni of Wild Places
+1 Phantom General
+1 Propaganda
+1 Rootborn Defenses
+1 Sage of the Beyond
+1 Spirit Cairn
+1 Spirit of the Labyrinth
+1 Teller of Tales
+1 Torrent of Stone
+1 Vega, the Watcher
+1 Volcanic Vision
+1 Waxmane Baku

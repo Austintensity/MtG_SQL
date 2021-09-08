@@ -1,0 +1,122 @@
+1 Alpine Meadow
+1 Caves of Koilos
+1 Command Tower
+1 Evolving Wilds
+1 Geier Reach Sanitarium
+1 Labyrinth of Skophos
+5 Mountain
+1 Myriad Landscape
+1 Naya Panorama
+1 Nomad Outpost
+1 Opal Palace
+7 Plains
+1 Rix Maadi, Dungeon Palace
+1 Scoured Barrens
+9 Swamp
+1 Tainted Field
+1 Terramorphic Expanse
+1 Alesha, Who Smiles at Death
+1 Ankle Shanker
+1 Avalanche Riders
+1 Awaken the Erstwhile
+1 Burglar Rat
+1 Burnished Hart
+1 Cackling Fiend
+1 Cathartic Reunion
+1 Clone Shell
+1 Cloudchaser Kestrel
+1 Corrupted Grafstone
+1 Dauthi Mindripper
+1 Delirium Skeins
+1 Desecrated Tomb
+1 Despotic Scepter
+1 Divine Reckoning
+1 Duergar Hedge-Mage
+1 Duplicant
+1 Dusk // Dawn
+1 Elderfang Disciple
+1 Elvish Doomsayer
+1 Faceless Butcher
+1 Faithless Looting
+1 False Prophet
+1 Fell the Mighty
+1 Fiend Hunter
+1 Fraying Omnipotence
+1 Goblin Bombardment
+1 Hazoret's Monument
+1 Immortal Servitude
+1 Keeper of the Dead
+1 Liliana's Specter
+1 Loxodon Warhammer
+1 Magus of the Disk
+1 Master of Cruelties
+1 Megrim
+1 Mind Slash
+1 Mirror Shield
+1 Moodmark Painter
+1 Moonlight Bargain
+1 Mythos of Snapdax
+1 Necrologia
+1 Orzhov Signet
+1 Palisade Giant
+1 Pilgrim's Eye
+1 Raid Bombardment
+1 Reveillark
+1 Sadistic Hypnotist
+1 Scaretiller
+1 Shattered Perception
+1 Skyclave Apparition
+1 Slaughter the Strong
+1 Sol Ring
+1 Solemn Simulacrum
+1 Stonehorn Dignitary
+1 Stronghold Rats
+1 Sun Titan
+1 Tajic, Blade of the Legion
+1 Talisman of Conviction
+1 Talisman of Hierarchy
+1 Tome of Legends
+1 Vizier of Deferment
+1 Whispersilk Cloak
+1 Workshop Assistant
+1 Xathrid Necromancer
+Sideboard:
+
+1 Abyssal Specter
+1 Acquisitions Expert
+1 Agent of Erebos
+1 Altar of the Pantheon
+1 Archetype of Finality
+1 Big Game Hunter
+1 Blind Zealot
+1 Bonehoard
+1 Cleansing Nova
+1 Creeping Dread
+1 Defender en-Vec
+1 Dreamstealer
+1 Ebony Horse
+1 Eliminate the Competition
+1 Explorer's Scope
+1 Glint-Horn Buccaneer
+1 Gorgon Recluse
+1 Gray Merchant of Asphodel
+1 High Priest of Penance
+1 Karmic Guide
+1 Lightning Runner
+1 Mad Prophet
+1 Mardu Ascendancy
+1 Mentor of the Meek
+1 Midvast Protector
+1 Nahiri's Wrath
+1 Ponyback Brigade
+1 Ransack the Lab
+1 Resolute Blademaster
+1 Returned Reveler
+1 Scalding Salamander
+1 Siege-Gang Commander
+1 Silence the Believers
+1 Subira, Tulzidi Caravanner
+1 Taste of Death
+1 Viscera Seer
+1 Vulturous Aven
+1 Warped Devotion

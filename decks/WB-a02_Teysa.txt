@@ -1,0 +1,136 @@
+1 Bojuka Bog
+1 Brightclimb Pathway // Grimclimb Pathway
+1 Cabal Stronghold
+1 Caves of Koilos
+1 Command Tower
+1 Concealed Courtyard
+1 Exotic Orchard
+10 Plains
+1 Scoured Barrens
+14 Swamp
+1 Tainted Field
+1 Temple of Silence
+1 Temple of the False God
+1 Angel of Despair
+1 Arcane Signet
+1 Ayara, First of Locthwain
+1 Ayli, Eternal Pilgrim
+1 Bloodsoaked Champion
+1 Bubbling Muck
+1 Burnished Hart
+1 Carrier Thrall
+1 Charcoal Diamond
+1 Cloak and Dagger
+1 Corpse Knight
+1 Cruel Celebrant
+1 Darksteel Mutation
+1 Dawn of Hope
+1 Deathgreeter
+1 Despark
+1 Diabolic Tutor
+1 Dire Tactics
+1 Divine Reckoning
+1 Dreadhorde Invasion
+1 Driver of the Dead
+1 Ethereal Absolution
+1 Fumigate
+1 Generous Gift
+1 Grim Haruspex
+1 Haazda Marshal
+1 Hallowed Spiritkeeper
+1 Harvester of Souls
+1 Hidden Stockpile
+1 Immortal Servitude
+1 Kaya's Wrath
+1 Kaya, Bane of the Dead
+1 Leave No Trace
+1 Magister of Worth
+1 Marionette Master
+1 Martyr of Dusk
+1 Maw of the Obzedat
+1 Midnight Reaper
+1 Ogre Slumlord
+1 Orah, Skyclave Hierophant
+1 Orzhov Enforcer
+1 Orzhov Signet
+1 Pawn of Ulamog
+1 Pestilence
+1 Pontiff of Blight
+1 Revel in Riches
+1 Revival // Revenge
+1 Skullclamp
+1 Smothering Tithe
+1 Sol Ring
+1 Solemn Simulacrum
+1 Syr Konrad, the Grim
+1 Taborax, Hope's Demise
+1 Talisman of Hierarchy
+1 Teysa Karlov
+1 Teysa, Orzhov Scion
+1 Thalisse, Reverent Medium
+1 Thrull Parasite
+1 Village Rites
+1 Vindictive Vampire
+1 Vizkopa Guildmage
+1 Well of Lost Dreams
+1 Whispersilk Cloak
+1 Xathrid Necromancer
+1 Zulaport Cutthroat
+Sideboard:
+
+1 Altar's Reap
+1 Archon of Justice
+1 Aryel, Knight of Windgrace
+1 Basilica Screecher
+1 Bastion of Remembrance
+1 Black Market
+1 Blistergrub
+1 Bloodthirsty Aerialist
+1 Butcher of Malakir
+1 Bygone Bishop
+1 Cadaver Imp
+1 Call to the Feast
+1 Campaign of Vengeance
+1 Captain's Call
+1 Commander's Sphere
+1 Deadly Tempest
+1 Death's-Head Buzzard
+1 Deathpact Angel
+1 Decree of Justice
+1 Doomed Dissenter
+1 Doomed Traveler
+1 Dutiful Attendant
+1 Executioner's Capsule
+1 Farsight Mask
+1 Felidar Sovereign
+1 Fell Shepherd
+1 Fiend Hunter
+1 First Response
+1 High Priest of Penance
+1 Hunted Witness
+1 Idyllic Grange
+1 Intangible Virtue
+1 Kingpin's Pet
+1 Mentor of the Meek
+1 Midnight Haunting
+1 Mortify
+1 Oath of Kaya
+1 Paladin of Prahv
+1 Pristine Talisman
+1 Raise the Alarm
+1 Reassembling Skeleton
+1 Regal Caracal
+1 Requiem Angel
+1 Reveillark
+1 Rite of Belzenlok
+1 Sengir Autocrat
+1 Shadows of the Past
+1 Soldevi Adnate
+1 Sworn Companions
+1 Tattered Mummy
+1 Teysa, Envoy of Ghosts
+1 Timely Hordemate
+1 Tithe Taker
+1 Unruly Mob
+1 Visionary Augmenter
+1 Witch's Cottage

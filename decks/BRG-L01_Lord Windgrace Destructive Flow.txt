@@ -1,0 +1,121 @@
+1 Bojuka Bog
+1 Cinder Glade
+1 Command Tower
+1 Cragcrown Pathway // Timbercrown Pathway
+1 Darigaaz's Caldera
+1 Drownyard Temple
+1 Exotic Orchard
+10 Forest
+1 Gruul Turf
+1 Jund Panorama
+1 Karplusan Forest
+1 Mosswort Bridge
+7 Mountain
+1 Rakdos Carnarium
+1 Savage Lands
+1 Shadowblood Ridge
+1 Stomping Ground
+4 Swamp
+1 Temple of the False God
+1 Terramorphic Expanse
+1 Alpine Guide
+1 Ancient Greenwarden
+1 Arcane Signet
+1 Army Ants
+1 Ashes to Ashes
+1 Avenger of Zendikar
+1 Beast Within
+1 Budoka Gardener
+1 Chain Reaction
+1 Crop Rotation
+1 Cultivate
+1 Decree of Annihilation
+1 Deep Reconnaissance
+1 Desolation
+1 Destructive Flow
+1 Destructive Force
+1 Earthlink
+1 Edge of Autumn
+1 Far Wanderings
+1 Farhaven Elf
+1 Farseek
+1 Fertilid
+1 From the Ashes
+1 Gaze of Granite
+1 Geode Rager
+1 Goblin Ruinblaster
+1 Groundskeeper
+1 Gruul Signet
+1 Harrow
+1 Harvest Season
+1 Kazandu Mammoth // Kazandu Valley
+1 Keldon Firebombers
+1 Khalni Heart Expedition
+1 Korvold, Fae-Cursed King
+1 Lord Windgrace
+1 Mayhem Devil
+1 Mina and Denn, Wildborn
+1 Molimo, Maro-Sorcerer
+1 Nesting Dragon
+1 Omnath, Locus of Rage
+1 Painful Truths
+1 Phylath, World Sculptor
+1 Quarry Beetle
+1 Rampaging Baloths
+1 Rampant Growth
+1 Ramunap Excavator
+1 Ravenous Baboons
+1 Sakura-Tribe Elder
+1 Scaretiller
+1 Scute Swarm
+1 Seer's Sundial
+1 Sol Ring
+1 Springbloom Druid
+1 Summer Bloom
+1 Tectonic Reformation
+1 The Mending of Dominaria
+1 Thresher Beast
+1 Tilling Treefolk
+1 Turntimber Sower
+1 Valakut Exploration
+1 Wildfire
+1 Yavimaya Elder
+Sideboard:
+
+1 Blighted Woodland
+1 Cartographer
+1 Charnelhoard Wurm
+1 Cleansing Wildfire
+1 Commander's Sphere
+1 Corrupted Grafstone
+1 Creeping Renaissance
+1 Deathbringer Regent
+1 Den Protector
+1 Dingus Egg
+1 Field of Ruin
+1 Gravewaker
+1 Hedonist's Trove
+1 Hunting Wilds
+1 Kodama's Reach
+1 Krenko, Tin Street Kingpin
+1 Living Twister
+1 Molderhulk
+1 Moldgraf Monstrosity
+1 Myriad Landscape
+1 Oran-Rief Hydra
+1 Ordeal of Nylea
+1 Paradise Druid
+1 Prismatic Lens
+1 Quirion Elves
+1 Reality Scramble
+1 Rites of Flourishing
+1 Ruinous Path
+1 Skyclave Pick-Axe
+1 Soul of Zendikar
+1 Spawning Pit
+1 Stalking Stones
+1 Star Compass
+1 Stoic Builder
+1 Stoneshaker Shaman
+1 Thespian's Stage
+1 Zendikar Incarnate

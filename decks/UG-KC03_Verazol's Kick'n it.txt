@@ -1,0 +1,107 @@
+1 Command Tower
+16 Forest
+1 Forge of Heroes
+12 Island
+1 Lumbering Falls
+1 Rejuvenating Springs
+1 Throne of Makindi
+1 Vineglimmer Snarl
+1 Yavimaya Coast
+1 Aether Figment
+1 Aetherize
+1 Canopy Surge
+1 Citanul Woodreaders
+1 Coralhelm Chronicler
+1 Cragplate Baloth
+1 Displacement Wave
+1 Elfhame Druid
+1 Emblazoned Golem
+1 Everflowing Chalice
+1 Evolution Sage
+1 Field Research
+1 Flux Channeler
+1 Forgotten Ancient
+1 Fuel for the Cause
+1 Gift of Growth
+1 Gnarlid Pack
+1 Grow from the Ashes
+1 Growth Spiral
+1 Hedron Archive
+1 Hunting Wilds
+1 Inscription of Abundance
+1 Inscription of Insight
+1 Into the Roil
+1 Kavu Primarch
+1 Kavu Titan
+1 Lullmage's Familiar
+1 Maddening Cacophony
+1 Merfolk Falconer
+1 Merfolk Skydiver
+1 Mirror Shield
+1 Mold Shambler
+1 Murasa Sproutling
+1 Myriad Construct
+1 Nature's Resurgence
+1 Oran-Rief Recluse
+1 Primal Growth
+1 Rite of Replication
+1 Roost of Drakes
+1 Saproling Infestation
+1 Simic Signet
+1 Skyclave Relic
+1 Slinn Voda, the Rising Deep
+1 Sol Ring
+1 Spark Double
+1 Spell Contortion
+1 Sphinx of Lost Truths
+1 Strength of the Tajuru
+1 Swarm Intelligence
+1 Tajuru Paragon
+1 Talisman of Curiosity
+1 Territorial Allosaurus
+1 Tezzeret's Gambit
+1 Thicket Elemental
+1 Thieving Skydiver
+1 Twinning Staff
+1 Untamed Kavu
+1 Unwind
+1 Vastwood Surge
+1 Verazol, the Split Current
+1 Vine Gecko
+1 Vines of Vastwood
+1 Vorel of the Hull Clade
+1 Wild Onslaught
+1 Wolfbriar Elemental
+Sideboard:
+
+1 Arctic Merfolk
+1 Baloth Gorger
+1 Bioshift
+1 Blink of an Eye
+1 Cunning Geysermage
+1 Druid of the Cowl
+1 Evolutionary Escalation
+1 Gatecreeper Vine
+1 Gnarlid Colony
+1 Maraleaf Pixie
+1 Moss Diamond
+1 Naga Vitalist
+1 Parcelbeast
+1 Plaxcaster Frogling
+1 Pollenbright Druid
+1 Pouncing Wurm
+1 Predatory Hunger
+1 Primal Empathy
+1 River's Rebuke
+1 Saproling Migration
+1 Scale the Heights
+1 Scute Mob
+1 Simic Ascendancy
+1 Skyclave Sentinel
+1 Soul's Might
+1 Taunting Arbormage
+1 Tranquility
+1 Whelming Wave
+1 Whisperer of the Wilds
+1 Whispersilk Cloak
+1 Winged Coatl

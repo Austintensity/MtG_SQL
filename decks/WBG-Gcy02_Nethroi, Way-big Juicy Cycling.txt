@@ -1,0 +1,129 @@
+1 Ash Barrens
+1 Barren Moor
+1 Caves of Koilos
+1 Command Tower
+1 Desert of the Glorified
+1 Desert of the Indomitable
+1 Desert of the True
+1 Drifting Meadow
+1 Exotic Orchard
+7 Forest
+1 Llanowar Wastes
+6 Plains
+1 Polluted Mire
+1 Saltcrusted Steppe
+1 Sandsteppe Citadel
+1 Secluded Steppe
+1 Selesnya Sanctuary
+1 Slippery Karst
+5 Swamp
+1 Tainted Wood
+1 Temple of Malady
+1 Tranquil Thicket
+1 Aegis of the Gods
+1 Akroma's Vengeance
+1 Angel of the Ruins
+1 Arboreal Grazer
+1 Arcane Signet
+1 Archfiend of Ifnir
+1 Aspect of Mongoose
+1 Astral Drift
+1 Astral Slide
+1 Boneyard Lurker
+1 Daring Archaeologist
+1 Deathreap Ritual
+1 Deathsprout
+1 Decree of Justice
+1 Demonic Collusion
+1 Dismantling Wave
+1 Duneblast
+1 Edge of Autumn
+1 Elixir of Immortality
+1 Emancipation Angel
+1 Eternal Dragon
+1 Feldon's Cane
+1 Fertilid
+1 Fierce Empath
+1 Fluctuator
+1 Forsake the Worldly
+1 Fumigate
+1 Gaze of Granite
+1 Glissa, the Traitor
+1 Herald of the Forgotten
+1 Indatha Crystal
+1 Ivory Mask
+1 Jarad's Orders
+1 Jeskai Barricade
+1 Kaya's Wrath
+1 Kor Skyfisher
+1 Krosan Tusker
+1 Loaming Shaman
+1 Migratory Greathorn
+1 Moldervine Reclamation
+1 Nethroi, Apex of Death
+1 Oketra's Attendant
+1 Pale Recluse
+1 Rampaging Hippo
+1 Repopulate
+1 Sakura-Tribe Elder
+1 Scion of Darkness
+1 Scourge of the Skyclaves
+1 Seedborn Muse
+1 Shefet Monitor
+1 Sigarda, Heron's Grace
+1 Sigil of the Nayan Gods
+1 Sol Ring
+1 Stonecloaker
+1 Swords to Plowshares
+1 Teyo, the Shieldmage
+1 Titanoth Rex
+1 Valiant Rescuer
+1 Vile Manifestation
+1 Viridian Emissary
+1 Void Beckoner
+1 Witchbane Orb
+1 Wood Elves
+Sideboard:
+
+1 Abandoned Sarcophagus
+1 Alley Evasion
+1 Ancestral Statue
+1 Aviary Mechanic
+1 Beneath the Sands
+1 Bloated Toad
+1 Break Asunder
+1 Cartographer
+1 Cast Out
+1 Centaur Vinecrasher
+1 Darkwatch Elves
+1 Dawntreader Elk
+1 Decoction Module
+1 Decree of Savagery
+1 Diabolic Tutor
+1 Elvish Aberration
+1 Expunge
+1 Goldnight Commander
+1 Golgari Findbroker
+1 Gray Merchant of Asphodel
+1 Greater Sandwurm
+1 Hollow One
+1 Hush
+1 Invasive Species
+1 Jungle Weaver
+1 Karmic Guide
+1 Migration Path
+1 Orbs of Warding
+1 Pharika's Mender
+1 Primal Druid
+1 Razaketh's Rite
+1 Reveillark
+1 Rune of Protection: Green
+1 Rune of Protection: Red
+1 Satyr Wayfinder
+1 Springbloom Druid
+1 Twisted Abomination
+1 Undertaker
+1 Wilt
+1 Winged Shepherd
+1 Wirewood Guardian
+1 Yavimaya Dryad

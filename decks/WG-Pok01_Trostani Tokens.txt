@@ -1,0 +1,112 @@
+1 Branchloft Pathway // Boulderloft Pathway
+1 Canopy Vista
+1 Castle Ardenvale
+1 Command Tower
+1 Evolving Wilds
+14 Forest
+1 Grove of the Guardian
+1 Krosan Verge
+9 Plains
+1 Saltcrusted Steppe
+1 Selesnya Sanctuary
+1 Sungrass Prairie
+1 Temple of the False God
+1 Vitu-Ghazi, the City-Tree
+1 Appeal // Authority
+1 Arcane Signet
+1 Aura Shards
+1 Avenger of Zendikar
+1 Battle for Bretagard
+1 Camaraderie
+1 Cultivate
+1 Daxos, Blessed by the Sun
+1 Druid's Deliverance
+1 Emmara Tandris
+1 Emrakul's Evangel
+1 End-Raze Forerunners
+1 Entreat the Angels
+1 Ezuri's Predation
+1 Farseek
+1 Fertilid
+1 Fungal Plots
+1 Giant Adephage
+1 Goldnight Commander
+1 Good-Fortune Unicorn
+1 Growing Ranks
+1 Harmonize
+1 Hour of Reckoning
+1 Intangible Virtue
+1 Khalni Heart Expedition
+1 Kodama's Reach
+1 Leafkin Druid
+1 Loyal Unicorn
+1 Mentor of the Meek
+1 Mouth // Feed
+1 Night Soil
+1 Nissa's Renewal
+1 Overwhelming Stampede
+1 Oviya Pashiri, Sage Lifecrafter
+1 Phantom General
+1 Phyrexian Rebirth
+1 Primal Vigor
+1 Rampaging Baloths
+1 Rampant Growth
+1 Reclamation Sage
+1 Requiem Angel
+1 Return of the Wildspeaker
+1 Rootborn Defenses
+1 Second Harvest
+1 Secret Rendezvous
+1 Selesnya Eulogist
+1 Selesnya Signet
+1 Shamanic Revelation
+1 Sol Ring
+1 Song of the Worldsoul
+1 Soul Foundry
+1 Spawning Grounds
+1 Spidersilk Armor
+1 Spirit Bonds
+1 Spoils of Victory
+1 Sram's Expertise
+1 Sundering Growth
+1 Talisman of Unity
+1 Thopter Assembly
+1 Trostani Discordant
+1 Trostani, Selesnya's Voice
+1 Vastwood Surge
+1 Vitu-Ghazi Guildmage
+1 Wayfaring Temple
+1 Wilderness Reclamation
+Sideboard:
+
+1 Ajani Unyielding
+1 Bronzebeak Moa
+1 Centaur Glade
+1 Circuitous Route
+1 Combat Calligrapher
+1 Crashing Footfalls
+1 Desolation Twin
+1 Field of Souls
+1 From Beyond
+1 Full Flowering
+1 Gideon's Phalanx
+1 Gingerbread Cabin
+1 Ironroot Warlord
+1 Moonsilver Spear
+1 Murder Investigation
+1 Nomads' Assembly
+1 One Dozen Eyes
+1 Paradise Druid
+1 Penumbra Spider
+1 Reborn Hope
+1 Selesnya Guildgate
+1 Sigil Captain
+1 Sigil of Valor
+1 Storm Herd
+1 Symbiotic Beast
+1 Thelonite Hermit
+1 Thragtusk
+1 Trostani's Summoner
+1 Verdant Force
+1 Wildfield Borderpost
+1 Wingmate Roc
