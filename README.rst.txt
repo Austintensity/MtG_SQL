@@ -1,6 +1,6 @@
 A Work-in-Progress SQLite database to create and manage Magic the Gathering commander decks.
 Written by Paul Austin  2021
-README Last Updated: 2021-09-08
+README Last Updated: 2021-10-25
 Thanks to https://scryfall.com/docs/api
 
 
@@ -34,16 +34,17 @@ Deck Details are updated
   Deck Status - ['ACTIVE', 'INACTIVE', 'UNASSEMBLED']   -Why does Deck Status 'shout' when Deck Tier doesn't?
   Deck Table - Name of the SQL table of the list of cards included 
   Deck Notes (optional) - Whatever you want, maybe cards to consider for the deck (maybeboard?)  or note which cards in the deck have worked the best, list of tokens the deck uses..?
-  Deck ID  - This can be whatever you want, but I like to create mine based on the following legend.  Sorry it isn't alphabetized since it keeps expanding
-					'a': aristocrat			'E': Evasion		'P': Populate			'H': Group Hug			
-					'A': Artifacts			'G': Graveyard		'S': Sacrifice			'Q': eQuipment
-					'b': blink				'I': Infect			'sc': spell copy		'$': buyback
-					'B': Battle				'K': Kicker			'T': Tribal				'g': gift
-					'c': creatures			'M': Madness		't': stealing			'xc': x-closer spells
-					'C': Counters			'm': morph			'U': Untap				'd': deathtouch
-					'cs': counterspells		'n': ninjitsu		'W': Word				'&': clone
-					'D': Draw				'N': eNchantments	'X': eXtra turns		'R': enRAGE!!
-					'L': Land matters							
+  Deck ID  - This can be whatever you want, but I like to create mine based on the following legend.  Sorry it isn't alphabetized since it keeps expanding.  Also paragraphing can be a nuissance and a half..
+
+				'a': aristocrat			'E': Evasion		'P': Populate			'H': Group Hug			
+				'A': Artifacts			'G': Graveyard		'S': Sacrifice			'Q': eQuipment
+				'b': blink			'I': Infect		'sc': spell copy		'$': buyback
+				'B': Battle			'K': Kicker		'T': Tribal			'g': gift
+				'c': creatures			'M': Madness		't': stealing			'xc': x-closer spells
+				'C': Counters			'm': morph		'U': Untap			'd': deathtouch
+				'cs': counterspells		'n': ninjitsu		'W': Word			'&': clone
+				'D': Draw			'N': eNchantments	'X': eXtra turns		'R': enRAGE!!
+				'L': Land matters		'kx': Cascade					
   
 The top frame on the right side is the list of cards included in the main deck, divided up by Creatures, Instants, Sorceries, Artifacts, Enchantments, Planeswalkers, Lands.  The bottom right corner frame is for the decks sideboard, divided up the same way.  Any cards that were listed in the deck, but aren't actually in your inventory will be uncategorized, and the program will not consider that card when counting up all of the stats for the deck.  This data is pulled from the Cards tables and that meta data isn't included in the Grandtable(s) tables.  From within the main program GUI, only cards in your inventory can be added to the deck anyway, and uncategorized cards only get added when importing from a text file.  So changing this would be a low priority.  
 
@@ -77,9 +78,11 @@ Cards that have 2 sets of rules text (or oracle text in Scrython's vernacular) a
 GETTING NEW JSON DATA
 ###########################
 New bulk card data for every Magic the Gathering card is updated daily on https://scryfall.com/docs/api/bulk-data 
-The 'All Cards' file that is approximately 195MB+ will take roughly 1.27GB and you should put it in the \db folder.
+The 'All Cards' file that is approximately 200MB+ will take roughly 1.27GB+ uncompressed and you should put it in the \db folder.
 
 Importing JSON data will wipe and rebuild the existing 'Grandtables'
+
+On my derelict machine the full JSON import usually takes roughly 7 minutes.  If you are as well, this may also disrupt your El Debarge playlist momentarily.  I speak from experience.
 
 ###########################
 IMPORTING INVENTORY
@@ -221,9 +224,9 @@ json_load.py handles the importing of the full card database JSON file from http
 Running json_load.py clears the existing Grandtable(s) and rebuilds them
 
 Based on the card's layout, it will be processed by one of the 3 functions.
-  Single_Sided_Card_JSON(the_card)  - Typical one sided MTG Card
-  Split_Card_JSON(the_card)  - Cards with two names, two sets of oracle_text and one card image 
-  Double_Faced_Card_JSON(the_card)   - Double-sided cards with two names, two sets of oracle_text and two card images 
+  single_sided_card_json(the_card)  - Typical one sided MTG Card
+  split_card_json(the_card)  - Cards with two names, two sets of oracle_text and one card image 
+  double_faced_card_json(the_card)   - Double-sided cards with two names, two sets of oracle_text and two card images 
 
 Calls insert_card_from_JSON() and insert_splitcard_from_JSON() functions from mtg_sql.py
 
@@ -234,11 +237,10 @@ MORE TO COME
 
 Updates as I can make them.  Just a few things on my TO DO list..
 
-  A broader Advanced Search window with more categories and some customizable options to quicker find the cards your deck
-is looking for
+  A broader Advanced Search window with more categories and some customizable options to quicker find the cards your deck is looking for
   Make the program window objects scale/shift to the window size, scrollbars if necessary
   Direct deck importing via copy/paste instead of a saved text file on your computer, exporting to a text window as well
   Make the table columns sortable
   Plans to track card inventory quantities, as if managing a physical inventory rather than a virtual one.  - This will get more complicated if it starts tracking card expansions/card set numbers/card condition/which version of a card is in which deck...depends how far I end up taking it
-  and more..
+
   

@@ -16,245 +16,245 @@ import mtg_main
 import re
 
 regex_searchmode = {
-    'fullpatternsearch': "[aA]dd {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|[Aa]dd {[wubrcgWUBCRG0123456789]}({[wubrcgWUBRGC0123456789]})*|[Aa]dd .+mana",
-    'hybridmanasearch': "[Aa]dd {[WUBRCGwubrcg0123456789]\/[WUBCRGwubrcg0123456789]}({[WUBCRGwubrcg0123456789]\/[WUBCRGwubrcg0123456789]})*",
-    'plainmanasearch': "[Aa]dd {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*",
-    'plainmanasearchmultiples': "[Aa]dd {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, ({[WUBRGCwubrcg0123456789]}{[WUBRGCwubrcg0123456789]}, )*or {[WUBRGCwubrcg123456789]}({[WUBRGCwubrcg0123456789]})*",
-    'wordmanasearch': "[Aa]dd .+mana",
-    'keywordsearch': "'keywords': \[()?(.)*?\]",
-    'imagesearch': "'image_uris': ?{.*?}",
-    'normal_image_search': "'normal':.*?,",
-    'activeabilitysearch': "({[01234567890TWURBGCwubrcg]}):|({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:|({[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:",
-    'gains_life_isolater': "gains? life equal to|gains? (.)*life",
-    'all_life_gains': "gains? .*life (for each)?(equal to)?|gains? .*life[\. ,]",
-    'all_damage_gains': "deals?t? damage (equal to)?|loses? .*life[\. ,]|deals?.*damage",
-    'planeswalker_ability_index': ".*:",
-    'planeswalker_boosts': "\+.*:",
-    'planeswalker_costs': "\-.*:|0:",
-    'etb_filter': "((return.* to)|enters?) the battlefield.*",
-    'wipe_filter': "(destroy|exile|sacrifices*|shuffle|return|damage( to))( all( other)?| each( other)?|( the rest))",
-    'target_filter': "(damaged?s?|flips?(ped)?|library?(ies)?|activate|move|put|distributes?|token|attach(ed)?s?|sacrificed?s?|destroy(ed)?s?|gets?|exiles?d?|return(ed)?s?|shuffles?|remove|(gains? control)|reveal|enchant|flip|discard|counter|(deal.*damage)|attack(ed)?s?|block(ed)?s?|fights?|(los.*life)|(life lost)|(gain.*life)|copy?(ied)?s?|spells?|ability?(ies)?).* target|target.*(distributes?|token|attach(ed)?s?|sacrificed?s?|destroy(ed)?s?|gets?|exiles?d?|return(ed)?s?|shuffles?|remove|(gains? control)|reveal|enchant|flip|discard|counter|(deal.*damage)|attack(ed)?s?|block(ed)?s?|fights?|(los.*life)|(life lost)|(gain.*life)|copy?(ied)?s?|spells?|ability?(ies)?)|damaged?s?|flips?(ped)?|gains?|library?(ies)?",
-    'changeling': "(every|all other).*creature type",
-    'board_wipe_dud': "(every|each|all).*land.*types",
-    'cast': "(when|whenever).*cast.*spell.*,.*\."
+    'fullpatternsearch' : "[aA]dd {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|[Aa]dd {[wubrcgWUBCRG0123456789]}({[wubrcgWUBRGC0123456789]})*|[Aa]dd .+mana",
+    'hybridmanasearch' : "[Aa]dd {[WUBRCGwubrcg0123456789]\/[WUBCRGwubrcg0123456789]}({[WUBCRGwubrcg0123456789]\/[WUBCRGwubrcg0123456789]})*",
+    'plainmanasearch' : "[Aa]dd {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*",
+    'plainmanasearchmultiples' : "[Aa]dd {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, {[WUBRGCwubrcg0123456789]}({[WUBRGCwubrcg0123456789]})*, ({[WUBRGCwubrcg0123456789]}{[WUBRGCwubrcg0123456789]}, )*or {[WUBRGCwubrcg123456789]}({[WUBRGCwubrcg0123456789]})*",
+    'wordmanasearch' : "[Aa]dd .+mana",
+    'keywordsearch' : "'keywords': \[()?(.)*?\]",
+    'imagesearch' : "'image_uris': ?{.*?}",
+    'normal_image_search' : "'normal':.*?,",
+    'activeabilitysearch' : "({[01234567890TWURBGCwubrcg]}):|({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:|({[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]\/[01234567890TWURBGCwubrcg]})*({[01234567890TWURBGCwubrcg]})*,(.)*:",
+    'gains_life_isolater' : "gains? life equal to|gains? (.)*life",
+    'all_life_gains' : "gains? .*life (for each)?(equal to)?|gains? .*life[\. ,]",
+    'all_damage_gains' : "deals?t? damage (equal to)?|loses? .*life[\. ,]|deals?.*damage",
+    'planeswalker_ability_index' : ".*:",
+    'planeswalker_boosts' : "\+.*:",
+    'planeswalker_costs' : "\-.*:|0:",
+    'etb_filter' : "((return.* to)|enters?) the battlefield.*",
+    'wipe_filter' : "(destroy|exile|sacrifices*|shuffle|return|damage( to))( all( other)?| each( other)?|( the rest))",
+    'target_filter' : "(damaged?s?|flips?(ped)?|library?(ies)?|activate|move|put|distributes?|token|attach(ed)?s?|sacrificed?s?|destroy(ed)?s?|gets?|exiles?d?|return(ed)?s?|shuffles?|remove|(gains? control)|reveal|enchant|flip|discard|counter|(deal.*damage)|attack(ed)?s?|block(ed)?s?|fights?|(los.*life)|(life lost)|(gain.*life)|copy?(ied)?s?|spells?|ability?(ies)?).* target|target.*(distributes?|token|attach(ed)?s?|sacrificed?s?|destroy(ed)?s?|gets?|exiles?d?|return(ed)?s?|shuffles?|remove|(gains? control)|reveal|enchant|flip|discard|counter|(deal.*damage)|attack(ed)?s?|block(ed)?s?|fights?|(los.*life)|(life lost)|(gain.*life)|copy?(ied)?s?|spells?|ability?(ies)?)|damaged?s?|flips?(ped)?|gains?|library?(ies)?",
+    'changeling' : "(every|all other).*creature type",
+    'board_wipe_dud' : "(every|each|all).*land.*types",
+    'cast' : "(when|whenever).*cast.*spell.*,.*\."
     }
 
 regex_draw_modes = {
-    'basic_draw_search': "draw.*((an additional)|a|x|one|two|three|four|five|six|seven|eight|nine|ten|((as|that) many)) cards*",   ##  Basic draw x card(s)
-    'lootn_rummage_search': "Discard.*card.*draw.*card|draw.*card.*discard.*card",  ## Rummage and Loot , might not really be worried about this distinction though
+    'basic_draw_search' : "draw.*((an additional)|a|x|one|two|three|four|five|six|seven|eight|nine|ten|((as|that) many)) cards*",   ##  Basic draw x card(s)
+    'lootn_rummage_search' : "Discard.*card.*draw.*card|draw.*card.*discard.*card",  ## Rummage and Loot , might not really be worried about this distinction though
     'draw_x_search': "draws* cards* equal to"   ## Draw value will be set to 'X', since it is a variable amount 
     }
 
 regex_etb_modes = {
-    'land_tutor': "search (your|their) library for .* (land|plains|island|swamp|mountain|forest|((basic )*land)).*hand",   # search your library for a land and add to your hand
-    'dork_rock': "\n{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{T}: Add ({[wubrcgWUBRGC0123456789]})*|\n{T}: Add .+mana|{T}:.* Add .+mana",   # removed {T},.*: Add ({[wubrcgWUBRGC0123456789]})*   , this is more for treasure tokens
-    'land_ramp': "(land|plains|island|swamp|mountain|forest).*on.*battlefield",   ## search your library for a land and put it on the battlefield
-    'sac_rock': "{T},.*: Add ({[wubrcgWUBRGC0123456789]})*(one|two|three|four|five)?( mana)?",
-    'get_+1': "get.*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X]",
-    'get_+1_counters': "(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
+    'land_tutor' : "search (your|their) library for .* (land|plains|island|swamp|mountain|forest|((basic )*land)).*hand",   # search your library for a land and add to your hand
+    'dork_rock' : "\n{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{T}: Add ({[wubrcgWUBRGC0123456789]})*|\n{T}: Add .+mana|{T}:.* Add .+mana",   # removed {T},.*: Add ({[wubrcgWUBRGC0123456789]})*   , this is more for treasure tokens
+    'land_ramp' : "(land|plains|island|swamp|mountain|forest).*on.*battlefield",   ## search your library for a land and put it on the battlefield
+    'sac_rock' : "{T},.*: Add ({[wubrcgWUBRGC0123456789]})*(one|two|three|four|five)?( mana)?",
+    'get_+1' : "get.*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X]",
+    'get_+1_counters' : "(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
     #get_fancy_counters is very thorough in searching through the list from https://mtg.fandom.com/wiki/Counter_(marker)/Full_List  - July 12 2021
-    'get_fancy_counters': "(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind).*counter",
-    'gain_control': "gain.*control",
-    'gain_life': "gain.*life",
-    'lose_life': "lose.*life",
-    'free_deploy': "put.*hand.*battlefield",
-    'tap': " taps?.*(permanent|creature|artifact|enchantment|land)|\ntaps?.*(permanent|creature|artifact|enchantment|land)",
-    'untap':" untaps?.*(permanent|creature|artifact|enchantment|land)|\nUntaps?.*(permanent|creature|artifact|enchantment|land)",
-    'monarch': "become.*monarch",
-    'mill': "mill.*card|card.*library.*graveyard",
-    'treasure': "create.*treasure token|{T},.*: Add one mana",
-    'mana_gain': "add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|add ({[wubrcgWUBRGC0123456789]})*|add .+mana",
-    'attachee': "attach.*(aura|equipment)|attach ",
-    'temp_gains': "(get|gain|has).*(first strike|trample|lifelink|haste|\+[123456789]\/\+[123456789]|hexproof|shroud|indestructible|unblockable|menace|flying|double strike|vigilance).*end of turn",
-    'buff': "(get|gain|has).*(first strike|trample|lifelink|haste|\+[1234567890x]\/\+[1234567890x]|hexproof|shroud|indestructible|unblockable|menace|flying|double strike|vigilance)",
-    'debuff': "(get|has|lose).*((-)[1234567890x]\/(-)[1234567890x])*(flying|shadow|trample|first strike)",
+    'get_fancy_counters' : "(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind).*counter",
+    'gain_control' : "gain.*control",
+    'gain_life' : "gain.*life",
+    'lose_life' : "lose.*life",
+    'free_deploy' : "put.*hand.*battlefield",
+    'tap' : " taps?.*(permanent|creature|artifact|enchantment|land)|\ntaps?.*(permanent|creature|artifact|enchantment|land)",
+    'untap' :" untaps?.*(permanent|creature|artifact|enchantment|land)|\nUntaps?.*(permanent|creature|artifact|enchantment|land)",
+    'monarch' : "become.*monarch",
+    'mill' : "mill.*card|card.*library.*graveyard",
+    'treasure' : "create.*treasure token|{T},.*: Add one mana",
+    'mana_gain' : "add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|add ({[wubrcgWUBRGC0123456789]})*|add .+mana",
+    'attachee' : "attach.*(aura|equipment)|attach ",
+    'temp_gains' : "(get|gain|has).*(first strike|trample|lifelink|haste|\+[123456789]\/\+[123456789]|hexproof|shroud|indestructible|unblockable|menace|flying|double strike|vigilance).*end of turn",
+    'buff' : "(get|gain|has).*(first strike|trample|lifelink|haste|\+[1234567890x]\/\+[1234567890x]|hexproof|shroud|indestructible|unblockable|menace|flying|double strike|vigilance)",
+    'debuff' : "(get|has|lose).*((-)[1234567890x]\/(-)[1234567890x])*(flying|shadow|trample|first strike)",
     }
 
 regex_ramp_modes = {
-    'land_tutor': "search.*library.*(land|plains|island|swamp|mountain|forest).*hand",   
-    'fetch_land': "search.*library.*(land|plains|island|swamp|mountain|forest).*on.*battlefield",
-    'top_deck': "(look|reveal).*top.*library.*(land|plains|island|swamp|mountain|forest).*on.*battlefield",
-    'hand_land': "(put|place).*(land|plains|island|swamp|mountain|forest).*hand.*battlefield",
-    'grave_land': "(put|place).*(land|plains|island|swamp|mountain|forest).*graveyard.*battlefield",
-    'dork_rock': "\n{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{T}: Add ({[wubrcgWUBRGC0123456789]})*|\n{T}: Add .+mana|{T}:.* Add .+mana",
-    'treasure': "create.*treasure token|{T},.*: Add one mana",
-    'phony': "{[wubrcgWUBRGC0123456789]}: add ({[wubrcgWUBRGC0123456789]})*|({[wubrcgWUBRGC0123456789]})*, {t}: add .+mana",
-    'sac_ramp': "sacrifice.*: add ({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]})*({[wubrcgWUBRCG0123456789]})*|sacrifice.*: add.*mana",    
+    'land_tutor' : "search.*library.*(land|plains|island|swamp|mountain|forest).*hand",   
+    'fetch_land' : "search.*library.*(land|plains|island|swamp|mountain|forest).*on.*battlefield",
+    'top_deck' : "(look|reveal).*top.*library.*(land|plains|island|swamp|mountain|forest).*on.*battlefield",
+    'hand_land' : "(put|place).*(land|plains|island|swamp|mountain|forest).*hand.*battlefield",
+    'grave_land' : "(put|place).*(land|plains|island|swamp|mountain|forest).*graveyard.*battlefield",
+    'dork_rock' : "\n{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{T}: Add ({[wubrcgWUBRGC0123456789]})*|\n{T}: Add .+mana|{T}:.* Add .+mana",
+    'treasure' : "create.*treasure token|{T},.*: Add one mana",
+    'phony' : "{[wubrcgWUBRGC0123456789]}: add ({[wubrcgWUBRGC0123456789]})*|({[wubrcgWUBRGC0123456789]})*, {t}: add .+mana",
+    'sac_ramp' : "sacrifice.*: add ({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]})*({[wubrcgWUBRCG0123456789]})*|sacrifice.*: add.*mana",    
     }
 
 regex_mana_costs = {
-    'mixed_mana': "{[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}",
+    'mixed_mana' : "{[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}",
     'plain_mana': "{[1234567890]+}",
     'colour_mana': "{[wubrg]}",
-    'white_symbol': "{w}",
-    'blue_symbol': "{u}",
-    'black_symbol': "{b}",
-    'red_symbol': "{r}",
-    'green_symbol': "{g}",
-    'ignore_mana': "{x}+"
+    'white_symbol' : "{w}",
+    'blue_symbol' : "{u}",
+    'black_symbol' : "{b}",
+    'red_symbol' : "{r}",
+    'green_symbol' : "{g}",
+    'ignore_mana' : "{x}+"
     }
 
 regex_target_modes = {
-    'exchange': "exchange.*target",
-    'tap': "\ntaps?.*target|target.* taps?| taps?.*target|^taps? (up to )?(x|one|two|three|four|five|six|seven|as many|each) target|tap target",
-    'untap':"untaps?.*target|target.*untaps?",    
-    'buff': "target.*(get|gain|has).*( it|first strike|all creature types|trample|fear|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'debuff': "target.*(get|gain|has|lose).*((-)[1234567890x]+\/(-)[1234567890x]+)*( it|first strike|trample|shadow|phasing|all abilities)",
-    'rebuff':"target.*(get|gain|has).*-[1234567890x]\/\+[1234567890x]|target.*(get|gain|has).*((\+)[1234567890x]\/-[1234567890x])",
+    'exchange' : "exchange.*target",
+    'tap' : "\ntaps?.*target|target.* taps?| taps?.*target|^taps? (up to )?(x|one|two|three|four|five|six|seven|as many|each) target|tap target",
+    'untap' :"untaps?.*target|target.*untaps?",    
+    'buff' : "target.*(get|gain|has).*( it|first strike|all creature types|trample|fear|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'debuff' : "target.*(get|gain|has|lose).*((-)[1234567890x]+\/(-)[1234567890x]+)*( it|first strike|trample|shadow|phasing|all abilities)",
+    'rebuff' :"target.*(get|gain|has).*-[1234567890x]\/\+[1234567890x]|target.*(get|gain|has).*((\+)[1234567890x]\/-[1234567890x])",
     'control': "target.*gains control|gains control.*target|target.*gain control|gain control.*target",
     'draw': "target.*draw",
     'transform': "target.*become|target.*becomes",
-    'graveyard': "target.*graveyard.*(battlefield|hand|library)|target.*(battlefield|hand|library).*graveyard",
-    'fight': "fight.*target|target.*fight",
-    'regenerate': "regenerate.*target|target.*regenerate",
-    'ward': "spells.*opponents.*target.*cost.*more",
-    'library_meddle': "look.*target.*library.*any order",
-    'card_to_library': "(put|place|shuffle) target.*library",
-    'retarget': "change the target.*target",
-    'retext': "change the text.*target",
-    'facedown': "(turn|flip( over)?|look at).*target.*face down|(turn|flip( over)?|look at) target.*face-down",
-    'loselife': "target.*lose.*life",
-    'looky_loo': "look at.*target.*(hand|library)",
-    'deny': "target.* can't",
-    'cheaper': "spells.*target.*cost.*less",
-    'get_+1_counters': "(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
-    'counterspell': "counter.*target.*(spells?|ability|abilities)",
-    'base_stats': "target.*(get|gain|has|lose).*base ",
-    'stat_switch': "switch target creature's power and toughness",
-    'fancy_counters': "(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind|loyalty).*counter"
+    'graveyard' : "target.*graveyard.*(battlefield|hand|library)|target.*(battlefield|hand|library).*graveyard",
+    'fight' : "fight.*target|target.*fight",
+    'regenerate' : "regenerate.*target|target.*regenerate",
+    'ward' : "spells.*opponents.*target.*cost.*more",
+    'library_meddle' : "look.*target.*library.*any order",
+    'card_to_library' : "(put|place|shuffle) target.*library",
+    'retarget' : "change the target.*target",
+    'retext' : "change the text.*target",
+    'facedown' : "(turn|flip( over)?|look at).*target.*face down|(turn|flip( over)?|look at) target.*face-down",
+    'loselife' : "target.*lose.*life",
+    'looky_loo' : "look at.*target.*(hand|library)",
+    'deny' : "target.* can't",
+    'cheaper' : "spells.*target.*cost.*less",
+    'get_+1_counters' : "(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
+    'counterspell' : "counter.*target.*(spells?|ability|abilities)",
+    'base_stats' : "target.*(get|gain|has|lose).*base ",
+    'stat_switch' : "switch target creature's power and toughness",
+    'fancy_counters' : "(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind|loyalty).*counter"
     }
 
 regex_wipe_modes = {
-    'debuff': "(every|each|all|creatures).*(get|gain|has).*((-)[1234567890x]\/(-)[1234567890x])",
-    'tap': "^taps?.*(every|each|all)|(every|each|all).* taps?| tap.*(every|each|all)",
-    'untap':"untaps?.*(every|each|all)|(every|each|all).*untaps?",    
-    'buff': "(every|each|all|creatures you control).*(get|gain|has|have).*(first strike|all creature types|trample|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'boost': "(get|have|has|with).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] .*for (every|each|all|creatures|other)",
-    'spell_copy': "copy.* (spell|ability|spell) for (each|every|all)",
-    'rebuff':"(every|each|all|creatures).*(get|gain|has).*-[1234567890x]\/\+[1234567890x]|target.*(get|gain|has).*((\+)[1234567890x]\/-[1234567890x])",
+    'debuff' : "(every|each|all|creatures).*(get|gain|has).*((-)[1234567890x]\/(-)[1234567890x])",
+    'tap' : "^taps?.*(every|each|all)|(every|each|all).* taps?| tap.*(every|each|all)",
+    'untap' :"untaps?.*(every|each|all)|(every|each|all).*untaps?",    
+    'buff' : "(every|each|all|creatures you control).*(get|gain|has|have).*(first strike|all creature types|trample|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'boost' : "(get|have|has|with).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] .*for (every|each|all|creatures|other)",
+    'spell_copy' : "copy.* (spell|ability|spell) for (each|every|all)",
+    'rebuff' :"(every|each|all|creatures).*(get|gain|has).*-[1234567890x]\/\+[1234567890x]|target.*(get|gain|has).*((\+)[1234567890x]\/-[1234567890x])",
     'control': "(every|each|all).*gains control|gains control.*(every|each|all)|(every|each|all).*gain control|gain control.*(every|each|all)",
     'draw': "(every|each|all|each other) player.*draw",
     'transform': "(every|each|all).*become|(every|each|all).*becomes",
-    'graveyard': "(every|each|all).*graveyard.*(battlefield|hand|library)|(every|each|all).*(battlefield|hand|library).*graveyard",
-    'fight': "fight.*(every|each|all)|(every|each|all).*fight",
-    'regenerate': "regenerate.*(every|each|all)|(every|each|all).*regenerate",
-    'card_to_library': "(put|place|shuffle) (every|each|all).*library",
-    'facedown': "(turn|flip( over)?|look at).*(every|each|all).*face down|(turn|flip( over)?|look at) (every|each|all).*face-down",
-    'loselife': "each.*lose.*life",
-    'deny': "(every|each|all|creatures|permanents|lands|artifacts|sorceries|instants|enchantments).* can't",
-    'base_stats': "(every|each|all|creatures).*(get|gain|has|lose).*base ",
-    'get_+1_counters': "(get|put|move|remove|add|with|distribute|place).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter.*(every|each|all|creatures)|(every|each|all|creatures).*(get|put|move|remove|add|with|distribute|place).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
-    'mill': "(every|each|all|each other).*mill.*card",
-    'discard': "(every|each|all|each other) player.*discards",
-    'damage': "deal.*damage.*to.*(each|every|all|other|creatures|players|planeswalkers)",
-    'lifegain': "gain.* life.*for (every|each|all|other)",
-    'sacrifice': "sacrifice.*(each|all|other)|(each|all|other).*sacrifice",
-    'destroy': "destroy.*and (all|each) other.*with|destroy.* (all|each|every).*",
-    'exile': "exile.*and (all|each) other.*with",
-    'return': "return.*and (all|each) other.*with|return.* (cards|all|each|every).*",
-    'ETB_counters': "each other.*(creature|planeswalker|permanent|artifact).*enter.*additional.*counter",
-    'frogify': "loses all.*abilities",
-    'cost_more': "(every|each|all|activated|white|blue|red|black|green|colorless).*(spell|ability).*cost.*more",
-    'cost_less': "(every|each|all|activated|white|blue|red|black|green|colorless).*(spell|ability).*cost.*less",
-    'PW_Abilities': "(each|all|every|each other).*planeswalker.*abilities",
-    'copy': "(copy|copies).*for each"
+    'graveyard' : "(every|each|all).*graveyard.*(battlefield|hand|library)|(every|each|all).*(battlefield|hand|library).*graveyard",
+    'fight' : "fight.*(every|each|all)|(every|each|all).*fight",
+    'regenerate' : "regenerate.*(every|each|all)|(every|each|all).*regenerate",
+    'card_to_library' : "(put|place|shuffle) (every|each|all).*library",
+    'facedown' : "(turn|flip( over)?|look at).*(every|each|all).*face down|(turn|flip( over)?|look at) (every|each|all).*face-down",
+    'loselife' : "each.*lose.*life",
+    'deny' : "(every|each|all|creatures|permanents|lands|artifacts|sorceries|instants|enchantments).* can't",
+    'base_stats' : "(every|each|all|creatures).*(get|gain|has|lose).*base ",
+    'get_+1_counters' : "(get|put|move|remove|add|with|distribute|place).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter.*(every|each|all|creatures)|(every|each|all|creatures).*(get|put|move|remove|add|with|distribute|place).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",
+    'mill' : "(every|each|all|each other).*mill.*card",
+    'discard' : "(every|each|all|each other) player.*discards",
+    'damage' : "deal.*damage.*to.*(each|every|all|other|creatures|players|planeswalkers)",
+    'lifegain' : "gain.* life.*for (every|each|all|other)",
+    'sacrifice' : "sacrifice.*(each|all|other)|(each|all|other).*sacrifice",
+    'destroy' : "destroy.*and (all|each) other.*with|destroy.* (all|each|every).*",
+    'exile' : "exile.*and (all|each) other.*with",
+    'return' : "return.*and (all|each) other.*with|return.* (cards|all|each|every).*",
+    'ETB_counters' : "each other.*(creature|planeswalker|permanent|artifact).*enter.*additional.*counter",
+    'frogify' : "loses all.*abilities",
+    'cost_more' : "(every|each|all|activated|white|blue|red|black|green|colorless).*(spell|ability).*cost.*more",
+    'cost_less' : "(every|each|all|activated|white|blue|red|black|green|colorless).*(spell|ability).*cost.*less",
+    'PW_Abilities' : "(each|all|every|each other).*planeswalker.*abilities",
+    'copy' : "(copy|copies).*for each"
     }
 
 regex_triggered_modes = {
-    'phases': "(start|beginning|end|before|during|at) (of|your|an|the).* (end step|main phase|upkeep|untap|combat).*,.*\.|.*(start|beginning|end|before|during).*(end step|main phase|upkeep|untap step|combat)",
-    'cast_noncreature': "(when|whenever).*cast.*(instant|aura|vehicle|equipment|sorcery|kicked|this|noncreature|artifact|enchantment|arcane|planeswalker).*,.*\.",
+    'phases' : "(start|beginning|end|before|during|at) (of|your|an|the).* (end step|main phase|upkeep|untap|combat).*,.*\.|.*(start|beginning|end|before|during).*(end step|main phase|upkeep|untap step|combat)",
+    'cast_noncreature' : "(when|whenever).*cast.*(instant|aura|vehicle|equipment|sorcery|kicked|this|noncreature|artifact|enchantment|arcane|planeswalker).*,.*\.",
     'cast_creature': "(when|whenever).*cast.*( creature|commander).*,.*\.",
-    'cast_historic': "(when|whenever).*cast.*(historic|artifact|legendary|saga).*spell.*,.*\.",
-    'heroic?': "(when|whenever).*cast.*(instant|sorcery|kicked|this|noncreature|artifact|enchantment|arcane|planeswalker|spell).*targets.*,.*\.",
-    'color_spell': "(when|whenever).*cast.*(red|white|blue|green|black|colorless|multicolored).*spell,.*\.",
-    'cost_spell': "(when|whenever).*cast.*spell with.*({x}|mana value|converted mana cost).*,.*\.",
-    'attacks': "(when|whenever).*attack.*\.",
-    'blocks': "(when|whenever).*block.*\.",
-    'damages': "(when|whenever).*deal.*damage.*,.*\.",
-    'shuffle': "(when|whenever).*shuffle.*\.",
-    'surveil': "(when|whenever).*surveil.*\.",
-    'mutate': "(when|whenever).*mutate.*\.",
-    'exile': "(when|whenever).*exile.*\.",    
-    'loot': "(when|whenever).*draw.*,.*discard.*\.",
-    'death': "(when|whenever).*(die|into.*graveyard|leave).*,.*\.",
-    'draw': "(when|whenever).*(you|opponent|player).*draws.*,.*\.",
-    'ETB': "enters? the battlefield.*",
-    'grave_cast': "(when|whenever).*(cast).*from.*(graveyard|other than your hand).*,.*\.",
+    'cast_historic' : "(when|whenever).*cast.*(historic|artifact|legendary|saga).*spell.*,.*\.",
+    'heroic?' : "(when|whenever).*cast.*(instant|sorcery|kicked|this|noncreature|artifact|enchantment|arcane|planeswalker|spell).*targets.*,.*\.",
+    'color_spell' : "(when|whenever).*cast.*(red|white|blue|green|black|colorless|multicolored).*spell,.*\.",
+    'cost_spell' : "(when|whenever).*cast.*spell with.*({x}|mana value|converted mana cost).*,.*\.",
+    'attacks' : "(when|whenever).*attack.*\.",
+    'blocks' : "(when|whenever).*block.*\.",
+    'damages' : "(when|whenever).*deal.*damage.*,.*\.",
+    'shuffle' : "(when|whenever).*shuffle.*\.",
+    'surveil' : "(when|whenever).*surveil.*\.",
+    'mutate' : "(when|whenever).*mutate.*\.",
+    'exile' : "(when|whenever).*exile.*\.",    
+    'loot' : "(when|whenever).*draw.*,.*discard.*\.",
+    'death' : "(when|whenever).*(die|into.*graveyard|leave).*,.*\.",
+    'draw' : "(when|whenever).*(you|opponent|player).*draws.*,.*\.",
+    'ETB' : "enters? the battlefield.*",
+    'grave_cast' : "(when|whenever).*(cast).*from.*(graveyard|other than your hand).*,.*\.",
     'sacrifice': "(when|whenever).*sacrifice.*,.*\.",
     'activate': "(when|whenever).*activate.*(ability),.*\.",
     'gain_life': "(when|whenever).*gain.*life.*,.*\.",
     'lose_life': "(when|whenever).*lose.*life.*,.*\.",
-    'discard': "(when|whenever).* (you|player|opponent).* (cycle|discard).*,.*\.",
-    'counters': "(when|whenever).*(counter).*(put|place|add|remove|move|with).*,.*\.",
-    'morph': "(when|whenever).*(turn|flip).*face (up|down).*,.*",
-    'tutor': "(when|whenever).*(player|you|opponent).*search.*library.*,.*\.",
-    'tapped': "(when|whenever).*(becomes tapped|tap).*,.*",
-    'monstrous': "(when|whenever).*monstrous.*,.*",
-    'targeted': "(when|whenever).*becomes the target.*,.*",
-    'miracle': "miracle cost when you draw",
-    'extort': "extort|Whenever you cast a spell, you may pay",
-    'returned': "(when|whenever).*(creature|artifact|enchantment|permanent).*return.*,.*\.",
+    'discard' : "(when|whenever).* (you|player|opponent).* (cycle|discard).*,.*\.",
+    'counters' : "(when|whenever).*(counter).*(put|place|add|remove|move|with).*,.*\.",
+    'morph' : "(when|whenever).*(turn|flip).*face (up|down).*,.*",
+    'tutor' : "(when|whenever).*(player|you|opponent).*search.*library.*,.*\.",
+    'tapped' : "(when|whenever).*(becomes tapped|tap).*,.*",
+    'monstrous' : "(when|whenever).*monstrous.*,.*",
+    'targeted' : "(when|whenever).*becomes the target.*,.*",
+    'miracle' : "miracle cost when you draw",
+    'extort' : "extort|Whenever you cast a spell, you may pay",
+    'returned' : "(when|whenever).*(creature|artifact|enchantment|permanent).*return.*,.*\.",
     # triggered keyword abilities..
     # persist, landfall, enrage, heroic, inspired, etc
     }
 
 regex_activated_modes = {
-    'tap': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*: tap.*\.|({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgcT0]})*:.*may tap .*\.",
-    'untap': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*:.*untap.*\.",
-    'destroy': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*: destroy.*\.",
-    'exile': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*: exile.*\.",
-    'deploy': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*(put|place).*(card|creature|instant|sorcery|artifact|planeswalker|enchantment|aura).*hand.*battlefield",
-    'reanimate': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(put|place).*(card|creature|instant|sorcery|artifact|elemental|planeswalker|enchantment|aura).*(graveyard|exile).*battlefield",
-    'recycle': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.*(put|place|shuffle).*(card|creature|instant|permanent|sorcery|artifact|planeswalker|enchantment|aura).*(battlefield|graveyard|own).*library",
-    'selective': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(target|all|each).*(card|creature|instant|permanent|sorcery|artifact|planeswalker|enchantment|aura).*(with|without) (flying|power|toughness|defender).*",
-    'deny': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*(this turn|target).*(card|creature|instant|sorcery|artifact|planeswalker|enchantment|aura).*can't",
-    'reveal': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*: reveal.*\.",
-    'control': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*gain.*control.*\.",
-    'tutor': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*: search.*library.*\.",
-    'sacrifice': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456e789wubrgcT0]})*,*: sacrifice .*\.",
-    'return': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*: return .*\.",
-    'manifest': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*: manifest .*\.",
-    'regenerate': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123e456789wubrgcT0]})*,*: regenerate .*\.",
-    'blink': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[1234567e89wubrgcT0]})*,*: (exile|remove) .*(,|\.).*return.*battlefield",
-    'token': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*:.* create.*token",
-    'mana': "{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{t}: add ({[wubrcgWUBRGC0123456789]})*|\n{t}: Add .+mana|{t}:.* Add .+mana|({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*(remove|put).*counter.*: add.* ({[wubrgc2341567890]})*mana|{[123456789t]}:.*add.*mana",
-    'buff': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(get|gain|has).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|walk|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'debuff': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|gain|has|lose).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]+\/-[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'rebuff': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(has|lose).*( it(,|\.)* |base (power|toughness)|first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]\/\+[1234567890x]|\+[1234567890x]\/\-[1234567890x]|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
-    'proliferate': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*proliferate",
-    'redirect': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*damage.*would.*dealt.*target.*instead",
-    'charge_cntr': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind|loyalty).*counter on",
+    'tap' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*: tap.*\.|({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgcT0]})*:.*may tap .*\.",
+    'untap' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*:.*untap.*\.",
+    'destroy' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*: destroy.*\.",
+    'exile' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgceT0]})*,*: exile.*\.",
+    'deploy' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*(put|place).*(card|creature|instant|sorcery|artifact|planeswalker|enchantment|aura).*hand.*battlefield",
+    'reanimate' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(put|place).*(card|creature|instant|sorcery|artifact|elemental|planeswalker|enchantment|aura).*(graveyard|exile).*battlefield",
+    'recycle' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.*(put|place|shuffle).*(card|creature|instant|permanent|sorcery|artifact|planeswalker|enchantment|aura).*(battlefield|graveyard|own).*library",
+    'selective' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(target|all|each).*(card|creature|instant|permanent|sorcery|artifact|planeswalker|enchantment|aura).*(with|without) (flying|power|toughness|defender).*",
+    'deny' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*(this turn|target).*(card|creature|instant|sorcery|artifact|planeswalker|enchantment|aura).*can't",
+    'reveal' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*: reveal.*\.",
+    'control' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*gain.*control.*\.",
+    'tutor' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*: search.*library.*\.",
+    'sacrifice' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456e789wubrgcT0]})*,*: sacrifice .*\.",
+    'return' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*: return .*\.",
+    'manifest' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*: manifest .*\.",
+    'regenerate' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123e456789wubrgcT0]})*,*: regenerate .*\.",
+    'blink' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[1234567e89wubrgcT0]})*,*: (exile|remove) .*(,|\.).*return.*battlefield",
+    'token' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[12345678e9wubrgcT0]})*,*:.* create.*token",
+    'mana' : "{t}: add {[wubrcgWUBRCG0123456789]\/[wubrcgWUBRGC0123456789]}({[wubrcgWUBRCG0123456789]\/[wubrcgWUBRCG0123456789]})*|{t}: add ({[wubrcgWUBRGC0123456789]})*|\n{t}: Add .+mana|{t}:.* Add .+mana|({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*(remove|put).*counter.*: add.* ({[wubrgc2341567890]})*mana|{[123456789t]}:.*add.*mana",
+    'buff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(get|gain|has).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|\+[1234567890x]+\/\+[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|walk|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'debuff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|gain|has|lose).*( it(,|\.)* |first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]+\/-[1234567890x]+|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'rebuff' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(has|lose).*( it(,|\.)* |base (power|toughness)|first strike|all creature types|trample|infect|fear|phasing|lifelink|haste|-[1234567890x]\/\+[1234567890x]|\+[1234567890x]\/\-[1234567890x]|hexproof|protection|shroud|deathtouch|indestructible|unblockable|menace|flying|shadow|double strike|vigilance)",
+    'proliferate' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*proliferate",
+    'redirect' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*damage.*would.*dealt.*target.*instead",
+    'charge_cntr' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*(get|put|remove|add|move|with).*(deathtouch|lifelink|trample|indestructible|double strike|first strike|flying|hexproof|menace|reach|vigilance|verse|trap|growth|treasure|page|vitality|training|charge|spark|time|level|loyalty|spore|storage|lore|luck|plague|magnet|manabond|manifestation|knowledge|poison|energy|fat?d?e|healing|wish|egg|fungus|brick|experience|bribery|bounty|blaze|corruption|depletion|age|prey|quest|sleep|slumber|doom|flood|acorn|aegis|aim|arrow|arrowhead|awakening|blood|book|cage|carrion|coin|component|credit|corpse|crystal|cube|currency|death|delay|despair|devotion|divinity|dream|echo|elixir|enlightened|eon|eyeball|eyestalk|feather|fetch|filibuster|flame|foreshadow|fuse|gem|ghostform|glyph|gold|harmony|hatchling|hit|hone|hoofprint|hour|hourglass|hunger|ice|incarnation|incubation|infection|intervention|isolation|javelin|ki|landmark|mannequin|mask|matrix|mine|mining|mire|music|muster|met|night|omen|ore|pain|paralyzation|petal|petrification|phylactery|pin|point|polyp|pressure|pupa|rust|scream|scroll|shell|shield|silver|shred|sleight|slime|soot|soul|spark|spite|strife|study|task|theft|tide|tower|velocity|void|volatile|vow|voyage|wage|winch|wind|loyalty).*counter on",
     'draw': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*draw.*\.",
     'discard': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.*discard.*\.",
-    'block': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*block.*turn.*\.",
-    'attack': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.*attack.*turn.*\.",
-    'end_turn': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*end.*turn\.",
-    'spell-ability_copy': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789ewubrgcT0]})*,*:.*(copy|copies).*(target|each|all).*(activated|triggered)* (spell|ability|abilities|instant|sorcery).*\.",
-    'xtra_turn': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789ewubrgcT0]})*,*:.*take.*extra turn",
-    'mill': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*mill.*\.",
-    'damage': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*deal.*damage.*\.",
-    'prevent_damage': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*prevent.*damage.*\.",
-    'phases': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*phase.*\.",
+    'block' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*block.*turn.*\.",
+    'attack' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.*attack.*turn.*\.",
+    'end_turn' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*end.*turn\.",
+    'spell-ability_copy' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789ewubrgcT0]})*,*:.*(copy|copies).*(target|each|all).*(activated|triggered)* (spell|ability|abilities|instant|sorcery).*\.",
+    'xtra_turn' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789ewubrgcT0]})*,*:.*take.*extra turn",
+    'mill' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*mill.*\.",
+    'damage' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*deal.*damage.*\.",
+    'prevent_damage' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*prevent.*damage.*\.",
+    'phases' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*:.*phase.*\.",
     'transform': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubergcT0]})*,*:.*target.*become|target.*becomes",    
-    'lifegain': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*gain.*life.*\.",
-    'lifeloss': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*,*:.*lose.*life.*\.",    
-    'scry': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*: scry.*\.",
-    'top_deck': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.* look.*top.*library.*\.",
-    'populate': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*populate",
-    'mo_counters': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*(double|triple).*counter.*(artifact|enchantment|creature|permanent|historic|land)",
-    'counterspell': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*counter.*(target|all|each) (spell|ability|abilities).*",
-    'get_+1_counters': "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",    
+    'lifegain' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wuebrgcT0]})*,*:.*gain.*life.*\.",
+    'lifeloss' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*,*:.*lose.*life.*\.",    
+    'scry' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*: scry.*\.",
+    'top_deck' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubregcT0]})*,*:.* look.*top.*library.*\.",
+    'populate' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*populate",
+    'mo_counters' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*(double|triple).*counter.*(artifact|enchantment|creature|permanent|historic|land)",
+    'counterspell' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789wubrgecT0]})*,*.*:.*counter.*(target|all|each) (spell|ability|abilities).*",
+    'get_+1_counters' : "({[wubrcg0123456789]\/[wubrcgWUBRCG0123456789]})*({[123456789weubrgcT0]})*,*:.*(get|put|move|remove|add|with|distribute).*[\+?\-?[0123456789X]\/+\+?\-?[0123456789X] counter",    
     # equip, cycle, morph, 
     }
 
 regex_manacolor = {
-    'getland_m_clr': ": Add (.)* any (.)*color|: Add (.)*mana(.)*different color",
-    'getland_m_clr2': ": Add {[WUBRGC]}[^, {]",   # for single color lands only
-    'getland_m_clr3': ": Add {[WUBRGC]} or {[WUBRGC]}|Add {[WUBRGC]\/[WUBRGC]}", # for dual lands only
-    'getland_m_tri': "Add {[WUBRGC]}(, )*({[WUBRGC]})*(, )*(or)* ({[WUBRGC]})",  # for tri-ome only
-    'getland_m_dbl': ": Add {[WUBRGC]}{[WUBRGC]}[^, {]"  ,  # for 2mana-lands only
-    'combination_mana': "any combination of {[WUBRG]} and\/or ({[WUBRG]})*",
-    'mana_symbols': "{[WUBRG1]}({[WUBRG1]})*|{[WUBRG1]\/[WUBRG1]}"    #  just for regex_get_mana
+    'getland_m_clr' : ": Add (.)* any (.)*color|: Add (.)*mana(.)*different color",
+    'getland_m_clr2' : ": Add {[WUBRGC]}[^, {]",   # for single color lands only
+    'getland_m_clr3' : ": Add {[WUBRGC]} or {[WUBRGC]}|Add {[WUBRGC]\/[WUBRGC]}", # for dual lands only
+    'getland_m_tri' : "Add {[WUBRGC]}(, )*({[WUBRGC]})*(, )*(or)* ({[WUBRGC]})",  # for tri-ome only
+    'getland_m_dbl' : ": Add {[WUBRGC]}{[WUBRGC]}[^, {]"  ,  # for 2mana-lands only
+    'combination_mana' : "any combination of {[WUBRG]} and\/or ({[WUBRG]})*",
+    'mana_symbols' : "{[WUBRG1]}({[WUBRG1]})*|{[WUBRG1]\/[WUBRG1]}"    #  just for regex_get_mana
     }
 
 def regex_get_mana_symbols(search_this):
@@ -346,7 +346,7 @@ def regex_get_aac(search_this):
     
 def regex_get_mv(searchtype, search_this):
     """Regex search to find the greatest amount of mana acquired per TAP for Lands (though I guess it doesn't need to be just lands)
-    Parameters: searchtype:  The Regex search pattern  (this is called from Land_handle() in MTG_Main in a For loop) 
+    Parameters: searchtype :  The Regex search pattern  (this is called from Land_handle() in MTG_Main in a For loop) 
                 search_this:  Oracle text of the card, after check_oracle_text()
     Returns: String or Integer 'mana_value'  - usually 1, sometimes 2 or 'X'
     """
@@ -378,9 +378,9 @@ def regex_get_mv(searchtype, search_this):
         else:
             mana_value = regex_get_cmc(manacostread)
         # try:
-        #     if int(mana_value) > highest_mana: highest_mana = mana_value
+        #     if int(mana_value) > highest_mana : highest_mana = mana_value
         # except:
-        #     if mana_value > highest_mana: highest_mana = mana_value
+        #     if mana_value > highest_mana : highest_mana = mana_value
         # print (matchfound, " Mana Cost: ",manacostread, " -> ", mana_value)
     if "for each" in search_this:
         # print ("Found likely X-mana generator")
@@ -447,7 +447,7 @@ def regex_get_mclr(search_this):
                 # print ("Searching in ", matchfound)
                 results = regex_get_mana(matchfound)
                 mana_code = str(mana_code)+str(results)
-    if mana_code is None or mana_code == "": mana_code = "C"
+    if mana_code is None or mana_code == "" : mana_code = "C"
     # print (set(mana_code))
     return set(mana_code)
      
@@ -606,7 +606,7 @@ def regex_get_pboosts(search_this):
         matchfound = matchfound.replace("+","")
         pboosts = pboosts + matchfound
 
-    if pboosts == "": pboosts = ""
+    if pboosts == "" : pboosts = ""
     # print (ability_count, " boosts found", pboosts)
     # print (list(pboosts))
     return (list(pboosts))
@@ -628,7 +628,7 @@ def regex_get_pcosts(search_this):
         matchfound = matchfound.replace(":","")
         matchfound = matchfound.replace("-","")
         pcosts = pcosts + matchfound
-    if pcosts == "": pcosts = ""
+    if pcosts == "" : pcosts = ""
     # print (ability_count, " costs found", pcosts)
     # print (list(pcosts))
     return (list(pcosts))
@@ -666,11 +666,11 @@ def regex_deeper_ETB(search_this, card_type):
 
     for etbs in regex_etb_modes:
         if re.findall(regex_etb_modes[etbs], search_this, re.IGNORECASE):
-            # print ("  :found ", etbs)
-            if etbs == 'dork_rock':
+            # print ("   :found ", etbs)
+            if etbs == 'dork_rock' :
                 if "artifact" in card_type.lower() and "creature" not in card_type.lower(): etb = etb + "Mana_Rock "
-                if "creature" in card_type.lower(): etb = etb + "Mana_Dork "
-            elif etbs == 'get_fancy_counters':
+                if "creature" in card_type.lower() : etb = etb + "Mana_Dork "
+            elif etbs == 'get_fancy_counters' :
                 continue
             else:
                 etb = etb + etbs.capitalize() + " "
@@ -715,7 +715,7 @@ def regex_get_ETB(search_this, card_type, keyword_list):
     if 'evoke' in keywords.lower(): etb = etb + "Evoke "
     if 'constellation' in keywords.lower(): etb = etb + "Constellation "
     if 'equipment' in card_type.lower(): etb = etb + "Equipment "
-    if etb == "": etb = "Other"
+    if etb == "" : etb = "Other"
     
     final_etb = set(etb.split(" "))
     filter_list = filter(lambda x: x != "", final_etb)
@@ -746,17 +746,17 @@ def regex_get_wipe(search_this, keyword_list):
     for wipes in regex_wipe_modes:
         # print (re.findall(regex_target_modes[filters], oracletext, re.IGNORECASE))
         if re.findall(regex_wipe_modes[wipes], search_this, re.IGNORECASE):
-            # print ("  :found ", wipes)
+            # print ("   :found ", wipes)
             wipe = wipe + wipes.capitalize() + " "
 
     if 'overload' in keywords.lower(): wipe = wipe + "Overload "
     if 'radiance' in keywords.lower(): wipe = wipe + "Radiance "
-    if wipe == "":
+    if wipe == "" :
         if re.findall(regex_searchmode['changeling'], search_this, re.IGNORECASE): wipe = "Changeling"
         # This will get removed anyway, may as well use the same name
         if re.findall(regex_searchmode['board_wipe_dud'], search_this, re.IGNORECASE): wipe = "Changeling"
         
-    if wipe == "": wipe = "Other"
+    if wipe == "" : wipe = "Other"
     final_wipe = set(wipe.split(" "))
     filter_list = filter(lambda x: x != "", final_wipe)
     return list(filter_list)
@@ -771,14 +771,14 @@ def regex_get_ramp(search_this, card_type):
     ramp = ""
     for ramps in regex_ramp_modes:
         if re.findall(regex_ramp_modes[ramps], search_this, re.IGNORECASE):
-            # print ("  :found ", ramps)
-            if ramps == 'dork_rock':
+            # print ("   :found ", ramps)
+            if ramps == 'dork_rock' :
                 if "artifact" in card_type.lower() and "creature" not in card_type.lower(): ramp = ramp + "Mana_Rock "
-                if "creature" in card_type.lower(): ramp = ramp + "Mana_Dork "
+                if "creature" in card_type.lower() : ramp = ramp + "Mana_Dork "
             else:
                 ramp = ramp + ramps.capitalize() + " "
             
-    if ramp == "": ramp = "Other"
+    if ramp == "" : ramp = "Other"
     if ramp == "Other" and "landfall" in search_this: ramp = ""
     """If the type of ramp hasn't been isolated, it is set to 'Other' since it still had some typical ramp talk in the oracle text
     cards with the landfall trigger have 'when a land enters the battlefield' in the text, which is the only reason they got this far"""
@@ -811,7 +811,7 @@ def regex_get_draw(search_this):
             if draw == 'Other': 
                 if 'x' in matchfound: draw = 'X'
                 
-        if draw == "X":
+        if draw == "X" :
             x_found = True
         else:
             try:
@@ -834,7 +834,7 @@ def regex_get_draw(search_this):
         break
     # if re.match(regex_draw_modes['draw_x_search'], search_this): x_found = True
         
-    if best_yet == "": best_yet = 'Other'
+    if best_yet == "" : best_yet = 'Other'
     if x_found == True: best_yet = 'X'
     return best_yet
 
@@ -851,14 +851,14 @@ def regex_get_triggered(search_this, keyword_list):
     keywords = mtg_main.rebuild_list(keyword_list)    
     for triggers in regex_triggered_modes:
         if re.findall(regex_triggered_modes[triggers], search_this, re.IGNORECASE):
-            # print ("  :found ", triggers)
+            # print ("   :found ", triggers)
             trigger = trigger + triggers.capitalize() + " "
             
     for triggers in triggered_keywords:
         if triggers in keywords.lower(): trigger = trigger + triggers.capitalize() + " "
-    if trigger == "": trigger = "Other"
+    if trigger == "" : trigger = "Other"
     
-    if trigger == "Other":
+    if trigger == "Other" :
         if re.findall(regex_searchmode['cast'], search_this, re.IGNORECASE): trigger = "Cast "
     
     # print ("trigger your jigger?: ", trigger)
@@ -877,14 +877,14 @@ def regex_get_activated(search_this, keyword_list):
     for modes in regex_activated_modes:        
         try:
             if re.findall(regex_activated_modes[modes], search_this, re.IGNORECASE):
-                # print ("  :found ", modes)
+                # print ("   :found ", modes)
                 activated = activated + modes.capitalize() + " "
         except Exception as e:
             print ("except occurred at regex_get_activated: ", e)
             
     for kw in activated_keywords:
         if kw in keywords.lower(): activated = activated + kw.capitalize() + " "
-    if activated == "": activated = "Other"
+    if activated == "" : activated = "Other"
     
     # print ("activated?: ", activated)
     return activated
